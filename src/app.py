@@ -8,11 +8,6 @@ from node import Node
 
 app = Flask(__name__)
 
-# --- Helper Functions ---
-def hash_function(key):
-    """Compute SHA-1 hash of a key mod 2^16."""
-    return int(hashlib.sha1(key.encode()).hexdigest(), 16) % (2 ** 16)
-
 # --- Chord DHT Operations ---
 @app.route('/insert', methods=['POST'])
 def insert():
@@ -85,10 +80,8 @@ def initialize_node():
         sys.exit(1)
 
     node_ip, node_port = sys.argv[1], int(sys.argv[2])
-    node_id = hash_function(f"{node_ip}:{node_port}")
     # Ask for consistency
     if len(sys.argv) == 3:
-        bootstrap_ip, bootstrap_port = node_ip, node_port
         consistency = input("Consistency (linearizability or eventual): ").strip().lower()
         k_factor = input("Kfactor: ")
         if consistency not in ["linearizability", "eventual"]:
@@ -107,8 +100,7 @@ def initialize_node():
             print(f"[JOINED] Successor: {successor['node_id']}, Predecessor: {predecessor['node_id']}")
         else:
             print("[JOIN FAILED]", response)
-        return Node(ip=node_ip, port=node_port, bootstrap_ip=bootstrap_ip, bootstrap_port=bootstrap_port,
-                consistency=consistency, k_factor=k_factor, successor=successor, predecessor=predecessor)
+        return Node(ip=node_ip, port=node_port, consistency=consistency, k_factor=k_factor, successor=successor, predecessor=predecessor)
 
 if __name__ == "__main__":
     # Initialize the node (with bootstrap parameters as required).
