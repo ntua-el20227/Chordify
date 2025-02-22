@@ -96,11 +96,11 @@ def initialize_node():
             successor, predecessor = response["new_successor"], response["new_predecessor"]
             consistency = response.get("consistency")
             k_factor = response.get("k_factor")
-            #data_store.update(response.get("transferred_keys", {}))
+            data_store = response.get("transferred_keys", {})
             print(f"[JOINED] Successor: {successor['node_id']}, Predecessor: {predecessor['node_id']}")
         else:
             print("[JOIN FAILED]", response)
-        return Node(ip=node_ip, port=node_port, consistency=consistency, k_factor=k_factor, successor=successor, predecessor=predecessor)
+        return Node(ip=node_ip, port=node_port, consistency=consistency, k_factor=k_factor, successor=successor, predecessor=predecessor, data_store=data_store)
 
 if __name__ == "__main__":
     # Initialize the node (with bootstrap parameters as required).

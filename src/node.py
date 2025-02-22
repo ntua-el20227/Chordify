@@ -3,11 +3,11 @@ import hashlib
 
 
 class Node:
-    def __init__(self, ip, port, consistency="linearizable", k_factor=1 , successor=None, predecessor=None):
+    def __init__(self, ip, port, consistency="linearizable", k_factor=1 , successor=None, predecessor=None, data_store = {}):
         self.ip = ip
         self.port = port
         self.node_id = self.hash_function(f"{ip}:{port}")
-        self.data_store = {}  # Local key-value store
+        self.data_store = data_store  # Local key-value store
 
         # Set consistency mode and replication factor (k-factor)
         self.consistency = consistency
@@ -111,20 +111,7 @@ class Node:
         """
         new_node_id = self.hash_function(f"{new_ip}:{new_port}")
 
-        # Case 1: Only one node in the network.
-        if self.node_id == self.predecessor["node_id"] and self.node_id == self.successor["node_id"]:
-            self.predecessor = {"ip": new_ip, "port": new_port, "node_id": new_node_id}
-            self.successor = {"ip": new_ip, "port": new_port, "node_id": new_node_id}
-            return {
-                "status": "success",
-                "new_successor": {"ip": self.ip, "port": self.port, "node_id": self.node_id},
-                "new_predecessor": {"ip": self.ip, "port": self.port, "node_id": self.node_id},
-                "transferred_keys": {},
-                "consistency": self.consistency,
-                "k_factor": self.k_factor
-            }
-
-        # Case 2: New node belongs between the current node's predecessor and this node.
+        # Case 1: New node belongs between the current node's predecessor and this node.
         if self.in_interval(new_node_id, self.predecessor["node_id"], self.node_id):
             old_predecessor = self.predecessor.copy()
             self.predecessor = {"ip": new_ip, "port": new_port, "node_id": new_node_id}
@@ -149,7 +136,7 @@ class Node:
                 "k_factor": self.k_factor
             }
 
-        # Case 3: Forward the join request to the successor.
+        # Case 2: Forward the join request to the successor.
         url = f"http://{self.successor['ip']}:{self.successor['port']}/join"
         response = requests.post(url, json={"ip": new_ip, "port": new_port})
         return response.json()
