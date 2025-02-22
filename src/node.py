@@ -3,7 +3,7 @@ import hashlib
 
 
 class Node:
-    def __init__(self, ip, port, bootstrap_ip=None, bootstrap_port=None, consistency="linearizable", k_factor=1 , successor=None, predecessor=None):
+    def __init__(self, ip, port, consistency="linearizable", k_factor=1 , successor=None, predecessor=None):
         self.ip = ip
         self.port = port
         self.node_id = self.hash_function(f"{ip}:{port}")
@@ -23,10 +23,6 @@ class Node:
 
         print(f"[START] Node {self.node_id} at {self.ip}:{self.port}")
         print(f"[CONFIG] Consistency: {self.consistency}, Replication Factor: {self.k_factor}")
-
-        # Always join via the provided bootstrap node.
-        if bootstrap_ip and bootstrap_port:
-            self.join_bootstrap(bootstrap_ip, bootstrap_port)
 
     @staticmethod
     def hash_function(key):
@@ -210,19 +206,3 @@ class Node:
         if response.json().get("status") == "success":
             overlay_list.extend(response.json().get("overlay", []))
         return {"status": "success", "overlay": overlay_list}
-
-    def join_bootstrap(self, bootstrap_ip, bootstrap_port):
-        """
-        Join an existing Chord ring using a bootstrap node.
-        Update this node's successor, predecessor, and local key store based on the response.
-        """
-        url = f"http://{bootstrap_ip}:{bootstrap_port}/join"
-        response = requests.post(url, json={"ip": self.ip, "port": self.port})
-        resp_json = response.json()
-        if resp_json.get("status") == "success":
-            self.successor = resp_json["new_successor"]
-            self.predecessor = resp_json["new_predecessor"]
-            self.data_store.update(resp_json.get("transferred_keys", {}))
-            print(f"[JOINED] Successor: {self.successor['node_id']}, Predecessor: {self.predecessor['node_id']}")
-        else:
-            print("[JOIN FAILED]", resp_json)
