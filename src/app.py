@@ -86,9 +86,6 @@ def initialize_node():
 
     node_ip, node_port = sys.argv[1], int(sys.argv[2])
     node_id = hash_function(f"{node_ip}:{node_port}")
-    successor = predecessor = {"ip": node_ip, "port": node_port, "node_id": node_id}
-    print(f"[START] Node {node_id} at {node_ip}:{node_port}")
-
     # Ask for consistency
     if len(sys.argv) == 3:
         bootstrap_ip, bootstrap_port = node_ip, node_port
@@ -97,6 +94,8 @@ def initialize_node():
         if consistency not in ["linearizability", "eventual"]:
             print("Invalid consistency type. Please choose 'linearizability' or 'eventual'.")
             sys.exit(1)
+        return Node(ip=node_ip, port=node_port, consistency=consistency, k_factor=k_factor)
+
     elif len(sys.argv) == 5:
         bootstrap_ip, bootstrap_port = sys.argv[3], int(sys.argv[4])
         response = requests.post(f"http://{bootstrap_ip}:{bootstrap_port}/join", json={"ip": node_ip, "port": node_port}).json()
@@ -108,11 +107,10 @@ def initialize_node():
             print(f"[JOINED] Successor: {successor['node_id']}, Predecessor: {predecessor['node_id']}")
         else:
             print("[JOIN FAILED]", response)
-    return Node(ip=node_ip, port=node_port, bootstrap_ip=bootstrap_ip, bootstrap_port=bootstrap_port,
-                consistency=consistency, k_factor=k_factor)
+        return Node(ip=node_ip, port=node_port, bootstrap_ip=bootstrap_ip, bootstrap_port=bootstrap_port,
+                consistency=consistency, k_factor=k_factor, successor=successor, predecessor=predecessor)
 
 if __name__ == "__main__":
     # Initialize the node (with bootstrap parameters as required).
     node = initialize_node()
-    print("My consistency is ",node.consistency)
-    #app.run(host=node.ip, port=node.port)
+    app.run(host=node.ip, port=node.port)

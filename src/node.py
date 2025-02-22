@@ -3,7 +3,7 @@ import hashlib
 
 
 class Node:
-    def __init__(self, ip, port, bootstrap_ip, bootstrap_port, consistency="linearizable", k_factor=1):
+    def __init__(self, ip, port, bootstrap_ip=None, bootstrap_port=None, consistency="linearizable", k_factor=1 , successor=None, predecessor=None):
         self.ip = ip
         self.port = port
         self.node_id = self.hash_function(f"{ip}:{port}")
@@ -13,9 +13,13 @@ class Node:
         self.consistency = consistency
         self.k_factor = k_factor
 
-        # Initially, the node is alone in the ring so its successor and predecessor are itself.
-        self.successor = {"ip": self.ip, "port": self.port, "node_id": self.node_id}
-        self.predecessor = {"ip": self.ip, "port": self.port, "node_id": self.node_id}
+        if successor and predecessor:
+           self.successor = successor
+           self.predecessor = predecessor
+        else:
+            # Initially, the node is alone in the ring so its successor and predecessor are itself.
+            self.successor = {"ip": self.ip, "port": self.port, "node_id": self.node_id}
+            self.predecessor = {"ip": self.ip, "port": self.port, "node_id": self.node_id}
 
         print(f"[START] Node {self.node_id} at {self.ip}:{self.port}")
         print(f"[CONFIG] Consistency: {self.consistency}, Replication Factor: {self.k_factor}")
