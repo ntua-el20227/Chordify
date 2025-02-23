@@ -60,6 +60,7 @@ class Node:
             response = requests.post(url, json={"key": key, "value": value})
             return response.json()
 
+
     def query(self, key, visited=None):
         """
         Query a key from the DHT.
@@ -76,18 +77,25 @@ class Node:
             result = self.data_store.copy()
             url = f"http://{self.successor['ip']}:{self.successor['port']}/query"
             response = requests.post(url, json={"key": "*", "visited": visited})
-            if response.json().get("status") == "success":
-                result.update(response.json().get("data", {}))
+            try:
+                response_json = response.json()
+                if response_json.get("status") == "success":
+                    result.update(response_json.get("data", {}))
+            except requests.exceptions.JSONDecodeError:
+                return {"status": "error", "message": "Invalid JSON response from successor"}
             return {"status": "success", "data": result}
         else:
             key_hash = self.hash_function(key)
             if self.node_id == self.predecessor["node_id"] or self.in_interval(key_hash, self.predecessor["node_id"],
-                                                                               self.node_id):
+                                                                            self.node_id):
                 return {"status": "success", "value": self.data_store.get(key, "Key not found")}
             else:
                 url = f"http://{self.successor['ip']}:{self.successor['port']}/query"
                 response = requests.post(url, json={"key": key})
-                return response.json()
+                try:
+                    return response.json()
+                except requests.exceptions.JSONDecodeError:
+                    return {"status": "error", "message": "Invalid JSON response from successor"}
 
     def delete(self, key):
         """
@@ -156,6 +164,14 @@ class Node:
         self.predecessor = new_predecessor
         print(f"[UPDATE] Node {self.node_id} updated its predecessor to {new_predecessor['node_id']}")
         return {"status": "success", "message": "Predecessor updated"}
+
+    def transfer_keys(self, keys):
+        """
+        Transfer keys to this node.
+        """
+        self.data_store.update(keys)
+        return {"status": "success", "message": "Keys transferred successfully"}
+
 
     def depart(self):
         """

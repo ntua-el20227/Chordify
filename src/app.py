@@ -22,7 +22,8 @@ def insert():
 def query():
     req = request.get_json()
     key = req.get("key")
-    result = node.query(key)
+    visited = req.get("visited", [])
+    result = node.query(key,visited)
     return jsonify(result)
 
 
@@ -64,6 +65,12 @@ def depart():
     result = node.depart()
     return jsonify(result)
 
+@app.route('/transfer_keys', methods=['POST'])
+def transfer_keys():
+    req = request.get_json()
+    keys = req.get("keys")
+    result = node.transfer_keys(keys)
+    return jsonify(result)
 
 @app.route('/overlay', methods=['GET'])
 def overlay():
