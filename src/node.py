@@ -12,7 +12,7 @@ class Node:
 
         # Set consistency mode and replication factor (k-factor)
         self.consistency = consistency
-        self.k_factor = k_factor
+        self.k_factor = int(k_factor)
         self.replicas = {} # Local replica store
         if successor and predecessor:
            self.successor = successor
@@ -45,10 +45,12 @@ class Node:
         if not (self.node_id == self.predecessor["node_id"] or hf.in_interval(key_hash, self.predecessor["node_id"], self.node_id)):
             url = f"http://{self.successor['ip']}:{self.successor['port']}/insert"
             response = requests.post(url, json={"key": key, "value": value})
+            print(f"[WRITE] Forwarded insert request for key '{key}' to node {self.successor['node_id']}")
             return response.json()
 
-
+        print(type(self.k_factor))
         replication_count = self.k_factor
+        print(type(replication_count))
         if self.consistency == "eventual":
             # Write locally into the primary data store.
             self.data_store[key] = self.data_store.get(key, "") + value
@@ -59,12 +61,13 @@ class Node:
             t.start() # Start the thread
             return {"status": "success", "message": f"Eventually inserted '{key}' at node {self.node_id}"}
         else:
-            assert self.consistency == "linearizable", "Chain replication is only supported with linearizable consistency"
+            assert self.consistency == "linearizability", "Chain replication is only supported with linearizable consistency"
             # If primary, apply the write locally.
             self.data_store[key] = self.data_store.get(key, "") + value
             print(f"[WRITE] Node {self.node_id} stored key '{key}' with value '{self.data_store[key]}'")
             # Call the successor to insert replicas.
-            self.forward_replicate(key, value, replication_count)
+            self.forward_replicate(key, value, replication_count, False)
+            return {"status": "success", "message": f"Inserted '{key}' at node {self.node_id}"} # Return success message
 
     def insertReplicas(self, key, value, replication_count, join=False):
         """
@@ -95,13 +98,14 @@ class Node:
         Asynchronously propagate the write for eventual consistency.
         Decrement replication_count before sending to ensure exactly kfactor copies.
         """
-        if replication_count > 1:
+        print(type(replication_count))
+        if int(replication_count) > 1:
             try:
                 url = f"http://{self.successor['ip']}:{self.successor['port']}/insertReplicas"
                 requests.post(url, json={
                     "key": key,
                     "value": value,
-                    "replication_count": replication_count-1,
+                    "replication_count": int(replication_count)-1,
                     "join": join
                 })
             except Exception as e:

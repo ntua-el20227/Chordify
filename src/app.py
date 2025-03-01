@@ -161,11 +161,11 @@ def initialize_node():
                 consistency = "linearizability"
             elif consistency == "e":
                 consistency = "eventual"
-            k_factor = input("Kfactor: ")
+            k_factor = int(input("Kfactor: "))
         except EOFError:
             # Non-interactive mode: set default values
             consistency = "eventual"
-            k_factor = "2"
+            k_factor = 2
         if consistency not in ["linearizability", "eventual"]:
             print("Invalid consistency type. Please choose 'linearizability' or 'eventual'.")
             sys.exit(1)
@@ -173,19 +173,19 @@ def initialize_node():
 
     elif len(sys.argv) == 5:
         bootstrap_ip, bootstrap_port = sys.argv[3], int(sys.argv[4])
-        response = requests.post(f"http://{bootstrap_ip}:{bootstrap_port}/join", json={"ip": node_ip, "port": node_port})
-        if response.json().get("status") == "success":
-            successor, predecessor = response.json()["new_successor"], response.json()["new_predecessor"]
-            consistency = response.json().get("consistency")
-            k_factor = response.json().get("k_factor")
-            data_store = response.json().get("transferred_keys", {})
-            replicas = response.json().get("transferred_replicas", {})
+        response = requests.post(f"http://{bootstrap_ip}:{bootstrap_port}/join", json={"ip": node_ip, "port": node_port}).json()
+        if response.get("status") == "success":
+            successor, predecessor = response["new_successor"], response["new_predecessor"]
+            consistency = response.get("consistency")
+            k_factor = response.get("k_factor")
+            data_store = response.get("transferred_keys", {})
+            replicas = response.get("transferred_replicas", {})
             print(f"[JOINED] Successor: {successor['node_id']}, Predecessor: {predecessor['node_id']},"
                   f"Consistency: {consistency}, K-factor: {k_factor},"
                   f"Data Store: {data_store}, Replicas: {replicas}")
         else:
             print("[JOIN FAILED]", response)
-        return Node(ip=node_ip, port=node_port, consistency=consistency, k_factor=k_factor, successor=successor, predecessor=predecessor, data_store=data_store)
+        return Node(ip=node_ip, port=node_port, consistency=consistency, k_factor=k_factor, successor=successor, predecessor=predecessor, data_store=data_store,replicas=replicas)
 
 if __name__ == "__main__":
     # Initialize the node (with bootstrap parameters as required).
