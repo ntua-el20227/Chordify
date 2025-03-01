@@ -148,6 +148,15 @@ def main():
             base_url = f"http://{node_ip}:{node_port}"
             resp = send_request("POST", base_url, "/depart")
             print(resp)
+        elif cmd == "node_info":
+            if len(tokens) < 3:
+                print("Usage: node_info <node_ip> <node_port>")
+                continue
+            node_ip = tokens[1]
+            node_port = tokens[2]
+            base_url = f"http://{node_ip}:{node_port}"
+            resp = send_request("GET", base_url, "/node_info")
+            print(resp)
 ###################################### single launch ######################################            
         elif cmd == "file_launch":                     
             if len(tokens) < 4:
