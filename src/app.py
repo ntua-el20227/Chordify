@@ -24,7 +24,8 @@ def insertReplicas():
     value = req.get("value")
     replication_count = req.get("replication_count")
     join_ = req.get("join")
-    result = node.insertReplicas(key, value, replication_count, join_)
+    starting_node = req.get("starting_node")
+    result = node.insertReplicas(key, value, replication_count, join_, starting_node)
     return jsonify(result)
 
 @app.route('/query', methods=['POST'])
@@ -56,7 +57,6 @@ def join():
     new_port = req.get("port")
     result = node.join(new_ip, new_port)
     return jsonify(result)
-
 @app.route('/transfer_replicas', methods=['POST'])
 def transfer_replicas():
     req = request.get_json()
@@ -112,10 +112,13 @@ def transfer_keys():
     result = node.transfer_keys(keys)
     return jsonify(result)
 
+@app.route('/shift_replicas', methods=['POST'])
 def shift_replicas():
     req = request.get_json()
-    replicas = req.get("keys")
-    result = node.shift_replicas(replicas)
+    data = req.get("keys")
+    replicas = req.get("replicas")
+    starting_node = req.get("starting_node")
+    result = node.shift_replicas(data, replicas, starting_node)
     return jsonify(result)
 
 @app.route('/overlay', methods=['GET'])
