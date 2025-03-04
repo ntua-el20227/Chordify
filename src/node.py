@@ -407,6 +407,7 @@ class Node:
         # Inform predecessor to update its successor.
         url_pred = f"http://{self.predecessor['ip']}:{self.predecessor['port']}/update_successor"
         requests.post(url_pred, json={"new_successor": self.successor})
+        # TODO : 1 node left when departing
         # Inform successor to update its predecessor.
         url_succ = f"http://{self.successor['ip']}:{self.successor['port']}/update_predecessor"
         requests.post(url_succ, json={"new_predecessor": self.predecessor})
