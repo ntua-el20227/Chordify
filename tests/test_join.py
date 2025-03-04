@@ -14,11 +14,11 @@ def hash_function(key):
 
 # Number of nodes and ports to use
 NODES = [
-    {"ip": "127.0.0.1", "port": 6000},
-    {"ip": "127.0.0.1", "port": 7000},
-    {"ip": "127.0.0.1", "port": 8000},
-    {"ip": "127.0.0.1", "port": 9000},
-    {"ip": "127.0.0.1", "port": 10000},
+    {"ip": "127.0.0.1", "port": 5000},
+    {"ip": "127.0.0.1", "port": 5001},
+    {"ip": "127.0.0.1", "port": 5002},
+    {"ip": "127.0.0.1", "port": 5003},
+    {"ip": "127.0.0.1", "port": 5004},
 ]
 
 # Path to the app file and the python executable
@@ -116,9 +116,14 @@ def test_keys_file_departure_join(chord_ring, insert_filepath="C:\\Users\\koust\
             data = node_info["data_store"]
             for key in data:
                 # Check its successors for the replicas
+                resp = requests.get(f"http://{node_ip}:{node_port}/node_info")
+                node_info = resp.json()
                 for i in range(k_factor-1, 0, -1):
                     successor_ip = node_info["successor"]["ip"]
                     successor_port = node_info["successor"]["port"]
+                    print("i", i)
+                    print("Successor IP and Port")
+                    print(successor_ip, successor_port)
                     resp = requests.get(f"http://{successor_ip}:{successor_port}/node_info")
                     if resp.status_code == 200:
                         node_info = resp.json()
