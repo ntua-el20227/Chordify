@@ -2,13 +2,17 @@ from flask import Flask, request, jsonify
 import requests
 import sys
 from node import Node
-from src.helper_functions import shutdown_server
+from helper_functions import *
 import threading
 
 
 app = Flask(__name__)
 
 # --- Chord DHT Operations ---
+@app.route('/shutdown', methods=['POST'])
+def shutdown():
+    threading.Thread(target=shutdown_server).start()
+    return jsonify({"status": "success"})
 @app.route('/insert', methods=['POST'])
 def insert():
     req = request.get_json()
@@ -207,4 +211,7 @@ def initialize_node():
 if __name__ == "__main__":
     # Initialize the node (with bootstrap parameters as required).
     node = initialize_node()
+
+    threading.Thread(target=replica_handler, args=(node,), daemon=True).start()
+    # Make sure every process on this port is killed before starting the server
     app.run(host=node.ip, port=node.port)

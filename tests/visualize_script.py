@@ -13,7 +13,7 @@ def get_node_info(ip, port):
     return None
 
 
-def visualize_chord_ring(chord_ring):
+def visualize_chord_ring(nodes):
     """
     Traverses the chord ring using each node's successor pointer and visualizes the ring.
     The graph will show each node (with its id and ip:port) and an arrow from each node to its successor.
@@ -22,7 +22,7 @@ def visualize_chord_ring(chord_ring):
     visited = set()
 
     # Start with the bootstrap node (assumed to be the first in the list)
-    start_node = chord_ring["nodes"][0]
+    start_node = nodes[0]
     current_ip = start_node["ip"]
     current_port = start_node["port"]
     node_info = get_node_info(current_ip, current_port)
