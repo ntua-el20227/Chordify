@@ -1,6 +1,5 @@
 import hashlib
 import time
-import subprocess
 import requests
 import os
 
