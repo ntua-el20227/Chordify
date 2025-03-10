@@ -67,11 +67,15 @@ def launch_file(i, node_ip, node_port, launch_type):
                     resp = send_request("POST", base_url, "/query", data=data)
                     print(resp)
                 elif request_type == "insert":
-                    data = {"key": key, "value": f"{node_ip}:{node_port}"}
+                    value = parts[2]
+                    data = {"key": key, "value": value}
                     resp = send_request("POST", base_url, "/insert", data=data)
                     print(resp)
     else:
         print("Available type of launch: insert, query, request")
+
+
+
 
 
 def main():
