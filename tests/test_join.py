@@ -1,5 +1,3 @@
-import re
-
 import pytest
 import time
 import requests
@@ -34,7 +32,7 @@ def chord_ring():
         {"ip": "127.0.0.1", "port": 5002},
         {"ip": "127.0.0.1", "port": 5003},
         {"ip": "127.0.0.1", "port": 5004},
-        {"ip": "127.0.0.1", "port": 5005},
+        {"ip": "127.0.0.1", "port": 5005}
     ]
     time.sleep(4)
     # Start bootstrap node
