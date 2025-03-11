@@ -2,3 +2,4 @@
 .DS_Store
 app_finger_tables.py
 client_finger.py
+.venv
