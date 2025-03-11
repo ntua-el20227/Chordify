@@ -1,6 +1,7 @@
 import requests
 import shlex
 import threading
+import os
 from concurrent.futures import ThreadPoolExecutor
 
 def print_help():
@@ -33,7 +34,7 @@ def send_request(method, base_url, endpoint, data=None, params=None):
 def launch_file(i, node_ip, node_port, launch_type):
     base_url = f"http://{node_ip}:{node_port}"
     if launch_type == "insert":
-        file_path = "insert_" + str(i) + ".txt"
+        file_path = os.path.join("..", "data", "insert_" + str(i) + ".txt")
         with open(file_path, "r") as file:
             while True:
                 line = file.readline()
@@ -43,7 +44,7 @@ def launch_file(i, node_ip, node_port, launch_type):
                 resp = send_request("POST", base_url, "/insert", data=data)
                 print(resp)
     elif launch_type == "query":
-        file_path = "query_" + str(i) + ".txt"
+        file_path = os.path.join("..", "data", "query_" + str(i) + ".txt")
         with open(file_path, "r") as file:
             while True:
                 line = file.readline()
@@ -53,7 +54,7 @@ def launch_file(i, node_ip, node_port, launch_type):
                 resp = send_request("POST", base_url, "/query", data=data)
                 print(resp)
     elif launch_type == "request":
-        file_path = "request_" + str(i) + ".txt"
+        file_path = os.path.join("..", "data", "requests_" + str(i) + ".txt")
         with open(file_path, "r") as file:
             while True:
                 line = file.readline().strip()
