@@ -294,10 +294,10 @@ class Node:
             return response.json()
     
     def deleteReplicas(self, key, replication_count):
-            """
-            Delete a key from the replicas.
-            """
-            result = self.replicas.pop(key, None)
+        """
+        Delete a key from the replicas.
+        """
+        result = self.replicas.pop(key, None)
         if result is None:
             return {"status": "success", "message": f"Replica '{key}' not found at node {self.node_id}, stopping propagation"}
         if replication_count > 1:
@@ -305,10 +305,10 @@ class Node:
         return {"status": "success", "message": f"Deleted replicas of '{key}' from node {self.node_id}"}
 
     def forward_delete_replicas(self, key, replication_count, starting_node):
-    """
-    Propagate the delete for replicas.
-    Decrement replication_count before sending to ensure exactly kfactor copies are deleted.
-    """
+        """
+        Propagate the delete for replicas.
+        Decrement replication_count before sending to ensure exactly kfactor copies are deleted.
+        """
         if self.successor["node_id"] != starting_node:
             try:
                 url = f"http://{self.successor['ip']}:{self.successor['port']}/deleteReplicas"

@@ -7,11 +7,6 @@ import os
 import atexit
 from colorama import init, Fore, Style
 import readline
-import time
-
-
-
-
 
 def print_banner():
     f = Figlet(font='slant')  # You can choose other fonts like 'standard', 'big', etc.
