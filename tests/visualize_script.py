@@ -13,11 +13,21 @@ def get_node_info(ip, port):
     return None
 
 
-def visualize_chord_ring(nodes):
+def visualize_chord_ring(nodes=None):
     """
     Traverses the chord ring using each node's successor pointer and visualizes the ring.
     The graph will show each node (with its id and ip:port) and an arrow from each node to its successor.
     """
+    if nodes is None:
+        nodes = [
+            {"ip": "127.0.0.1", "port": 5000},
+            {"ip": "127.0.0.1", "port": 5001},
+            {"ip": "127.0.0.1", "port": 5002},
+            {"ip": "127.0.0.1", "port": 5003},
+            {"ip": "127.0.0.1", "port": 5004},
+            {"ip": "127.0.0.1", "port": 5005},
+            {"ip": "127.0.0.1", "port": 5006},
+        ]
     dot = Digraph(comment='Chord Ring')
     visited = set()
 
@@ -62,6 +72,9 @@ def visualize_chord_ring(nodes):
 
     return dot
 
+if __name__ == "__main__":
+    dot = visualize_chord_ring()
+    dot.render('chord_ring', format='png', view=True)
 
 
 

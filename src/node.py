@@ -69,7 +69,7 @@ class Node:
         else:
             assert self.consistency == "linearizability", "Chain replication is only supported with linearizable consistency"
             # If primary, apply the write locally.
-            self.data_store[key] = self.data_store.get(key, "") + value
+            self.data_store[key] = self.data_store.get(key, "") + value # Concatenate the value if the key already exists
             print(f"[WRITE] Node {self.node_id} stored key '{key}' with value '{self.data_store[key]}'")
             # Call the successor to insert replicas.
             self.forward_replicate(key, value, replication_count, False, self.node_id)
@@ -215,7 +215,7 @@ class Node:
         if replica_value != "Key not found" and (
                 rep_count == 1 or successor['node_id'] == starting_id):  # Only the tail node returns the final value.
             print(f"[READ-LIN] Tail node {port} returning final value '{replica_value}' for key '{key}'")
-            return {"status": "success", "value": replica_value}
+            return {"status": f"success from TAIL NODE {port}", "key": key, "value": replica_value}
         else:
             if replication_count > 1:
                 print(f"[READ-LIN] Node {port} forwarding query for key '{key}' to node {successor['port']}")

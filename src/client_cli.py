@@ -1,21 +1,35 @@
 import requests
 import shlex
-import threading
-import os
 from concurrent.futures import ThreadPoolExecutor
+from pyfiglet import Figlet
+from prompt_toolkit.styles import Style
+import os
+import atexit
+from colorama import init, Fore, Style
+import readline
+import time
 
+
+
+
+
+def print_banner():
+    f = Figlet(font='slant')  # You can choose other fonts like 'standard', 'big', etc.
+    print(f.renderText('Chordify CLI Client'))
+
+init(autoreset=True)  # Automatically resets color after each print
 def print_help():
-    help_text = """
-Available commands:
-  insert <key> <value>   - Insert a (key, value) pair into the DHT.
-  delete <key>           - Delete the (key, value) pair for the key.
-  query <key>            - Retrieve the value for the key (use "*" for all).
-  overlay                - Display the Chord ring topology.
-  depart                 - Instruct the node to gracefully leave the DHT (clearing its DHT info).
-  file_launch            - Launches a file from a node
-  file_parallel          - Launches in parallel different files to different nodes
-  help                   - Display this help message.
-  exit                   - Exit the client.
+    help_text = f"""
+{Fore.GREEN}Available commands:{Style.RESET_ALL}
+  {Fore.CYAN}insert <key> <value>{Style.RESET_ALL}   - Insert a (key, value) pair into the DHT.
+  {Fore.CYAN}delete <key>{Style.RESET_ALL}           - Delete the (key, value) pair for the key.
+  {Fore.CYAN}query <key>{Style.RESET_ALL}            - Retrieve the value for the key (use "*" for all).
+  {Fore.CYAN}overlay{Style.RESET_ALL}                - Display the Chord ring topology.
+  {Fore.CYAN}depart{Style.RESET_ALL}                 - Instruct the node to gracefully leave the DHT.
+  {Fore.CYAN}file_launch{Style.RESET_ALL}            - Launch a file from a node.
+  {Fore.CYAN}file_parallel{Style.RESET_ALL}          - Launch files in parallel to different nodes.
+  {Fore.CYAN}help{Style.RESET_ALL}                   - Display this help message.
+  {Fore.CYAN}exit{Style.RESET_ALL}                   - Exit the client.
 """
     print(help_text)
 
@@ -56,30 +70,50 @@ def launch_file(i, node_ip, node_port, launch_type):
     elif launch_type == "request":
         file_path = os.path.join("..", "data", "requests_" + str(i) + ".txt")
         with open(file_path, "r") as file:
-            while True:
-                line = file.readline().strip()
-                if not line:  # Break if end of file
-                    break
-                parts = line.split(", ")
-                request_type = parts[0]
-                key = parts[1]
-                if request_type == "query":
-                    data = {"key": key}
-                    resp = send_request("POST", base_url, "/query", data=data)
-                    print(resp)
-                elif request_type == "insert":
-                    value = parts[2]
-                    data = {"key": key, "value": value}
-                    resp = send_request("POST", base_url, "/insert", data=data)
-                    print(resp)
+            counter = 0
+            with open("output.txt", "a") as f:
+                while True:
+                    line = file.readline().strip()
+                    if not line:  # Break if end of file
+                        break
+                    parts = line.split(", ")
+                    request_type = parts[0]
+                    key = parts[1]
+                    if request_type == "query":
+                        data = {"key": key}
+                        query_url  = base_url + "/query"
+                        q_resp = requests.post(query_url, json=data)
+                       # print(q_resp.json(), flush=True)
+                        f.write(str(q_resp.json()) + "\n")
+
+                    elif request_type == "insert":
+                        value = parts[2]
+                        data = {"key": key, "value": value}
+                        insert_url = base_url + "/insert"
+                        ins_resp = requests.post(insert_url, json=data)
+                        # print to a file no to the console
+                        f.write(str(ins_resp.json()) + "\n")
     else:
         print("Available type of launch: insert, query, request")
 
 
 
 
+# Define a history file path
+history_file = os.path.join(os.path.expanduser("~"), ".chordify_cli_history")
+
+# Try to read an existing history file
+try:
+    readline.read_history_file(history_file)
+except FileNotFoundError:
+    pass
+
+# Ensure the history is saved when the program exits
+atexit.register(readline.write_history_file, history_file)
+
 
 def main():
+    print_banner()
     print("Chordify CLI Client (Flask-based)")
     print("Type 'help' to see available commands.")
     while True:
