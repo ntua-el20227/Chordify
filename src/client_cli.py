@@ -50,27 +50,28 @@ def launch_file(i, node_ip, node_port, launch_type):
     if launch_type == "insert":
         file_path = os.path.join("..", "data", "insert_" + str(i) + ".txt")
         with open(file_path, "r") as file:
-            while True:
-                line = file.readline()
-                if not line:  # Break if end of file
-                    break
-                data = {"key": line.strip(), "value": f"{node_ip}:{node_port}"}
-                resp = send_request("POST", base_url, "/insert", data=data)
-                print(resp)
+            with open("output.txt", "a") as f:
+                while True:
+                    line = file.readline()
+                    if not line:  # Break if end of file
+                        break
+                    data = {"key": line.strip(), "value": f"{node_ip}:{node_port}"}
+                    ins_resp = send_request("POST", base_url, "/insert", data=data)
+                    f.write(str(ins_resp) + "\n")
     elif launch_type == "query":
         file_path = os.path.join("..", "data", "query_" + str(i) + ".txt")
         with open(file_path, "r") as file:
-            while True:
-                line = file.readline()
-                if not line:  # Break if end of file
-                    break
-                data = {"key": line.strip()}
-                resp = send_request("POST", base_url, "/query", data=data)
-                print(resp)
+            with open("output.txt", "a") as f:
+                while True:
+                    line = file.readline()
+                    if not line:  # Break if end of file
+                        break
+                    data = {"key": line.strip()}
+                    q_resp = send_request("POST", base_url, "/query", data=data)
+                    f.write(str(q_resp) + "\n")
     elif launch_type == "request":
         file_path = os.path.join("..", "data", "requests_" + str(i) + ".txt")
         with open(file_path, "r") as file:
-            counter = 0
             with open("output.txt", "a") as f:
                 while True:
                     line = file.readline().strip()
@@ -81,18 +82,14 @@ def launch_file(i, node_ip, node_port, launch_type):
                     key = parts[1]
                     if request_type == "query":
                         data = {"key": key}
-                        query_url  = base_url + "/query"
-                        q_resp = requests.post(query_url, json=data)
-                       # print(q_resp.json(), flush=True)
-                        f.write(str(q_resp.json()) + "\n")
+                        q_resp = send_request("POST", base_url, "/query", data=data)
+                        f.write(str(q_resp) + "\n")
 
                     elif request_type == "insert":
                         value = parts[2]
                         data = {"key": key, "value": value}
-                        insert_url = base_url + "/insert"
-                        ins_resp = requests.post(insert_url, json=data)
-                        # print to a file no to the console
-                        f.write(str(ins_resp.json()) + "\n")
+                        ins_resp = send_request("POST", base_url, "/insert", data=data)
+                        f.write(str(ins_resp) + "\n")
     else:
         print("Available type of launch: insert, query, request")
 
