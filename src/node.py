@@ -64,7 +64,7 @@ class Node:
                                  args=(key, value, replication_count, False, self.node_id), daemon=True,
                                  name="forward_replicate")
             t.start()  # Start the thread
-            return {"status": "success", "message": f"Eventually inserted '{key}' at node {self.node_id}"}
+            return {"status": "success", "message": f"Eventually inserted at node {self.ip}:{self.port}", "key": key, "value": value}
         else:
             assert self.consistency == "linearizability", "Chain replication is only supported with linearizable consistency"
             # If primary, apply the write locally.
@@ -72,8 +72,7 @@ class Node:
             print(f"[WRITE] Node {self.node_id} stored key '{key}' with value '{self.data_store[key]}'")
             # Call the successor to insert replicas.
             self.forward_replicate(key, value, replication_count, False, self.node_id)
-            return {"status": "success",
-                    "message": f"Inserted '{key}' at node {self.node_id}"}  # Return success message
+            return {"status": "success", "message": f"Inserted at node {self.ip}:{self.port}", "key": key, "value": value} # Return success message
 
     def insertReplicas(self, key, value, replication_count, join=False, starting_node=None):
         """
@@ -156,7 +155,8 @@ class Node:
                 primary_value = self.data_store.get(key, "Key not found")
                 if primary_value != "Key not found":
                     print(f"[READ-EC] Node {self.node_id} found primary for '{key}' with value '{primary_value}'")
-                    return {"status": "success", "value": primary_value, "node_id": self.node_id}
+                    return {"status": f"success from  NODE {self.ip}:{self.port}", "key": key, "value": primary_value}
+
                 else:
                     return {"status": "error", "message": f"Key '{key}' not found in node {self.node_id}"}
                 
@@ -164,7 +164,8 @@ class Node:
             replica_value, _ = self.replicas.get(key, ("Key not found", 0))
             if replica_value != "Key not found":
                 print(f"[READ-EC] Node {self.node_id} found replica for '{key}' with value '{replica_value}'")
-                return {"status": "success", "replica value": replica_value, "node_id": self.node_id}
+                return {"status": f"success from  replica NODE {self.ip}:{self.port}", "key": key, "replica value": replica_value}
+
             
             # Forward the query to the responsible node.
             url = f"http://{self.successor['ip']}:{self.successor['port']}/query"
@@ -178,7 +179,8 @@ class Node:
             # Corner case: if the node is the only one in the ring
             if self.node_id == self.predecessor["node_id"]:
                 if key in self.data_store:
-                    return {"status": "success", "value": self.data_store[key]}
+                    return {"status": f"success from  NODE {self.ip}:{self.port}", "key": key, "value": self.data_store[key]}
+
                 else:
                     return {"status": "error", "message": f"Key '{key}' not found in the only node in the ring"}
 
@@ -254,7 +256,7 @@ class Node:
         if replica_value != "Key not found" and (
                 rep_count == 1 or successor['node_id'] == starting_id):  # Only the tail node returns the final value.
             print(f"[READ-LIN] Tail node {port} returning final value '{replica_value}' for key '{key}'")
-            return {"status": f"success from TAIL NODE {port}", "key": key, "value": replica_value}
+            return {"status": f"success from TAIL NODE {ip}:{port}", "key": key, "value": replica_value}
         else:
             if replication_count > 1:
                 print(f"[READ-LIN] Node {port} forwarding query for key '{key}' to node {successor['port']}")
@@ -499,7 +501,6 @@ class Node:
         for key, value in keys.items():
             self.forward_replicate(key, value, self.k_factor, True, self.node_id)
 
-    # TODO: Implement the depart method for replication
     def depart(self):
         """
         Handle graceful departure of this node.
