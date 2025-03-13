@@ -255,4 +255,4 @@ def cli_loop():
 
 if __name__ == "__main__":
     threading.Thread(target=cli_loop, daemon=True).start()
-    cli_server.run(host="0.0.0.0", port=8888)
+    cli_server.run(host="10.2.20.230", port=8888)
