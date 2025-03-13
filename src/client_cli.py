@@ -7,6 +7,7 @@ import os
 import atexit
 from colorama import init, Fore, Style
 import readline
+import time
 
 def print_banner():
     f = Figlet(font='slant')  # You can choose other fonts like 'standard', 'big', etc.
@@ -45,46 +46,51 @@ def launch_file(i, node_ip, node_port, launch_type):
     if launch_type == "insert":
         file_path = os.path.join("..", "data", "insert_" + str(i) + ".txt")
         with open(file_path, "r") as file:
-            with open("output.txt", "a") as f:
+            with open("output.txt", "w") as f:
+                count = 0
                 while True:
                     line = file.readline()
                     if not line:  # Break if end of file
                         break
+                    count+=1
                     data = {"key": line.strip(), "value": f"{node_ip}:{node_port}"}
                     ins_resp = send_request("POST", base_url, "/insert", data=data)
-                    f.write(str(ins_resp) + "\n")
+                    print(str(ins_resp) + f" | Command {count} from file {i}", flush = True)
     elif launch_type == "query":
         file_path = os.path.join("..", "data", "query_" + str(i) + ".txt")
         with open(file_path, "r") as file:
-            with open("output.txt", "a") as f:
+            with open("output.txt", "w") as f:
+                count = 0
                 while True:
                     line = file.readline()
                     if not line:  # Break if end of file
                         break
+                    count+=1
                     data = {"key": line.strip()}
                     q_resp = send_request("POST", base_url, "/query", data=data)
-                    f.write(str(q_resp) + "\n")
+                    print(str(q_resp) + f" | Command {count} from file {i}", flush = True)
     elif launch_type == "request":
         file_path = os.path.join("..", "data", "requests_" + str(i) + ".txt")
         with open(file_path, "r") as file:
-            with open("output.txt", "a") as f:
+            with open("output.txt", "w") as f:
+                count = 0
                 while True:
                     line = file.readline().strip()
                     if not line:  # Break if end of file
                         break
+                    count+=1
                     parts = line.split(", ")
                     request_type = parts[0]
                     key = parts[1]
                     if request_type == "query":
                         data = {"key": key}
                         q_resp = send_request("POST", base_url, "/query", data=data)
-                        f.write(str(q_resp) + "\n")
-
+                        print(str(q_resp) + f" | Command {count} from file {i}", flush = True)
                     elif request_type == "insert":
                         value = parts[2]
                         data = {"key": key, "value": value}
                         ins_resp = send_request("POST", base_url, "/insert", data=data)
-                        f.write(str(ins_resp) + "\n")
+                        print(str(ins_resp) + f" | Command {count} from file {i}", flush = True)
     else:
         print("Available type of launch: insert, query, request")
 
@@ -210,12 +216,8 @@ def main():
             node_list = [(node["ip"], node["port"]) for node in resp["overlay"]]
 
             with ThreadPoolExecutor(max_workers=len(node_list)) as executor:
-                futures = []
                 for i, (ip, port) in enumerate(node_list):
-                    futures.append(executor.submit(launch_file, i, ip, port, launch_type))
-                
-                for future in futures:
-                    future.result()
+                    executor.submit(launch_file, i, ip, port, launch_type)
         else:
             print("Unknown command. Type 'help' for available commands.")
 
