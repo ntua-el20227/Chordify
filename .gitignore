@@ -3,3 +3,4 @@
 app_finger_tables.py
 client_finger.py
 .venv
+__pycache__
