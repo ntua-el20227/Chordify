@@ -1,5 +1,4 @@
 import requests
-import hashlib
 import threading
 import helper_functions as hf
 
