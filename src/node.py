@@ -45,7 +45,6 @@ class Node:
           - If primary, write locally and then call insertReplicas if replication_count > 1.
         """
         client_url = f"http://{client_ip}:{client_port}/reception"
-        print(client_url, "#########################################")
         
         # Check if the node is primary for the key.
         key_hash = hf.hash_function(key)
@@ -113,7 +112,6 @@ class Node:
         """
         if client_ip:
             client_url = f"http://{client_ip}:{client_port}/reception"
-            print(client_url,"$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
         
         if self.successor["node_id"] != starting_node:
             print(key)
@@ -161,7 +159,6 @@ class Node:
           - If read_count is provided, we are already in the chain query.
         """
         client_url = f"http://{client_ip}:{client_port}/reception"
-        print(client_url, "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%")
 
         if key == "*":
              return self.query_all_nodes()
@@ -280,7 +277,6 @@ class Node:
         the query to the successor with a decremented replication count.
         """
         client_url = f"http://{client_ip}:{client_port}/reception"
-        print(client_url, "$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
         # Get the info of current node
         url = f"http://{ip}:{port}/node_info"
         response = requests.get(url)
