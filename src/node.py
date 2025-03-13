@@ -30,7 +30,7 @@ class Node:
         print(f"[START] Node {self.node_id} at {self.ip}:{self.port}")
         print(f"[CONFIG] Consistency: {self.consistency}, Replication Factor: {self.k_factor}")
 
-    def insert(self, key, value):
+    def insert(self, key, value, client_ip, client_port):
         """
         Primary insertion method.
 
@@ -44,12 +44,14 @@ class Node:
             If not, forward the request.
           - If primary, write locally and then call insertReplicas if replication_count > 1.
         """
+        client_url = f"http://{client_ip}:{client_port}/reception"
+        
         # Check if the node is primary for the key.
         key_hash = hf.hash_function(key)
         if not (self.node_id == self.predecessor["node_id"] or hf.in_interval(key_hash, self.predecessor["node_id"],
                                                                               self.node_id)):
             url = f"http://{self.successor['ip']}:{self.successor['port']}/insert"
-            response = requests.post(url, json={"key": key, "value": value})
+            response = requests.post(url, json={"key": key, "value": value, "client_ip": client_ip, "client_port": client_port})
             print(f"[WRITE] Forwarded insert request for key '{key}' to node {self.successor['node_id']}")
             return response.json()
 
@@ -61,20 +63,23 @@ class Node:
             # Asynchronously propagate the update if needed.
             # Call the successor to insert replicas.
             t = threading.Thread(target=self.forward_replicate,
-                                 args=(key, value, replication_count, False, self.node_id), daemon=True,
+                                 args=(key, value, replication_count, False, self.node_id, client_ip, client_port), daemon=True,
                                  name="forward_replicate")
             t.start()  # Start the thread
-            return {"status": "success", "message": f"Eventually inserted at node {self.ip}:{self.port}", "key": key, "value": value, "timestamp": datetime.now().strftime("%H:%M:%S")}
+            ## TODO return from first (primary) node, check
+            client_message = {"status": "success", "message": f"Eventually inserted at node {self.ip}:{self.port}", "key": key, "value": value, "timestamp": datetime.now().strftime("%H:%M:%S")}
+            requests.post(client_url, json=client_message)
+            return client_message
         else:
             assert self.consistency == "linearizability", "Chain replication is only supported with linearizable consistency"
             # If primary, apply the write locally.
             self.data_store[key] = self.data_store.get(key, "") + value # Concatenate the value if the key already exists
             print(f"[WRITE] Node {self.node_id} stored key '{key}' with value '{self.data_store[key]}'")
             # Call the successor to insert replicas.
-            self.forward_replicate(key, value, replication_count, False, self.node_id)
+            self.forward_replicate(key, value, replication_count, False, self.node_id, client_ip, client_port)
             return {"status": "success", "message": f"Inserted at node {self.ip}:{self.port}", "key": key, "value": value, "timestamp": datetime.now().strftime("%H:%M:%S")} # Return success message
 
-    def insertReplicas(self, key, value, replication_count, join=False, starting_node=None):
+    def insertReplicas(self, key, value, replication_count, join=False, starting_node=None, client_ip=None, client_port=None):
         """
         Replica insertion method for chain replication.
 
@@ -98,13 +103,16 @@ class Node:
             print(
                 f"[WRITE_JOIN/DEPART] Node {self.node_id} stored replica key '{key}' with value '{self.replicas[key]}' and replica_count:{replication_count}")
         # If more replicas are needed, forward the request.
-        self.forward_replicate(key, value, replication_count, join, starting_node)
+        self.forward_replicate(key, value, replication_count, join, starting_node, client_ip, client_port)
 
-    def forward_replicate(self, key, value, replication_count, join, starting_node):
+    def forward_replicate(self, key, value, replication_count, join, starting_node, client_ip=None, client_port=None):
         """
         Asynchronously propagate the write for eventual consistency.
         Decrement replication_count before sending to ensure exactly kfactor copies.
         """
+        if client_ip:
+            client_url = f"http://{client_ip}:{client_port}/reception"
+        
         if self.successor["node_id"] != starting_node:
             print(key)
             print(value)
@@ -116,14 +124,26 @@ class Node:
                         "value": value,
                         "replication_count": int(replication_count) - 1,
                         "join": join,
-                        "starting_node": starting_node
+                        "starting_node": starting_node,
+                        "client_ip": client_ip,
+                        "client_port": client_port
                     })
                 except Exception as e:
                     print(f"[ERROR] Forward replication failed at node {self.node_id}: {e}")
+            else:
+                ## TODO return from last node of the chain, only from linearizability, check
+                if(self.consistency == "linearizability" and client_ip):
+                    client_message = {"status": "success", "message": f"Inserted at tail node {self.ip}:{self.port}", "key": key, "value": value, "timestamp": datetime.now().strftime("%H:%M:%S")}
+                    requests.post(client_url, json=client_message)
+                print(f"Circular replication completed for key '{key}'")
         else:
+            ## TODO return from last node of the chain, check
+            if(self.consistency == "linearizability" and client_ip):
+                client_message = {"status": "success", "message": f"Inserted at tail node {self.ip}:{self.port}", "key": key, "value": value, "timestamp": datetime.now().strftime("%H:%M:%S")}
+                requests.post(client_url, json=client_message)
             print(f"Circular replication completed for key '{key}'")
 
-    def query(self, key):
+    def query(self, key, client_ip, client_port):
         """
         Query operation supporting both eventual and linearizable consistency.
 
@@ -138,6 +158,8 @@ class Node:
             query with a replication count of self.k_factor.
           - If read_count is provided, we are already in the chain query.
         """
+        client_url = f"http://{client_ip}:{client_port}/reception"
+        
         if key == "*":
              return self.query_all_nodes()
             
@@ -155,21 +177,27 @@ class Node:
                 primary_value = self.data_store.get(key, "Key not found")
                 if primary_value != "Key not found":
                     print(f"[READ-EC] Node {self.node_id} found primary for '{key}' with value '{primary_value}'")
-                    return {"status": f"success from  NODE {self.ip}:{self.port}", "key": key, "value": primary_value, "timestamp": datetime.now().strftime("%H:%M:%S")}
+                    ##TODO return original, check             
+                    client_message = {"status": f"success from  NODE {self.ip}:{self.port}", "key": key, "value": primary_value, "timestamp": datetime.now().strftime("%H:%M:%S")}
 
                 else:
-                    return {"status": "error", "message": f"Key '{key}' not found in node {self.node_id}"}
-                
+                    ##TODO not found, check
+                    client_message = {"status": "error", "message": f"Key '{key}' not found in node {self.node_id}"}
+
+                requests.post(client_url, json=client_message)
+                return client_message    
             # Check replica store (stale values are acceptable).
             replica_value, _ = self.replicas.get(key, ("Key not found", 0))
             if replica_value != "Key not found":
                 print(f"[READ-EC] Node {self.node_id} found replica for '{key}' with value '{replica_value}'")
-                return {"status": f"success from  replica NODE {self.ip}:{self.port}", "key": key, "replica value": replica_value, "timestamp": datetime.now().strftime("%H:%M:%S")}
-
+                ## TODO return replica, check               
+                client_message = {"status": f"success from  replica NODE {self.ip}:{self.port}", "key": key, "replica value": replica_value, "timestamp": datetime.now().strftime("%H:%M:%S")}
+                requests.post(client_url, json=client_message)
+                return client_message
             
             # Forward the query to the responsible node.
             url = f"http://{self.successor['ip']}:{self.successor['port']}/query"
-            response = requests.post(url, json={"key": key})
+            response = requests.post(url, json={"key": key, "client_ip": client_ip, "client_port": client_port})
             return response.json()
             
         else:
@@ -179,20 +207,37 @@ class Node:
             # Corner case: if the node is the only one in the ring
             if self.node_id == self.predecessor["node_id"]:
                 if key in self.data_store:
-                    return {"status": f"success from  NODE {self.ip}:{self.port}", "key": key, "value": self.data_store[key], "timestamp": datetime.now().strftime("%H:%M:%S")}
-
+                    ## TODO return original, one node, check
+                    client_message = {"status": f"success from  NODE {self.ip}:{self.port}", "key": key, "value": self.data_store[key], "timestamp": datetime.now().strftime("%H:%M:%S")}
+                    requests.post(client_url, json=client_message)
+                    return client_message
+                
                 else:
-                    return {"status": "error", "message": f"Key '{key}' not found in the only node in the ring"}
+                    ## TODO not found, check
+                    client_message = {"status": "error", "message": f"Key '{key}' not found in the only node in the ring"}
+                    requests.post(client_url, json=client_message)
+                    return client_message
 
             # Initial query: ensure the query starts at the node responsible for the key.
             if not hf.in_interval(key_hash, self.predecessor["node_id"], self.node_id):
                 # Forward the query to the responsible node.
                 url = f"http://{self.successor['ip']}:{self.successor['port']}/query"
-                response = requests.post(url, json={"key": key})
+                response = requests.post(url, json={"key": key, "client_ip": client_ip, "client_port": client_port})
                 return response.json()
             else:
+                # case of kfactor 1.
+                if(self.k_factor == 1):
+                    if key in self.data_store:
+                        client_message = {"status": f"success from  NODE {self.ip}:{self.port}", "key": key, "value": self.data_store[key], "timestamp": datetime.now().strftime("%H:%M:%S")}
+                        requests.post(client_url, json=client_message)
+                        return client_message
+                    else:
+                        client_message = {"status": "error", "message": f"Key '{key}' not found in node {self.node_id}"}
+                        requests.post(client_url, json=client_message)
+                        return client_message
+                    
                 return self.query_chain(self.successor['ip'], self.successor['port'], key, self.k_factor - 1,
-                                        self.node_id)
+                                        self.node_id, client_ip, client_port)
 
     def query_all_nodes(self):
         """
@@ -221,19 +266,9 @@ class Node:
                                 replicas=node_info["replicas"], successor=node_info["successor"],
                                 predecessor=node_info["predecessor"])
             
-            
         return {"status": "success", "all_data": all_data}
 
-    def forward_query_eventual(self, key):
-        """Forward an eventual consistency query to the successor."""
-        try:
-            url = f"http://{self.successor['ip']}:{self.successor['port']}/query"
-            response = requests.post(url, json={"key": key})
-            return response.json()
-        except Exception as e:
-            return {"status": "error", "message": f"Eventual query forwarding failed: {e}"}
-
-    def query_chain(self, ip, port, key, replication_count, starting_id):
+    def query_chain(self, ip, port, key, replication_count, starting_id, client_ip, client_port):
         """
         Handle a linearizable consistency query as part of a chain replication.
 
@@ -241,6 +276,8 @@ class Node:
         then this node is the tail and returns the final value. Otherwise, forward
         the query to the successor with a decremented replication count.
         """
+        client_url = f"http://{client_ip}:{client_port}/reception"
+        
         # Get the info of current node
         url = f"http://{ip}:{port}/node_info"
         response = requests.get(url)
@@ -256,13 +293,19 @@ class Node:
         if replica_value != "Key not found" and (
                 rep_count == 1 or successor['node_id'] == starting_id):  # Only the tail node returns the final value.
             print(f"[READ-LIN] Tail node {port} returning final value '{replica_value}' for key '{key}'")
-            return {"status": f"success from TAIL NODE {ip}:{port}", "key": key, "value": replica_value, "timestamp": datetime.now().strftime("%H:%M:%S")}
+            ## TODO return original from tail, check
+            client_message = {"status": f"success from TAIL NODE {ip}:{port}", "key": key, "value": replica_value, "timestamp": datetime.now().strftime("%H:%M:%S")}
+            requests.post(client_url, json=client_message)
+            return client_message
         else:
             if replication_count > 1:
                 print(f"[READ-LIN] Node {port} forwarding query for key '{key}' to node {successor['port']}")
-                return self.query_chain(successor['ip'], successor['port'], key, replication_count - 1, starting_id)
+                return self.query_chain(successor['ip'], successor['port'], key, replication_count - 1, starting_id, client_ip, client_port)
             else:
-                return {"status": "error", "message": f"Key '{key}' not found in linearizable chain"}
+                ## TODO not found, check
+                client_message = {"status": "error", "message": f"Key '{key}' not found in linearizable chain"}
+                requests.post(client_url, json=client_message)
+                return client_message
 
     def delete(self, key):
         """
@@ -509,7 +552,6 @@ class Node:
         # Inform predecessor to update its successor.
         url_pred = f"http://{self.predecessor['ip']}:{self.predecessor['port']}/update_successor"
         requests.post(url_pred, json={"new_successor": self.successor})
-        # TODO : 1 node left when departing
         # Inform successor to update its predecessor.
         url_succ = f"http://{self.successor['ip']}:{self.successor['port']}/update_predecessor"
         requests.post(url_succ, json={"new_predecessor": self.predecessor})

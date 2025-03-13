@@ -8,8 +8,9 @@ import os
 import atexit
 from colorama import init, Fore, Style
 import readline
-import time
 import threading
+import sys
+import logging
 
 cli_server = Flask(__name__)
 
@@ -58,7 +59,7 @@ def launch_file(i, node_ip, node_port, launch_type):
                     if not line:  # Break if end of file
                         break
                     count+=1
-                    data = {"key": line.strip(), "value": f"{node_ip}:{node_port}"}
+                    data = {"key": line.strip(), "value": f"{node_ip}:{node_port}", "client_ip": node_ip, "client_port": 8888}
                     ins_resp = send_request("POST", base_url, "/insert", data=data)
                     #print(str(ins_resp) + f" | Command {count} from file {i}", file=f, flush=True)
     elif launch_type == "query":
@@ -71,7 +72,7 @@ def launch_file(i, node_ip, node_port, launch_type):
                     if not line:  # Break if end of file
                         break
                     count+=1
-                    data = {"key": line.strip()}
+                    data = {"key": line.strip(), "client_ip": node_ip, "client_port": 8888}
                     q_resp = send_request("POST", base_url, "/query", data=data)
                     #print(str(q_resp) + f" | Command {count} from file {i}", file=f, flush=True)
     elif launch_type == "request":
@@ -88,13 +89,13 @@ def launch_file(i, node_ip, node_port, launch_type):
                     request_type = parts[0]
                     key = parts[1]
                     if request_type == "query":
-                        data = {"key": key}
+                        data = {"key": key, "client_ip": node_ip, "client_port": 8888}
                         q_resp = send_request("POST", base_url, "/query", data=data)
                         #print(str(q_resp) + f" | Command {count} from file {i}", file=f, flush=True)
 
                     elif request_type == "insert":
                         value = parts[2]
-                        data = {"key": key, "value": value}
+                        data = {"key": key, "value": value, "client_ip": node_ip, "client_port": 8888}
                         ins_resp = send_request("POST", base_url, "/insert", data=data)
                         #print(str(ins_resp) + f" | Command {count} from file {i}", file=f, flush=True)
     else:
@@ -135,7 +136,7 @@ def reception():
 
 
 
-def cli_loop():
+def cli_loop(client_ip):
     with open("output.txt", "w") as f:
         pass  
     print_banner()
@@ -168,7 +169,7 @@ def cli_loop():
             value = tokens[2]
             node_ip = tokens[3]
             node_port = tokens[4]
-            data = {"key": key, "value": value}
+            data = {"key": key, "value": value, "client_ip": client_ip, "client_port": 8888}
             base_url = f"http://{node_ip}:{node_port}"
             resp = send_request("POST", base_url, "/insert", data=data)
             print(resp)
@@ -190,7 +191,7 @@ def cli_loop():
             key = tokens[1]
             node_ip = tokens[2]
             node_port = tokens[3]
-            data = {"key": key}
+            data = {"key": key, "client_ip": client_ip, "client_port": 8888}
             base_url = f"http://{node_ip}:{node_port}"
             resp = send_request("POST", base_url, "/query", data=data)
             print(resp)
@@ -253,6 +254,11 @@ def cli_loop():
         else:
             print("Unknown command. Type 'help' for available commands.")
 
+# Disable Flask API logs
+log = logging.getLogger('werkzeug')
+log.setLevel(logging.ERROR)
+
 if __name__ == "__main__":
-    threading.Thread(target=cli_loop, daemon=True).start()
-    cli_server.run(host="10.2.20.230", port=8888)
+    client_ip = sys.argv[1]
+    threading.Thread(target=cli_loop, args=(client_ip,), daemon=True).start()
+    cli_server.run(host=client_ip, port=8888)
