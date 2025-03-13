@@ -1,0 +1,500 @@
+{'message': "Key 'Hey Jude' not found in linearizable chain", 'status': 'error'} | Command 1 from file 0
+{'message': "Key 'Respect' not found in linearizable chain", 'status': 'error'} | Command 1 from file 8
+{'key': 'Respect', 'message': 'Inserted at node 10.0.20.227:5001', 'status': 'success', 'value': '553'} | Command 1 from file 9
+{'message': "Key 'Like a Rolling Stone' not found in linearizable chain", 'status': 'error'} | Command 1 from file 6
+{'message': "Key 'Hey Jude' not found in linearizable chain", 'status': 'error'} | Command 2 from file 9
+{'message': "Key 'Hey Jude' not found in linearizable chain", 'status': 'error'} | Command 1 from file 5
+{'message': "Key 'What's Going On' not found in linearizable chain", 'status': 'error'} | Command 1 from file 1
+{'message': "Key 'Like a Rolling Stone' not found in linearizable chain", 'status': 'error'} | Command 1 from file 4
+{'message': "Key 'Hey Jude' not found in linearizable chain", 'status': 'error'} | Command 3 from file 9
+{'message': "Key 'Hey Jude' not found in linearizable chain", 'status': 'error'} | Command 1 from file 3
+{'key': 'Like a Rolling Stone', 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '583'} | Command 1 from file 2
+{'message': "Key 'Hey Jude' not found in linearizable chain", 'status': 'error'} | Command 4 from file 9
+{'key': 'Respect', 'message': 'Inserted at node 10.0.20.227:5001', 'status': 'success', 'value': '528'} | Command 2 from file 0
+{'message': "Key 'Hey Jude' not found in linearizable chain", 'status': 'error'} | Command 3 from file 0
+{'key': 'Respect', 'status': 'success from TAIL NODE 10.0.20.41:5001', 'value': '553528'} | Command 2 from file 6
+{'key': 'Like a Rolling Stone', 'message': 'Inserted at node 10.0.20.137:5001', 'status': 'success', 'value': '583'} | Command 1 from file 7
+{'key': 'Like a Rolling Stone', 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '583'} | Command 2 from file 5
+{'message': "Key 'What's Going On' not found in linearizable chain", 'status': 'error'} | Command 2 from file 8
+{'key': 'Like a Rolling Stone', 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '583'} | Command 3 from file 6
+{'message': "Key 'What's Going On' not found in linearizable chain", 'status': 'error'} | Command 2 from file 1
+{'key': 'Respect', 'status': 'success from TAIL NODE 10.0.20.41:5001', 'value': '553528'} | Command 5 from file 9
+{'message': "Key 'What's Going On' not found in linearizable chain", 'status': 'error'} | Command 3 from file 5
+{'message': "Key 'Hey Jude' not found in linearizable chain", 'status': 'error'} | Command 2 from file 3
+{'key': 'Like a Rolling Stone', 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '583'} | Command 4 from file 0
+{'key': 'Respect', 'status': 'success from TAIL NODE 10.0.20.41:5001', 'value': '553528'} | Command 2 from file 4
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524'} | Command 3 from file 8
+{'key': 'Hey Jude', 'message': 'Inserted at node 10.0.20.230:5000', 'status': 'success', 'value': '524'} | Command 2 from file 2
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524'} | Command 4 from file 6
+{'key': 'Respect', 'status': 'success from TAIL NODE 10.0.20.41:5001', 'value': '553528'} | Command 4 from file 8
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524'} | Command 4 from file 5
+{'message': "Key 'What's Going On' not found in linearizable chain", 'status': 'error'} | Command 6 from file 9
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524'} | Command 3 from file 1
+{'key': "What's Going On", 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '510'} | Command 5 from file 6
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524'} | Command 3 from file 4
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524'} | Command 3 from file 3
+{'key': "What's Going On", 'message': 'Inserted at node 10.0.20.137:5001', 'status': 'success', 'value': '510'} | Command 2 from file 7
+{'key': "What's Going On", 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '510'} | Command 6 from file 6
+{'key': 'Like a Rolling Stone', 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '583'} | Command 3 from file 2
+{'key': 'Respect', 'status': 'success from TAIL NODE 10.0.20.41:5001', 'value': '553528'} | Command 5 from file 8
+{'key': 'Hey Jude', 'message': 'Inserted at node 10.0.20.230:5000', 'status': 'success', 'value': '539'} | Command 7 from file 9
+{'key': 'Respect', 'status': 'success from TAIL NODE 10.0.20.41:5001', 'value': '553528'} | Command 5 from file 0
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539'} | Command 5 from file 5
+{'key': 'Like a Rolling Stone', 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '583'} | Command 4 from file 2
+{'key': 'Respect', 'status': 'success from TAIL NODE 10.0.20.41:5001', 'value': '553528'} | Command 4 from file 4
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539'} | Command 4 from file 1
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539'} | Command 3 from file 7
+{'key': 'Respect', 'message': 'Inserted at node 10.0.20.227:5001', 'status': 'success', 'value': '516'} | Command 7 from file 6
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561'} | Command 8 from file 9
+{'key': 'Hey Jude', 'message': 'Inserted at node 10.0.20.230:5000', 'status': 'success', 'value': '561'} | Command 6 from file 8
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561'} | Command 9 from file 9
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561'} | Command 4 from file 3
+{'key': 'Respect', 'status': 'success from TAIL NODE 10.0.20.41:5001', 'value': '553528516522'} | Command 6 from file 5
+{'key': 'Respect', 'message': 'Inserted at node 10.0.20.227:5001', 'status': 'success', 'value': '522'} | Command 6 from file 0
+{'key': 'Respect', 'status': 'success from TAIL NODE 10.0.20.41:5001', 'value': '553528516522'} | Command 7 from file 8
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561'} | Command 4 from file 7
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561'} | Command 8 from file 6
+{'key': 'Like a Rolling Stone', 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '583'} | Command 5 from file 3
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561'} | Command 5 from file 1
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542'} | Command 10 from file 9
+{'key': 'Respect', 'message': 'Inserted at node 10.0.20.227:5001', 'status': 'success', 'value': '554'} | Command 8 from file 8
+{'key': 'Hey Jude', 'message': 'Inserted at node 10.0.20.230:5000', 'status': 'success', 'value': '542'} | Command 7 from file 0
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561'} | Command 5 from file 4
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542'} | Command 7 from file 5
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542'} | Command 5 from file 7
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513'} | Command 8 from file 0
+{'key': 'Hey Jude', 'message': 'Inserted at node 10.0.20.230:5000', 'status': 'success', 'value': '513'} | Command 9 from file 6
+{'key': 'Respect', 'status': 'success from TAIL NODE 10.0.20.41:5001', 'value': '553528516522554'} | Command 11 from file 9
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542'} | Command 5 from file 2
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558'} | Command 9 from file 0
+{'key': 'Hey Jude', 'message': 'Inserted at node 10.0.20.230:5000', 'status': 'success', 'value': '558'} | Command 9 from file 8
+{'key': 'Like a Rolling Stone', 'message': 'Inserted at node 10.0.20.137:5001', 'status': 'success', 'value': '575'} | Command 10 from file 6
+{'key': 'Respect', 'status': 'success from TAIL NODE 10.0.20.41:5001', 'value': '553528516522554'} | Command 6 from file 3
+{'key': 'Respect', 'status': 'success from TAIL NODE 10.0.20.41:5001', 'value': '553528516522554'} | Command 12 from file 9
+{'key': 'Like a Rolling Stone', 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '583575'} | Command 8 from file 5
+{'key': "What's Going On", 'message': 'Inserted at node 10.0.20.137:5001', 'status': 'success', 'value': '590'} | Command 6 from file 2
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558'} | Command 10 from file 8
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558'} | Command 6 from file 7
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558'} | Command 13 from file 9
+{'key': 'Respect', 'status': 'success from TAIL NODE 10.0.20.41:5001', 'value': '553528516522554'} | Command 6 from file 1
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558'} | Command 6 from file 4
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558'} | Command 11 from file 6
+{'key': 'Like a Rolling Stone', 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '583575'} | Command 7 from file 2
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558'} | Command 9 from file 5
+{'key': 'Hey Jude', 'message': 'Inserted at node 10.0.20.230:5000', 'status': 'success', 'value': '523'} | Command 7 from file 3
+{'key': 'Hey Jude', 'message': 'Inserted at node 10.0.20.230:5000', 'status': 'success', 'value': '525'} | Command 12 from file 6
+{'key': "What's Going On", 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '510590'} | Command 7 from file 1
+{'key': 'Like a Rolling Stone', 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '583575'} | Command 11 from file 8
+{'key': 'Respect', 'status': 'success from TAIL NODE 10.0.20.41:5001', 'value': '553528516522554'} | Command 10 from file 0
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525'} | Command 7 from file 4
+{'key': 'Like a Rolling Stone', 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '583575'} | Command 14 from file 9
+{'key': "What's Going On", 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '510590'} | Command 7 from file 7
+{'key': 'Respect', 'status': 'success from TAIL NODE 10.0.20.41:5001', 'value': '553528516522554'} | Command 10 from file 5
+{'key': 'Respect', 'status': 'success from TAIL NODE 10.0.20.41:5001', 'value': '553528516522554'} | Command 13 from file 6
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525'} | Command 8 from file 2
+{'key': "What's Going On", 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '510590'} | Command 11 from file 0
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525'} | Command 8 from file 3
+{'key': "What's Going On", 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '510590'} | Command 12 from file 8
+{'key': 'Respect', 'status': 'success from TAIL NODE 10.0.20.41:5001', 'value': '553528516522554'} | Command 8 from file 7
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525'} | Command 8 from file 1
+{'key': "What's Going On", 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '510590'} | Command 11 from file 5
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525'} | Command 8 from file 4
+{'key': 'Like a Rolling Stone', 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '583575'} | Command 14 from file 6
+{'key': 'Hey Jude', 'message': 'Inserted at node 10.0.20.230:5000', 'status': 'success', 'value': '570'} | Command 13 from file 8
+{'key': 'Like a Rolling Stone', 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '583575'} | Command 15 from file 9
+{'key': 'Like a Rolling Stone', 'message': 'Inserted at node 10.0.20.137:5001', 'status': 'success', 'value': '582'} | Command 12 from file 0
+{'key': 'Like a Rolling Stone', 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '583575582'} | Command 9 from file 3
+{'key': 'Hey Jude', 'message': 'Inserted at node 10.0.20.230:5000', 'status': 'success', 'value': '505'} | Command 16 from file 9
+{'key': 'Respect', 'status': 'success from TAIL NODE 10.0.20.41:5001', 'value': '553528516522554'} | Command 12 from file 5
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570'} | Command 15 from file 6
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570'} | Command 9 from file 2
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505'} | Command 9 from file 1
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505'} | Command 9 from file 4
+{'key': 'Respect', 'message': 'Inserted at node 10.0.20.227:5001', 'status': 'success', 'value': '503'} | Command 16 from file 6
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505'} | Command 13 from file 5
+{'key': 'Like a Rolling Stone', 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '583575582'} | Command 10 from file 3
+{'key': 'Like a Rolling Stone', 'message': 'Inserted at node 10.0.20.137:5001', 'status': 'success', 'value': '504'} | Command 13 from file 0
+{'key': "What's Going On", 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '510590'} | Command 17 from file 6
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505'} | Command 10 from file 2
+{'key': "What's Going On", 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '510590'} | Command 14 from file 8
+{'key': "What's Going On", 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '510590'} | Command 17 from file 9
+{'key': 'Like a Rolling Stone', 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '583575582504'} | Command 18 from file 6
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505'} | Command 10 from file 1
+{'key': 'Respect', 'status': 'success from TAIL NODE 10.0.20.41:5001', 'value': '553528516522554503'} | Command 14 from file 5
+{'key': "What's Going On", 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '510590'} | Command 9 from file 7
+{'key': 'Like a Rolling Stone', 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '583575582504'} | Command 11 from file 3
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505'} | Command 10 from file 4
+{'key': "What's Going On", 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '510590'} | Command 19 from file 6
+{'key': "What's Going On", 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '510590'} | Command 14 from file 0
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505'} | Command 15 from file 8
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572'} | Command 11 from file 2
+{'key': 'Respect', 'status': 'success from TAIL NODE 10.0.20.41:5001', 'value': '553528516522554503'} | Command 20 from file 6
+{'key': 'Hey Jude', 'message': 'Inserted at node 10.0.20.230:5000', 'status': 'success', 'value': '572'} | Command 15 from file 5
+{'key': 'Like a Rolling Stone', 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '583575582504'} | Command 11 from file 1
+{'key': "What's Going On", 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '510590'} | Command 18 from file 9
+{'key': 'Like a Rolling Stone', 'message': 'Inserted at node 10.0.20.137:5001', 'status': 'success', 'value': '585'} | Command 12 from file 3
+{'key': 'Respect', 'message': 'Inserted at node 10.0.20.227:5001', 'status': 'success', 'value': '550'} | Command 16 from file 8
+{'key': 'Respect', 'status': 'success from TAIL NODE 10.0.20.41:5001', 'value': '553528516522554503'} | Command 11 from file 4
+{'key': "What's Going On", 'message': 'Inserted at node 10.0.20.137:5001', 'status': 'success', 'value': '531'} | Command 15 from file 0
+{'key': "What's Going On", 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '510590531'} | Command 21 from file 6
+{'key': "What's Going On", 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '510590531'} | Command 16 from file 5
+{'key': 'Like a Rolling Stone', 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '583575582504585'} | Command 10 from file 7
+{'key': "What's Going On", 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '510590531'} | Command 13 from file 3
+{'key': 'Like a Rolling Stone', 'message': 'Inserted at node 10.0.20.137:5001', 'status': 'success', 'value': '536'} | Command 12 from file 1
+{'key': "What's Going On", 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '510590531'} | Command 12 from file 4
+{'key': "What's Going On", 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '510590531'} | Command 12 from file 2
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572'} | Command 17 from file 8
+{'key': "What's Going On", 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '510590531'} | Command 17 from file 5
+{'key': "What's Going On", 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '510590531'} | Command 16 from file 0
+{'key': 'Hey Jude', 'message': 'Inserted at node 10.0.20.230:5000', 'status': 'success', 'value': '597'} | Command 22 from file 6
+{'key': "What's Going On", 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '510590531'} | Command 19 from file 9
+{'key': 'Respect', 'status': 'success from TAIL NODE 10.0.20.41:5001', 'value': '553528516522554503550'} | Command 11 from file 7
+{'key': 'Hey Jude', 'message': 'Inserted at node 10.0.20.230:5000', 'status': 'success', 'value': '511'} | Command 20 from file 9
+{'key': 'Respect', 'status': 'success from TAIL NODE 10.0.20.41:5001', 'value': '553528516522554503550'} | Command 14 from file 3
+{'key': 'Like a Rolling Stone', 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '583575582504585536'} | Command 13 from file 4
+{'key': 'Like a Rolling Stone', 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '583575582504585536520'} | Command 23 from file 6
+{'key': 'Like a Rolling Stone', 'message': 'Inserted at node 10.0.20.137:5001', 'status': 'success', 'value': '520'} | Command 13 from file 1
+{'key': 'Respect', 'message': 'Inserted at node 10.0.20.227:5001', 'status': 'success', 'value': '589'} | Command 18 from file 5
+{'key': "What's Going On", 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '510590531'} | Command 13 from file 2
+{'key': 'Respect', 'status': 'success from TAIL NODE 10.0.20.41:5001', 'value': '553528516522554503550589'} | Command 17 from file 0
+{'key': "What's Going On", 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '510590531'} | Command 24 from file 6
+{'key': "What's Going On", 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '510590531'} | Command 18 from file 8
+{'key': "What's Going On", 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '510590531'} | Command 21 from file 9
+{'key': 'Like a Rolling Stone', 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '583575582504585536520'} | Command 15 from file 3
+{'key': 'Respect', 'status': 'success from TAIL NODE 10.0.20.41:5001', 'value': '553528516522554503550589'} | Command 14 from file 1
+{'key': 'Respect', 'status': 'success from TAIL NODE 10.0.20.41:5001', 'value': '553528516522554503550589'} | Command 19 from file 8
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511'} | Command 14 from file 4
+{'key': 'Like a Rolling Stone', 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '583575582504585536520'} | Command 12 from file 7
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511'} | Command 25 from file 6
+{'key': 'Respect', 'status': 'success from TAIL NODE 10.0.20.41:5001', 'value': '553528516522554503550589'} | Command 19 from file 5
+{'key': 'Respect', 'status': 'success from TAIL NODE 10.0.20.41:5001', 'value': '553528516522554503550589584'} | Command 18 from file 0
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579'} | Command 14 from file 2
+{'key': 'Hey Jude', 'message': 'Inserted at node 10.0.20.230:5000', 'status': 'success', 'value': '579'} | Command 22 from file 9
+{'key': 'Like a Rolling Stone', 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '583575582504585536520'} | Command 20 from file 5
+{'key': 'Respect', 'message': 'Inserted at node 10.0.20.227:5001', 'status': 'success', 'value': '584'} | Command 16 from file 3
+{'key': "What's Going On", 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '510590531'} | Command 15 from file 1
+{'key': 'Hey Jude', 'message': 'Inserted at node 10.0.20.230:5000', 'status': 'success', 'value': '580'} | Command 23 from file 9
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579'} | Command 13 from file 7
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579'} | Command 15 from file 4
+{'key': 'Respect', 'message': 'Inserted at node 10.0.20.227:5001', 'status': 'success', 'value': '560'} | Command 26 from file 6
+{'key': 'Hey Jude', 'message': 'Inserted at node 10.0.20.230:5000', 'status': 'success', 'value': '557'} | Command 24 from file 9
+{'key': 'Like a Rolling Stone', 'message': 'Inserted at node 10.0.20.137:5001', 'status': 'success', 'value': '551'} | Command 20 from file 8
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557'} | Command 21 from file 5
+{'key': 'Like a Rolling Stone', 'message': 'Inserted at node 10.0.20.137:5001', 'status': 'success', 'value': '600'} | Command 27 from file 6
+{'key': 'Respect', 'status': 'success from TAIL NODE 10.0.20.41:5001', 'value': '553528516522554503550589584560'} | Command 15 from file 2
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518'} | Command 17 from file 3
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557'} | Command 16 from file 1
+{'key': 'Hey Jude', 'message': 'Inserted at node 10.0.20.230:5000', 'status': 'success', 'value': '518'} | Command 25 from file 9
+{'key': 'Respect', 'status': 'success from TAIL NODE 10.0.20.41:5001', 'value': '553528516522554503550589584560'} | Command 19 from file 0
+{'key': 'Hey Jude', 'message': 'Inserted at node 10.0.20.230:5000', 'status': 'success', 'value': '501'} | Command 26 from file 9
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518'} | Command 16 from file 4
+{'key': 'Hey Jude', 'message': 'Inserted at node 10.0.20.230:5000', 'status': 'success', 'value': '534'} | Command 28 from file 6
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518'} | Command 22 from file 5
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534'} | Command 27 from file 9
+{'key': "What's Going On", 'message': 'Inserted at node 10.0.20.137:5001', 'status': 'success', 'value': '521'} | Command 14 from file 7
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534'} | Command 16 from file 2
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534'} | Command 28 from file 9
+{'key': 'Respect', 'message': 'Inserted at node 10.0.20.227:5001', 'status': 'success', 'value': '512'} | Command 18 from file 3
+{'key': "What's Going On", 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '510590531521'} | Command 20 from file 0
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534'} | Command 21 from file 0
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534'} | Command 29 from file 6
+{'key': 'Like a Rolling Stone', 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '583575582504585536520551600'} | Command 21 from file 8
+{'key': 'Respect', 'message': 'Inserted at node 10.0.20.227:5001', 'status': 'success', 'value': '587'} | Command 23 from file 5
+{'key': 'Like a Rolling Stone', 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '583575582504585536520551600'} | Command 19 from file 3
+{'key': "What's Going On", 'message': 'Inserted at node 10.0.20.137:5001', 'status': 'success', 'value': '562'} | Command 29 from file 9
+{'key': 'Respect', 'status': 'success from TAIL NODE 10.0.20.41:5001', 'value': '553528516522554503550589584560512587'} | Command 22 from file 8
+{'key': 'Like a Rolling Stone', 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '583575582504585536520551600'} | Command 22 from file 0
+{'key': 'Respect', 'status': 'success from TAIL NODE 10.0.20.41:5001', 'value': '553528516522554503550589584560512587'} | Command 17 from file 1
+{'key': 'Hey Jude', 'message': 'Inserted at node 10.0.20.230:5000', 'status': 'success', 'value': '526'} | Command 17 from file 4
+{'key': 'Respect', 'status': 'success from TAIL NODE 10.0.20.41:5001', 'value': '553528516522554503550589584560512587'} | Command 17 from file 2
+{'key': 'Hey Jude', 'message': 'Inserted at node 10.0.20.230:5000', 'status': 'success', 'value': '596'} | Command 23 from file 0
+{'key': 'Hey Jude', 'message': 'Inserted at node 10.0.20.230:5000', 'status': 'success', 'value': '530'} | Command 30 from file 6
+{'key': 'Respect', 'status': 'success from TAIL NODE 10.0.20.41:5001', 'value': '553528516522554503550589584560512587'} | Command 30 from file 9
+{'key': 'Hey Jude', 'message': 'Inserted at node 10.0.20.230:5000', 'status': 'success', 'value': '588'} | Command 23 from file 8
+{'key': 'Like a Rolling Stone', 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '583575582504585536520551600'} | Command 24 from file 5
+{'key': "What's Going On", 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '510590531521562'} | Command 15 from file 7
+{'key': 'Like a Rolling Stone', 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '583575582504585536520551600'} | Command 24 from file 0
+{'key': 'Respect', 'status': 'success from TAIL NODE 10.0.20.41:5001', 'value': '553528516522554503550589584560512587'} | Command 31 from file 6
+{'key': "What's Going On", 'message': 'Inserted at node 10.0.20.137:5001', 'status': 'success', 'value': '537'} | Command 31 from file 9
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588'} | Command 18 from file 4
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588'} | Command 24 from file 8
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588'} | Command 25 from file 5
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588'} | Command 16 from file 7
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588'} | Command 18 from file 1
+{'key': 'Like a Rolling Stone', 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '583575582504585536520551600'} | Command 32 from file 6
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588'} | Command 18 from file 2
+{'key': 'Respect', 'message': 'Inserted at node 10.0.20.227:5001', 'status': 'success', 'value': '541'} | Command 25 from file 8
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588'} | Command 20 from file 3
+{'key': "What's Going On", 'message': 'Inserted at node 10.0.20.137:5001', 'status': 'success', 'value': '515'} | Command 19 from file 4
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588'} | Command 17 from file 7
+{'key': 'Like a Rolling Stone', 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '583575582504585536520551600'} | Command 25 from file 0
+{'key': 'Hey Jude', 'message': 'Inserted at node 10.0.20.230:5000', 'status': 'success', 'value': '568'} | Command 26 from file 5
+{'key': 'Hey Jude', 'message': 'Inserted at node 10.0.20.230:5000', 'status': 'success', 'value': '507'} | Command 33 from file 6
+{'key': "What's Going On", 'message': 'Inserted at node 10.0.20.137:5001', 'status': 'success', 'value': '546'} | Command 32 from file 9
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507'} | Command 18 from file 7
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507'} | Command 26 from file 0
+{'key': "What's Going On", 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '510590531521562537515546'} | Command 19 from file 1
+{'key': 'Like a Rolling Stone', 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '583575582504585536520551600'} | Command 34 from file 6
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507'} | Command 27 from file 0
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507'} | Command 33 from file 9
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507'} | Command 19 from file 2
+{'key': "What's Going On", 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '510590531521562537515546'} | Command 35 from file 6
+{'key': 'Like a Rolling Stone', 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '583575582504585536520551600'} | Command 36 from file 6
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507'} | Command 20 from file 4
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507'} | Command 27 from file 5
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507'} | Command 21 from file 3
+{'key': "What's Going On", 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '510590531521562537515546'} | Command 26 from file 8
+{'key': "What's Going On", 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '510590531521562537515546517'} | Command 20 from file 2
+{'key': "What's Going On", 'message': 'Inserted at node 10.0.20.137:5001', 'status': 'success', 'value': '517'} | Command 19 from file 7
+{'key': "What's Going On", 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '510590531521562537515546517'} | Command 34 from file 9
+{'key': 'Hey Jude', 'message': 'Inserted at node 10.0.20.230:5000', 'status': 'success', 'value': '556'} | Command 27 from file 8
+{'key': "What's Going On", 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '510590531521562537515546517'} | Command 28 from file 0
+{'key': 'Like a Rolling Stone', 'message': 'Inserted at node 10.0.20.137:5001', 'status': 'success', 'value': '514'} | Command 20 from file 1
+{'key': "What's Going On", 'message': 'Inserted at node 10.0.20.137:5001', 'status': 'success', 'value': '533'} | Command 28 from file 5
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556'} | Command 35 from file 9
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556'} | Command 29 from file 0
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556'} | Command 28 from file 8
+{'key': 'Respect', 'status': 'success from TAIL NODE 10.0.20.41:5001', 'value': '553528516522554503550589584560512587541'} | Command 37 from file 6
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556'} | Command 30 from file 0
+{'key': 'Respect', 'status': 'success from TAIL NODE 10.0.20.41:5001', 'value': '553528516522554503550589584560512587541'} | Command 22 from file 3
+{'key': 'Respect', 'status': 'success from TAIL NODE 10.0.20.41:5001', 'value': '553528516522554503550589584560512587541'} | Command 21 from file 4
+{'key': 'Respect', 'status': 'success from TAIL NODE 10.0.20.41:5001', 'value': '553528516522554503550589584560512587541'} | Command 29 from file 8
+{'key': "What's Going On", 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '510590531521562537515546517533'} | Command 20 from file 7
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556'} | Command 38 from file 6
+{'key': 'Like a Rolling Stone', 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '583575582504585536520551600514'} | Command 22 from file 4
+{'key': 'Like a Rolling Stone', 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '583575582504585536520551600514'} | Command 36 from file 9
+{'key': 'Like a Rolling Stone', 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '583575582504585536520551600514'} | Command 23 from file 3
+{'key': 'Like a Rolling Stone', 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '583575582504585536520551600514'} | Command 39 from file 6
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556'} | Command 29 from file 5
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556'} | Command 21 from file 2
+{'key': 'Like a Rolling Stone', 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '583575582504585536520551600514'} | Command 40 from file 6
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556'} | Command 31 from file 0
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556'} | Command 30 from file 8
+{'key': "What's Going On", 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '510590531521562537515546517533'} | Command 41 from file 6
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556'} | Command 21 from file 1
+{'key': 'Like a Rolling Stone', 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '583575582504585536520551600514'} | Command 22 from file 2
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556'} | Command 37 from file 9
+{'key': 'Hey Jude', 'message': 'Inserted at node 10.0.20.230:5000', 'status': 'success', 'value': '540'} | Command 23 from file 4
+{'key': 'Like a Rolling Stone', 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '583575582504585536520551600514'} | Command 21 from file 7
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540'} | Command 30 from file 5
+{'key': 'Like a Rolling Stone', 'message': 'Inserted at node 10.0.20.137:5001', 'status': 'success', 'value': '599'} | Command 23 from file 2
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540'} | Command 24 from file 3
+{'key': 'Respect', 'status': 'success from TAIL NODE 10.0.20.41:5001', 'value': '553528516522554503550589584560512587541'} | Command 22 from file 1
+{'key': 'Respect', 'status': 'success from TAIL NODE 10.0.20.41:5001', 'value': '553528516522554503550589584560512587541'} | Command 32 from file 0
+{'key': 'Hey Jude', 'message': 'Inserted at node 10.0.20.230:5000', 'status': 'success', 'value': '544'} | Command 42 from file 6
+{'key': "What's Going On", 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '510590531521562537515546517533'} | Command 31 from file 8
+{'key': "What's Going On", 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '510590531521562537515546517533'} | Command 38 from file 9
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544'} | Command 24 from file 4
+{'key': 'Like a Rolling Stone', 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '583575582504585536520551600514599'} | Command 25 from file 3
+{'key': "What's Going On", 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '510590531521562537515546517533'} | Command 24 from file 2
+{'key': "What's Going On", 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '510590531521562537515546517533'} | Command 22 from file 7
+{'key': 'Like a Rolling Stone', 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '583575582504585536520551600514599'} | Command 33 from file 0
+{'key': 'Hey Jude', 'message': 'Inserted at node 10.0.20.230:5000', 'status': 'success', 'value': '594'} | Command 31 from file 5
+{'key': 'Like a Rolling Stone', 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '583575582504585536520551600514599'} | Command 25 from file 4
+{'key': 'Like a Rolling Stone', 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '583575582504585536520551600514599'} | Command 39 from file 9
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594'} | Command 34 from file 0
+{'key': 'Respect', 'status': 'success from TAIL NODE 10.0.20.41:5001', 'value': '553528516522554503550589584560512587541'} | Command 23 from file 1
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594'} | Command 43 from file 6
+{'key': 'Like a Rolling Stone', 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '583575582504585536520551600514599'} | Command 32 from file 8
+{'key': 'Respect', 'status': 'success from TAIL NODE 10.0.20.41:5001', 'value': '553528516522554503550589584560512587541'} | Command 26 from file 3
+{'key': "What's Going On", 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '510590531521562537515546517533'} | Command 32 from file 5
+{'key': "What's Going On", 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '510590531521562537515546517533'} | Command 40 from file 9
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555'} | Command 41 from file 9
+{'key': 'Respect', 'status': 'success from TAIL NODE 10.0.20.41:5001', 'value': '553528516522554503550589584560512587541'} | Command 33 from file 8
+{'key': 'Hey Jude', 'message': 'Inserted at node 10.0.20.230:5000', 'status': 'success', 'value': '555'} | Command 23 from file 7
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555'} | Command 26 from file 4
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555'} | Command 25 from file 2
+{'key': 'Like a Rolling Stone', 'message': 'Inserted at node 10.0.20.137:5001', 'status': 'success', 'value': '578'} | Command 24 from file 1
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555'} | Command 44 from file 6
+{'key': 'Like a Rolling Stone', 'message': 'Inserted at node 10.0.20.137:5001', 'status': 'success', 'value': '571'} | Command 27 from file 3
+{'key': 'Hey Jude', 'message': 'Inserted at node 10.0.20.230:5000', 'status': 'success', 'value': '565'} | Command 33 from file 5
+{'key': "What's Going On", 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '510590531521562537515546517533'} | Command 42 from file 9
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555565'} | Command 24 from file 7
+{'key': 'Respect', 'message': 'Inserted at node 10.0.20.227:5001', 'status': 'success', 'value': '566'} | Command 35 from file 0
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555565'} | Command 27 from file 4
+{'key': 'Hey Jude', 'message': 'Inserted at node 10.0.20.230:5000', 'status': 'success', 'value': '598'} | Command 45 from file 6
+{'key': 'Hey Jude', 'message': 'Inserted at node 10.0.20.230:5000', 'status': 'success', 'value': '595'} | Command 43 from file 9
+{'key': "What's Going On", 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '510590531521562537515546517533'} | Command 34 from file 8
+{'key': 'Respect', 'status': 'success from TAIL NODE 10.0.20.41:5001', 'value': '553528516522554503550589584560512587541566'} | Command 26 from file 2
+{'key': "What's Going On", 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '510590531521562537515546517533'} | Command 28 from file 4
+{'key': 'Respect', 'status': 'success from TAIL NODE 10.0.20.41:5001', 'value': '553528516522554503550589584560512587541566'} | Command 25 from file 1
+{'key': 'Hey Jude', 'message': 'Inserted at node 10.0.20.230:5000', 'status': 'success', 'value': '586'} | Command 25 from file 7
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555565598595586'} | Command 46 from file 6
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555565598595586'} | Command 44 from file 9
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555565598595'} | Command 28 from file 3
+{'key': 'Respect', 'status': 'success from TAIL NODE 10.0.20.41:5001', 'value': '553528516522554503550589584560512587541566'} | Command 34 from file 5
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555565598595586'} | Command 45 from file 9
+{'key': 'Respect', 'status': 'success from TAIL NODE 10.0.20.41:5001', 'value': '553528516522554503550589584560512587541566'} | Command 35 from file 8
+{'key': 'Respect', 'status': 'success from TAIL NODE 10.0.20.41:5001', 'value': '553528516522554503550589584560512587541566'} | Command 36 from file 0
+{'key': 'Like a Rolling Stone', 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '583575582504585536520551600514599578571'} | Command 26 from file 1
+{'key': "What's Going On", 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '510590531521562537515546517533'} | Command 29 from file 4
+{'key': 'Respect', 'message': 'Inserted at node 10.0.20.227:5001', 'status': 'success', 'value': '567'} | Command 47 from file 6
+{'key': 'Hey Jude', 'message': 'Inserted at node 10.0.20.230:5000', 'status': 'success', 'value': '576'} | Command 27 from file 2
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555565598595586576'} | Command 36 from file 8
+{'key': "What's Going On", 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '510590531521562537515546517533'} | Command 26 from file 7
+{'key': 'Like a Rolling Stone', 'message': 'Inserted at node 10.0.20.137:5001', 'status': 'success', 'value': '547'} | Command 46 from file 9
+{'key': 'Respect', 'status': 'success from TAIL NODE 10.0.20.41:5001', 'value': '553528516522554503550589584560512587541566567'} | Command 29 from file 3
+{'key': 'Hey Jude', 'message': 'Inserted at node 10.0.20.230:5000', 'status': 'success', 'value': '573'} | Command 35 from file 5
+{'key': "What's Going On", 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '510590531521562537515546517533'} | Command 27 from file 1
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555565598595586576573'} | Command 30 from file 4
+{'key': 'Like a Rolling Stone', 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '583575582504585536520551600514599578571547'} | Command 37 from file 0
+{'key': 'Respect', 'status': 'success from TAIL NODE 10.0.20.41:5001', 'value': '553528516522554503550589584560512587541566567'} | Command 47 from file 9
+{'key': 'Respect', 'status': 'success from TAIL NODE 10.0.20.41:5001', 'value': '553528516522554503550589584560512587541566567'} | Command 37 from file 8
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555565598595586576573'} | Command 48 from file 6
+{'key': 'Hey Jude', 'message': 'Inserted at node 10.0.20.230:5000', 'status': 'success', 'value': '506'} | Command 38 from file 0
+{'key': "What's Going On", 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '510590531521562537515546517533'} | Command 30 from file 3
+{'key': 'Respect', 'message': 'Inserted at node 10.0.20.227:5001', 'status': 'success', 'value': '548'} | Command 27 from file 7
+{'key': 'Like a Rolling Stone', 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '583575582504585536520551600514599578571547'} | Command 49 from file 6
+{'key': 'Hey Jude', 'message': 'Inserted at node 10.0.20.230:5000', 'status': 'success', 'value': '591'} | Command 48 from file 9
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555565598595586576573506'} | Command 36 from file 5
+{'key': 'Respect', 'status': 'success from TAIL NODE 10.0.20.41:5001', 'value': '553528516522554503550589584560512587541566567548'} | Command 38 from file 8
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555565598595586576573506'} | Command 28 from file 2
+{'key': "What's Going On", 'message': 'Inserted at node 10.0.20.137:5001', 'status': 'success', 'value': '569'} | Command 28 from file 1
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555565598595586576573506591'} | Command 31 from file 4
+{'key': 'Like a Rolling Stone', 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '583575582504585536520551600514599578571547'} | Command 29 from file 2
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555565598595586576573506591'} | Command 49 from file 9
+{'key': 'Respect', 'status': 'success from TAIL NODE 10.0.20.41:5001', 'value': '553528516522554503550589584560512587541566567548'} | Command 39 from file 8
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555565598595586576573506591'} | Command 50 from file 6
+{'key': 'Hey Jude', 'message': 'Inserted at node 10.0.20.230:5000', 'status': 'success', 'value': '519'} | Command 37 from file 5
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555565598595586576573506591519'} | Command 31 from file 3
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555565598595586576573506591519'} | Command 50 from file 9
+{'key': 'Respect', 'status': 'success from TAIL NODE 10.0.20.41:5001', 'value': '553528516522554503550589584560512587541566567548'} | Command 39 from file 0
+{'key': 'Like a Rolling Stone', 'message': 'Inserted at node 10.0.20.137:5001', 'status': 'success', 'value': '509'} | Command 28 from file 7
+{'key': 'Respect', 'status': 'success from TAIL NODE 10.0.20.41:5001', 'value': '553528516522554503550589584560512587541566567548'} | Command 29 from file 1
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555565598595586576573506591519'} | Command 30 from file 2
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555565598595586576573506591519'} | Command 32 from file 4
+{'key': 'Hey Jude', 'message': 'Inserted at node 10.0.20.230:5000', 'status': 'success', 'value': '543'} | Command 38 from file 5
+{'key': 'Like a Rolling Stone', 'message': 'Inserted at node 10.0.20.137:5001', 'status': 'success', 'value': '527'} | Command 32 from file 3
+{'key': "What's Going On", 'message': 'Inserted at node 10.0.20.137:5001', 'status': 'success', 'value': '529'} | Command 40 from file 0
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555565598595586576573506591519543'} | Command 29 from file 7
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555565598595586576573506591519543'} | Command 41 from file 0
+{'key': 'Like a Rolling Stone', 'message': 'Inserted at node 10.0.20.137:5001', 'status': 'success', 'value': '577'} | Command 40 from file 8
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555565598595586576573506591519543'} | Command 30 from file 7
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555565598595586576573506591519543'} | Command 39 from file 5
+{'key': "What's Going On", 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '510590531521562537515546517533569529'} | Command 33 from file 4
+{'key': 'Like a Rolling Stone', 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '583575582504585536520551600514599578571547509527577'} | Command 40 from file 5
+{'key': "What's Going On", 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '510590531521562537515546517533569529'} | Command 31 from file 2
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555565598595586576573506591519543'} | Command 31 from file 7
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555565598595586576573506591519543'} | Command 30 from file 1
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555565598595586576573506591519543'} | Command 33 from file 3
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555565598595586576573506591519543'} | Command 34 from file 4
+{'key': 'Respect', 'status': 'success from TAIL NODE 10.0.20.41:5001', 'value': '553528516522554503550589584560512587541566567548'} | Command 42 from file 0
+{'key': 'Like a Rolling Stone', 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '583575582504585536520551600514599578571547509527577'} | Command 41 from file 5
+{'key': 'Like a Rolling Stone', 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '583575582504585536520551600514599578571547509527577'} | Command 41 from file 8
+{'key': 'Hey Jude', 'message': 'Inserted at node 10.0.20.230:5000', 'status': 'success', 'value': '552'} | Command 32 from file 2
+{'key': "What's Going On", 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '510590531521562537515546517533569529'} | Command 43 from file 0
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555565598595586576573506591519543552'} | Command 34 from file 3
+{'key': 'Respect', 'status': 'success from TAIL NODE 10.0.20.41:5001', 'value': '553528516522554503550589584560512587541566567548'} | Command 31 from file 1
+{'key': 'Like a Rolling Stone', 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '583575582504585536520551600514599578571547509527577'} | Command 32 from file 7
+{'key': "What's Going On", 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '510590531521562537515546517533569529'} | Command 42 from file 8
+{'key': 'Respect', 'status': 'success from TAIL NODE 10.0.20.41:5001', 'value': '553528516522554503550589584560512587541566567548'} | Command 42 from file 5
+{'key': 'Respect', 'status': 'success from TAIL NODE 10.0.20.41:5001', 'value': '553528516522554503550589584560512587541566567548'} | Command 35 from file 4
+{'key': 'Like a Rolling Stone', 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '583575582504585536520551600514599578571547509527577'} | Command 33 from file 2
+{'key': 'Like a Rolling Stone', 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '583575582504585536520551600514599578571547509527577'} | Command 44 from file 0
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555565598595586576573506591519543552549'} | Command 33 from file 7
+{'key': "What's Going On", 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '510590531521562537515546517533569529'} | Command 35 from file 3
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555565598595586576573506591519543552549'} | Command 43 from file 8
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555565598595586576573506591519543552549'} | Command 45 from file 0
+{'key': 'Hey Jude', 'message': 'Inserted at node 10.0.20.230:5000', 'status': 'success', 'value': '549'} | Command 32 from file 1
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555565598595586576573506591519543552549'} | Command 43 from file 5
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555565598595586576573506591519543552549'} | Command 46 from file 0
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555565598595586576573506591519543552549'} | Command 47 from file 0
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555565598595586576573506591519543552549'} | Command 44 from file 8
+{'key': 'Like a Rolling Stone', 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '583575582504585536520551600514599578571547509527577'} | Command 48 from file 0
+{'key': 'Respect', 'status': 'success from TAIL NODE 10.0.20.41:5001', 'value': '553528516522554503550589584560512587541566567548'} | Command 36 from file 4
+{'key': 'Hey Jude', 'message': 'Inserted at node 10.0.20.230:5000', 'status': 'success', 'value': '502'} | Command 49 from file 0
+{'key': 'Respect', 'status': 'success from TAIL NODE 10.0.20.41:5001', 'value': '553528516522554503550589584560512587541566567548'} | Command 34 from file 2
+{'key': 'Respect', 'status': 'success from TAIL NODE 10.0.20.41:5001', 'value': '553528516522554503550589584560512587541566567548'} | Command 36 from file 3
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555565598595586576573506591519543552549'} | Command 44 from file 5
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555565598595586576573506591519543552549502'} | Command 45 from file 8
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555565598595586576573506591519543552549'} | Command 34 from file 7
+{'key': 'Like a Rolling Stone', 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '583575582504585536520551600514599578571547509527577'} | Command 37 from file 4
+{'key': 'Respect', 'message': 'Inserted at node 10.0.20.227:5001', 'status': 'success', 'value': '559'} | Command 33 from file 1
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555565598595586576573506591519543552549502'} | Command 35 from file 7
+{'key': "What's Going On", 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '510590531521562537515546517533569529'} | Command 50 from file 0
+{'key': "What's Going On", 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '510590531521562537515546517533569529'} | Command 34 from file 1
+{'key': 'Respect', 'status': 'success from TAIL NODE 10.0.20.41:5001', 'value': '553528516522554503550589584560512587541566567548559'} | Command 38 from file 4
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555565598595586576573506591519543552549502'} | Command 36 from file 7
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555565598595586576573506591519543552549502'} | Command 37 from file 3
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555565598595586576573506591519543552549502'} | Command 45 from file 5
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555565598595586576573506591519543552549502'} | Command 35 from file 2
+{'key': "What's Going On", 'message': 'Inserted at node 10.0.20.137:5001', 'status': 'success', 'value': '574'} | Command 46 from file 8
+{'key': "What's Going On", 'message': 'Inserted at node 10.0.20.137:5001', 'status': 'success', 'value': '508'} | Command 46 from file 5
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555565598595586576573506591519543552549502'} | Command 37 from file 7
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555565598595586576573506591519543552549502'} | Command 35 from file 1
+{'key': 'Respect', 'status': 'success from TAIL NODE 10.0.20.41:5001', 'value': '553528516522554503550589584560512587541566567548559'} | Command 39 from file 4
+{'key': 'Hey Jude', 'message': 'Inserted at node 10.0.20.230:5000', 'status': 'success', 'value': '581'} | Command 47 from file 8
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555565598595586576573506591519543552549502'} | Command 38 from file 3
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555565598595586576573506591519543552549502581'} | Command 47 from file 5
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555565598595586576573506591519543552549502581'} | Command 36 from file 2
+{'key': 'Respect', 'status': 'success from TAIL NODE 10.0.20.41:5001', 'value': '553528516522554503550589584560512587541566567548559'} | Command 38 from file 7
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555565598595586576573506591519543552549502581'} | Command 48 from file 8
+{'key': 'Like a Rolling Stone', 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '583575582504585536520551600514599578571547509527577'} | Command 48 from file 5
+{'key': "What's Going On", 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '510590531521562537515546517533569529574508'} | Command 40 from file 4
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555565598595586576573506591519543552549502581'} | Command 36 from file 1
+{'key': 'Hey Jude', 'message': 'Inserted at node 10.0.20.230:5000', 'status': 'success', 'value': '532'} | Command 49 from file 8
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555565598595586576573506591519543552549502581'} | Command 39 from file 3
+{'key': "What's Going On", 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '510590531521562537515546517533569529574508'} | Command 49 from file 5
+{'key': 'Like a Rolling Stone', 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '583575582504585536520551600514599578571547509527577'} | Command 37 from file 2
+{'key': "What's Going On", 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '510590531521562537515546517533569529574508563'} | Command 37 from file 1
+{'key': "What's Going On", 'message': 'Inserted at node 10.0.20.137:5001', 'status': 'success', 'value': '563'} | Command 39 from file 7
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555565598595586576573506591519543552549502581532'} | Command 50 from file 5
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555565598595586576573506591519543552549502581532'} | Command 41 from file 4
+{'key': "What's Going On", 'message': 'Inserted at node 10.0.20.137:5001', 'status': 'success', 'value': '538'} | Command 50 from file 8
+{'key': 'Like a Rolling Stone', 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '583575582504585536520551600514599578571547509527577'} | Command 38 from file 2
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555565598595586576573506591519543552549502581532'} | Command 40 from file 7
+{'key': 'Like a Rolling Stone', 'message': 'Inserted at node 10.0.20.137:5001', 'status': 'success', 'value': '593'} | Command 38 from file 1
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555565598595586576573506591519543552549502581532'} | Command 40 from file 3
+{'key': "What's Going On", 'message': 'Inserted at node 10.0.20.137:5001', 'status': 'success', 'value': '564'} | Command 42 from file 4
+{'key': 'Respect', 'status': 'success from TAIL NODE 10.0.20.41:5001', 'value': '553528516522554503550589584560512587541566567548559'} | Command 39 from file 2
+{'key': "What's Going On", 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '510590531521562537515546517533569529574508563538564'} | Command 39 from file 1
+{'key': 'Like a Rolling Stone', 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '583575582504585536520551600514599578571547509527577593'} | Command 43 from file 4
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555565598595586576573506591519543552549502581532'} | Command 41 from file 3
+{'key': "What's Going On", 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '510590531521562537515546517533569529574508563538564'} | Command 41 from file 7
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555565598595586576573506591519543552549502581532'} | Command 42 from file 7
+{'key': "What's Going On", 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '510590531521562537515546517533569529574508563538564'} | Command 44 from file 4
+{'key': 'Respect', 'status': 'success from TAIL NODE 10.0.20.41:5001', 'value': '553528516522554503550589584560512587541566567548559'} | Command 40 from file 2
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555565598595586576573506591519543552549502581532'} | Command 43 from file 7
+{'key': "What's Going On", 'message': 'Inserted at node 10.0.20.137:5001', 'status': 'success', 'value': '592'} | Command 45 from file 4
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555565598595586576573506591519543552549502581532'} | Command 40 from file 1
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555565598595586576573506591519543552549502581532'} | Command 42 from file 3
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555565598595586576573506591519543552549502581532'} | Command 44 from file 7
+{'key': 'Hey Jude', 'message': 'Inserted at node 10.0.20.230:5000', 'status': 'success', 'value': '535'} | Command 46 from file 4
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555565598595586576573506591519543552549502581532'} | Command 41 from file 2
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555565598595586576573506591519543552549502581532535'} | Command 45 from file 7
+{'key': "What's Going On", 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '510590531521562537515546517533569529574508563538564592'} | Command 41 from file 1
+{'key': 'Respect', 'status': 'success from TAIL NODE 10.0.20.41:5001', 'value': '553528516522554503550589584560512587541566567548559'} | Command 43 from file 3
+{'key': "What's Going On", 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '510590531521562537515546517533569529574508563538564592'} | Command 42 from file 2
+{'key': 'Like a Rolling Stone', 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '583575582504585536520551600514599578571547509527577593'} | Command 47 from file 4
+{'key': "What's Going On", 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '510590531521562537515546517533569529574508563538564592'} | Command 46 from file 7
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555565598595586576573506591519543552549502581532535'} | Command 44 from file 3
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555565598595586576573506591519543552549502581532535'} | Command 42 from file 1
+{'key': 'Respect', 'status': 'success from TAIL NODE 10.0.20.41:5001', 'value': '553528516522554503550589584560512587541566567548559'} | Command 47 from file 7
+{'key': 'Like a Rolling Stone', 'message': 'Inserted at node 10.0.20.137:5001', 'status': 'success', 'value': '545'} | Command 43 from file 1
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555565598595586576573506591519543552549502581532535'} | Command 48 from file 4
+{'key': 'Respect', 'status': 'success from TAIL NODE 10.0.20.41:5001', 'value': '553528516522554503550589584560512587541566567548559'} | Command 45 from file 3
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555565598595586576573506591519543552549502581532535'} | Command 43 from file 2
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555565598595586576573506591519543552549502581532535'} | Command 48 from file 7
+{'key': 'Like a Rolling Stone', 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '583575582504585536520551600514599578571547509527577593545'} | Command 44 from file 1
+{'key': 'Like a Rolling Stone', 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '583575582504585536520551600514599578571547509527577593545'} | Command 49 from file 4
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555565598595586576573506591519543552549502581532535'} | Command 49 from file 7
+{'key': 'Like a Rolling Stone', 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '583575582504585536520551600514599578571547509527577593545'} | Command 44 from file 2
+{'key': 'Like a Rolling Stone', 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '583575582504585536520551600514599578571547509527577593545'} | Command 46 from file 3
+{'key': "What's Going On", 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '510590531521562537515546517533569529574508563538564592'} | Command 50 from file 4
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555565598595586576573506591519543552549502581532535'} | Command 50 from file 7
+{'key': 'Respect', 'status': 'success from TAIL NODE 10.0.20.41:5001', 'value': '553528516522554503550589584560512587541566567548559'} | Command 45 from file 1
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555565598595586576573506591519543552549502581532535'} | Command 47 from file 3
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555565598595586576573506591519543552549502581532535'} | Command 45 from file 2
+{'key': "What's Going On", 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '510590531521562537515546517533569529574508563538564592'} | Command 46 from file 1
+{'key': 'Like a Rolling Stone', 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '583575582504585536520551600514599578571547509527577593545'} | Command 48 from file 3
+{'key': 'Respect', 'status': 'success from TAIL NODE 10.0.20.41:5001', 'value': '553528516522554503550589584560512587541566567548559'} | Command 46 from file 2
+{'key': 'Respect', 'status': 'success from TAIL NODE 10.0.20.41:5001', 'value': '553528516522554503550589584560512587541566567548559'} | Command 47 from file 1
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555565598595586576573506591519543552549502581532535'} | Command 49 from file 3
+{'key': "What's Going On", 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '510590531521562537515546517533569529574508563538564592'} | Command 48 from file 1
+{'key': 'Respect', 'status': 'success from TAIL NODE 10.0.20.41:5001', 'value': '553528516522554503550589584560512587541566567548559'} | Command 47 from file 2
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555565598595586576573506591519543552549502581532535'} | Command 50 from file 3
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555565598595586576573506591519543552549502581532535'} | Command 49 from file 1
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555565598595586576573506591519543552549502581532535'} | Command 48 from file 2
+{'key': "What's Going On", 'status': 'success from TAIL NODE 10.0.20.169:5001', 'value': '510590531521562537515546517533569529574508563538564592'} | Command 49 from file 2
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555565598595586576573506591519543552549502581532535'} | Command 50 from file 1
+{'key': 'Hey Jude', 'status': 'success from TAIL NODE 10.0.20.41:5000', 'value': '524539561542513558523525570505572597511579580557518501534526530596588568507556540544594555565598595586576573506591519543552549502581532535'} | Command 50 from file 2

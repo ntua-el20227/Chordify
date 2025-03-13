@@ -86,6 +86,7 @@ def launch_file(i, node_ip, node_port, launch_type):
                         data = {"key": key}
                         q_resp = send_request("POST", base_url, "/query", data=data)
                         print(str(q_resp) + f" | Command {count} from file {i}", file=f, flush=True)
+
                     elif request_type == "insert":
                         value = parts[2]
                         data = {"key": key, "value": value}

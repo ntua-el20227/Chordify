@@ -2,6 +2,6 @@
 .DS_Store
 app_finger_tables.py
 client_finger.py
-.venv
+.myenv
 ./src/__pycache__
 ./tests/__pycache__
