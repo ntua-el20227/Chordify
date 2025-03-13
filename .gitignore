@@ -4,3 +4,4 @@ app_finger_tables.py
 client_finger.py
 .venv
 ./src/__pycache__
+./tests/__pycache__
