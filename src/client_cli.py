@@ -1,4 +1,5 @@
 import requests
+from flask import Flask, request, jsonify
 import shlex
 from concurrent.futures import ThreadPoolExecutor
 from pyfiglet import Figlet
@@ -8,6 +9,10 @@ import atexit
 from colorama import init, Fore, Style
 import readline
 import time
+import threading
+
+cli_server = Flask(__name__)
+
 
 def print_banner():
     f = Figlet(font='slant')  # You can choose other fonts like 'standard', 'big', etc.
@@ -55,7 +60,7 @@ def launch_file(i, node_ip, node_port, launch_type):
                     count+=1
                     data = {"key": line.strip(), "value": f"{node_ip}:{node_port}"}
                     ins_resp = send_request("POST", base_url, "/insert", data=data)
-                    print(str(ins_resp) + f" | Command {count} from file {i}", file=f, flush=True)
+                    #print(str(ins_resp) + f" | Command {count} from file {i}", file=f, flush=True)
     elif launch_type == "query":
         file_path = os.path.join("..", "data", "query_" + str(i) + ".txt")
         with open(file_path, "r") as file:
@@ -68,7 +73,7 @@ def launch_file(i, node_ip, node_port, launch_type):
                     count+=1
                     data = {"key": line.strip()}
                     q_resp = send_request("POST", base_url, "/query", data=data)
-                    print(str(q_resp) + f" | Command {count} from file {i}", file=f, flush=True)
+                    #print(str(q_resp) + f" | Command {count} from file {i}", file=f, flush=True)
     elif launch_type == "request":
         file_path = os.path.join("..", "data", "requests_" + str(i) + ".txt")
         with open(file_path, "r") as file:
@@ -85,13 +90,13 @@ def launch_file(i, node_ip, node_port, launch_type):
                     if request_type == "query":
                         data = {"key": key}
                         q_resp = send_request("POST", base_url, "/query", data=data)
-                        print(str(q_resp) + f" | Command {count} from file {i}", file=f, flush=True)
+                        #print(str(q_resp) + f" | Command {count} from file {i}", file=f, flush=True)
 
                     elif request_type == "insert":
                         value = parts[2]
                         data = {"key": key, "value": value}
                         ins_resp = send_request("POST", base_url, "/insert", data=data)
-                        print(str(ins_resp) + f" | Command {count} from file {i}", file=f, flush=True)
+                        #print(str(ins_resp) + f" | Command {count} from file {i}", file=f, flush=True)
     else:
         print("Available type of launch: insert, query, request")
 
@@ -111,9 +116,30 @@ except FileNotFoundError:
 atexit.register(readline.write_history_file, history_file)
 
 
-def main():
+@cli_server.route("/reception", methods=["POST"])
+def reception():
+    try:
+        data = request.get_json()  # Get incoming JSON data
+        if not data:
+            return jsonify({"status": "error", "message": "No data received"}), 400
+        
+        # Write to output file
+        with open("output.txt", "a") as f:
+            f.write(str(data) + "\n")
+
+        return jsonify({"status": "success", "message": "Data written to output file"}), 200
+    
+    except Exception as e:
+        return jsonify({"status": "error", "message": str(e)}), 500
+
+
+
+
+def cli_loop():
+    with open("output.txt", "w") as f:
+        pass  
     print_banner()
-    print("Chordify CLI Client (Flask-based)")
+    print("Chordify CLI Client-Server (Flask-based)")
     print("Type 'help' to see available commands.")
     while True:
         try:
@@ -196,7 +222,9 @@ def main():
             resp = send_request("GET", base_url, "/node_info")
             print(resp)
 ###################################### single launch ######################################            
-        elif cmd == "file_launch":                     
+        elif cmd == "file_launch":
+            with open("output.txt", "w") as f:
+                pass                      
             if len(tokens) < 4:
                 print("Usage: file_launch <node_ip> <node_port> <type>")
                 continue
@@ -226,4 +254,5 @@ def main():
             print("Unknown command. Type 'help' for available commands.")
 
 if __name__ == "__main__":
-    main()
+    threading.Thread(target=cli_loop, daemon=True).start()
+    cli_server.run(host="0.0.0.0", port=8888)
