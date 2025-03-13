@@ -46,7 +46,7 @@ def launch_file(i, node_ip, node_port, launch_type):
     if launch_type == "insert":
         file_path = os.path.join("..", "data", "insert_" + str(i) + ".txt")
         with open(file_path, "r") as file:
-            with open("output.txt", "w") as f:
+            with open("output.txt", "a") as f:
                 count = 0
                 while True:
                     line = file.readline()
@@ -55,11 +55,11 @@ def launch_file(i, node_ip, node_port, launch_type):
                     count+=1
                     data = {"key": line.strip(), "value": f"{node_ip}:{node_port}"}
                     ins_resp = send_request("POST", base_url, "/insert", data=data)
-                    print(str(ins_resp) + f" | Command {count} from file {i}", flush = True)
+                    print(str(ins_resp) + f" | Command {count} from file {i}", file=f, flush=True)
     elif launch_type == "query":
         file_path = os.path.join("..", "data", "query_" + str(i) + ".txt")
         with open(file_path, "r") as file:
-            with open("output.txt", "w") as f:
+            with open("output.txt", "a") as f:
                 count = 0
                 while True:
                     line = file.readline()
@@ -68,11 +68,11 @@ def launch_file(i, node_ip, node_port, launch_type):
                     count+=1
                     data = {"key": line.strip()}
                     q_resp = send_request("POST", base_url, "/query", data=data)
-                    print(str(q_resp) + f" | Command {count} from file {i}", flush = True)
+                    print(str(q_resp) + f" | Command {count} from file {i}", file=f, flush=True)
     elif launch_type == "request":
         file_path = os.path.join("..", "data", "requests_" + str(i) + ".txt")
         with open(file_path, "r") as file:
-            with open("output.txt", "w") as f:
+            with open("output.txt", "a") as f:
                 count = 0
                 while True:
                     line = file.readline().strip()
@@ -85,12 +85,12 @@ def launch_file(i, node_ip, node_port, launch_type):
                     if request_type == "query":
                         data = {"key": key}
                         q_resp = send_request("POST", base_url, "/query", data=data)
-                        print(str(q_resp) + f" | Command {count} from file {i}", flush = True)
+                        print(str(q_resp) + f" | Command {count} from file {i}", file=f, flush=True)
                     elif request_type == "insert":
                         value = parts[2]
                         data = {"key": key, "value": value}
                         ins_resp = send_request("POST", base_url, "/insert", data=data)
-                        print(str(ins_resp) + f" | Command {count} from file {i}", flush = True)
+                        print(str(ins_resp) + f" | Command {count} from file {i}", file=f, flush=True)
     else:
         print("Available type of launch: insert, query, request")
 
@@ -205,6 +205,8 @@ def main():
             launch_file(0, node_ip, node_port, launch_type)       
 ###################################### parallel launch ######################################
         elif cmd == "file_parallel":                        
+            with open("output.txt", "w") as f:
+                pass 
             if len(tokens) < 4:
                 print("Usage: file_parallel <node_ip> <node_port> <type>")
                 continue
@@ -218,6 +220,7 @@ def main():
             with ThreadPoolExecutor(max_workers=len(node_list)) as executor:
                 for i, (ip, port) in enumerate(node_list):
                     executor.submit(launch_file, i, ip, port, launch_type)
+            
         else:
             print("Unknown command. Type 'help' for available commands.")
 
