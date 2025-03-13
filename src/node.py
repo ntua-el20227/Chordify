@@ -160,7 +160,7 @@ class Node:
             query with a replication count of self.k_factor.
           - If read_count is provided, we are already in the chain query.
         """
-        client_url = f"http://{client_ip}:{client_port}/reception
+        client_url = f"http://{client_ip}:{client_port}/reception"
         print(client_url, "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%")
 
         if key == "*":
