@@ -87,11 +87,11 @@
 {'key': 'Hey Jude', 'replica value': '524539561542513558', 'status': 'success from  replica NODE 10.0.20.41:5000'} | Command 8 from file 2
 {'key': 'Hey Jude', 'status': 'success from  NODE 10.0.20.230:5000', 'value': '524539561542513558'} | Command 11 from file 6
 {'key': 'Hey Jude', 'status': 'success from  NODE 10.0.20.230:5000', 'value': '524539561542513558'} | Command 5 from file 7
-{'key': 'Hey Jude', 'message': 'Eventually inserted at node 10.0.20.230:5000', 'status': 'success', 'value': '570'} | Command 13 from file 8
-{'key': 'Hey Jude', 'replica value': '524539561542513558', 'status': 'success from  replica NODE 10.0.20.41:5000'} | Command 9 from file 2
+{'key': 'Hey Jude', 'message': 'Eventually inserted at node 10.0.20.230:5000', 'status': 'success', 'value': '570'} | Command 13 from file 8 ###########
+{'key': 'Hey Jude', 'replica value': '524539561542513558', 'status': 'success from  replica NODE 10.0.20.41:5000'} | Command 9 from file 2 #############
 {'key': "What's Going On", 'replica value': '510590', 'status': 'success from  replica NODE 10.0.20.169:5001'} | Command 14 from file 8
-{'key': 'Hey Jude', 'replica value': '524539561542513558', 'status': 'success from  replica NODE 10.0.20.41:5000'} | Command 10 from file 2
-{'key': 'Hey Jude', 'replica value': '524539561542513558570', 'status': 'success from  replica NODE 10.0.20.41:5000'} | Command 11 from file 2
+{'key': 'Hey Jude', 'replica value': '524539561542513558', 'status': 'success from  replica NODE 10.0.20.41:5000'} | Command 10 from file 2 ##############
+{'key': 'Hey Jude', 'replica value': '524539561542513558570', 'status': 'success from  replica NODE 10.0.20.41:5000'} | Command 11 from file 2 ##########
 {'key': 'Like a Rolling Stone', 'message': 'Eventually inserted at node 10.0.20.137:5001', 'status': 'success', 'value': '582'} | Command 12 from file 0
 {'key': 'Hey Jude', 'status': 'success from  NODE 10.0.20.230:5000', 'value': '524539561542513558570'} | Command 6 from file 7
 {'key': 'Hey Jude', 'status': 'success from  NODE 10.0.20.230:5000', 'value': '524539561542513558570'} | Command 6 from file 4

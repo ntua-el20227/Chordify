@@ -45,6 +45,7 @@ class Node:
           - If primary, write locally and then call insertReplicas if replication_count > 1.
         """
         client_url = f"http://{client_ip}:{client_port}/reception"
+        print(client_url, "#########################################")
         
         # Check if the node is primary for the key.
         key_hash = hf.hash_function(key)
@@ -112,6 +113,7 @@ class Node:
         """
         if client_ip:
             client_url = f"http://{client_ip}:{client_port}/reception"
+            print(client_url,"$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
         
         if self.successor["node_id"] != starting_node:
             print(key)
@@ -131,13 +133,13 @@ class Node:
                 except Exception as e:
                     print(f"[ERROR] Forward replication failed at node {self.node_id}: {e}")
             else:
-                ## TODO return from last node of the chain, only from linearizability, check
+                #return from last node of the chain, only from linearizability, check
                 if(self.consistency == "linearizability" and client_ip):
                     client_message = {"status": "success", "message": f"Inserted at tail node {self.ip}:{self.port}", "key": key, "value": value, "timestamp": datetime.now().strftime("%H:%M:%S")}
                     requests.post(client_url, json=client_message)
                 print(f"Circular replication completed for key '{key}'")
         else:
-            ## TODO return from last node of the chain, check
+            #return from last node of the chain, check
             if(self.consistency == "linearizability" and client_ip):
                 client_message = {"status": "success", "message": f"Inserted at tail node {self.ip}:{self.port}", "key": key, "value": value, "timestamp": datetime.now().strftime("%H:%M:%S")}
                 requests.post(client_url, json=client_message)
@@ -158,8 +160,9 @@ class Node:
             query with a replication count of self.k_factor.
           - If read_count is provided, we are already in the chain query.
         """
-        client_url = f"http://{client_ip}:{client_port}/reception"
-        
+        client_url = f"http://{client_ip}:{client_port}/reception
+        print(client_url, "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%")
+
         if key == "*":
              return self.query_all_nodes()
             
@@ -277,7 +280,7 @@ class Node:
         the query to the successor with a decremented replication count.
         """
         client_url = f"http://{client_ip}:{client_port}/reception"
-        
+        print(client_url, "$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
         # Get the info of current node
         url = f"http://{ip}:{port}/node_info"
         response = requests.get(url)

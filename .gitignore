@@ -5,3 +5,4 @@ client_finger.py
 .myenv
 ./src/__pycache__
 ./tests/__pycache__
+.venv
