@@ -10,6 +10,7 @@ from colorama import init, Fore, Style
 import readline
 import threading
 import sys
+import time
 import logging
 
 cli_server = Flask(__name__)
@@ -245,11 +246,15 @@ def cli_loop(client_ip):
             base_url = f"http://{node_ip}:{node_port}"
             resp = send_request("GET", base_url, "/overlay")
             node_list = [(node["ip"], node["port"]) for node in resp["overlay"]]
-
+            start  = time.time()
             with ThreadPoolExecutor(max_workers=len(node_list)) as executor:
                 for i, (ip, port) in enumerate(node_list):
                     executor.submit(launch_file, i, ip, port, launch_type, client_ip)
-            
+            end = time.time()
+            elapsed = end - start
+            throughput = elapsed / 500
+            print(f"Elapsed time: {elapsed} seconds")
+            print(f"Throughput: {throughput} seconds/commands")
         else:
             print("Unknown command. Type 'help' for available commands.")
 
