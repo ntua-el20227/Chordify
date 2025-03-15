@@ -72,6 +72,11 @@ python3 tests/test.py
 
 
 ---
+## References
+
+Chord: A Scalable Peer-to-peer Lookup Protocol
+for Internet Applications
+Ion Stoica†, Robert Morris‡, David Liben-Nowell‡, David R. Karger‡, M. Frans Kaashoek‡, Frank Dabek‡, Hari Balakrishnan‡
 
 ## License
 
