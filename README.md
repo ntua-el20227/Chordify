@@ -70,11 +70,6 @@ A basic test suite using the `pytest` library is available in the `./tests` dire
 python3 tests/test.py
 ```
 
----
-
-## GitHub
-
-For more details, updates, and contributions, visit the [ntua-el20227 GitHub profile](https://github.com/ntua-el20227).
 
 ---
 
