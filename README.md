@@ -1,91 +1,83 @@
-# Chordify: A P2P Chord-DHT application
+# Chordify: A P2P Chord-DHT Application
 
-  [![License](https://img.shields.io/static/v1?label=License&message=MIT&color=blue&?style=plastic&logo=appveyor)](https://opensource.org/license/MIT)
+[![License: MIT](https://img.shields.io/static/v1?label=License&message=MIT&color=blue&style=plastic)](https://opensource.org/license/MIT)  
+[![GitHub repo size](https://img.shields.io/github/repo-size/ntua-el20227/Chordify?style=plastic)](https://github.com/ntua-el20227/Chordify)  
+[![GitHub top language](https://img.shields.io/github/languages/top/ntua-el20227/Chordify?style=plastic)](https://github.com/ntua-el20227/Chordify)  
 
+[![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python)](https://www.python.org)  
+[![Flask](https://img.shields.io/badge/Flask-2.0%2B-blue?logo=flask)](https://flask.palletsprojects.com/)  
+[![AWS](https://img.shields.io/badge/AWS-Amazon%20Web%20Services-orange?logo=amazon-aws)](https://aws.amazon.com)
 
+---
 
-## Table Of Content
+## Table of Contents
 
 - [Description](#description)
-
 - [Installation](#installation)
-
-
 - [Tests](#tests)
 - [GitHub](#github)
-
 - [License](#license)
 
-
-
-
-![GitHub repo size](https://img.shields.io/github/repo-size/ntua-el20227/Chordify?style=plastic)
-
-  ![GitHub top language](https://img.shields.io/github/languages/top/ntua-el20227/Chordify?style=plastic)
-
-
+---
 
 ## Description
 
-  As part of the semester project in our Distributed Systems class we created an application that is using the Chord protocol-algorithm for a Peer-to-Peer network of nodes. Each node was in a different ip address/port of the cluster of VMs that were running on the AWS cloud provider. The data was (key,value) pairs with song titles as keys and values with little essence for the goals of the project. 
+Chordify is a peer-to-peer Chord-DHT application developed as part of a Distributed Systems semester project. The system implements the Chord protocol to manage a distributed hash table (DHT) across nodes deployed on AWS VMs. Each node operates on a unique IP/port combination, storing (key, value) pairs where keys are song titles.
 
-
-
-
-
-
-
-
-
-
-
+---
 
 ## Installation
 
-The project has been developed using the Flask application framework and Python 3.12. After cloning the project you can use "pip install -r requirements.txt" for the installation of the required dependecies. Based on the instructions given we used a bootstrap node as a SPOF(Unofortunately!) to manage any joins and departs of other nodes. As a result, it is IMPORTANT to first deploy the bootstrap node with "python3 app.py <bootstrap-ip> <bootstrap-port>" and then for every other node deploymentpython3 app.py <node-ip> <node-port> <bootstrap-ip> <bootstrap-port>". Finally, for the client server use "python3 client_cli.py <ip you want it to run on>"
+Chordify is built using **Python 3.12** and the **Flask** web framework. Follow the steps below to set up your environment:
 
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/ntua-el20227/Chordify.git
+   cd Chordify
+## Installation
 
+2. **Install Dependencies:**
 
+   ```bash
+   pip install -r requirements.txt
+   ```
 
+3. **Deploy the Bootstrap Node:**
 
-Chordify: A P2P Chord-DHT application is built with the following tools and libraries: <ul><li>Python3</li> <li>Flask</li> <li>AWS</li></ul>
+   ```bash
+   python3 app.py <bootstrap-ip> <bootstrap-port>
+   ```
 
+4. **Deploy Additional Nodes:**
 
+   ```bash
+   python3 app.py <node-ip> <node-port> <bootstrap-ip> <bootstrap-port>
+   ```
 
+5. **Run the Client CLI:**
 
+   ```bash
+   python3 client_cli.py <desired-ip>
+   ```
 
-
-
-
-
-
+---
 
 ## Tests
- 
-In the ./tests directory there is a test.py script that uses the pytest library to test some basic functionalities of the application. Run it as a normal python script when the nodes are down.
 
+A basic test suite using the `pytest` library is available in the `./tests` directory. Ensure that all nodes are down before running tests:
 
+```bash
+python3 tests/test.py
+```
 
-
-
+---
 
 ## GitHub
 
-<a href="https://github.com/ntua-el20227"><strong>ntua-el20227</a></strong>
+For more details, updates, and contributions, visit the [ntua-el20227 GitHub profile](https://github.com/ntua-el20227).
 
-
-
-<p>Visit my website: <strong><a href="https://github.com/ntua-el20227"></a></strong></p>
-
-
-
-
-
-
-
+---
 
 ## License
 
-[![License](https://img.shields.io/static/v1?label=Licence&message=MIT&color=blue)](https://opensource.org/license/MIT)
-
-
+Chordify is licensed under the [MIT License](https://opensource.org/license/MIT).
