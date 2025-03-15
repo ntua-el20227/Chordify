@@ -15,7 +15,7 @@
 - [Description](#description)
 - [Installation](#installation)
 - [Tests](#tests)
-- [GitHub](#github)
+- [References](#references)
 - [License](#license)
 
 ---
