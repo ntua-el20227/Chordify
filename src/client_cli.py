@@ -126,7 +126,7 @@ def reception():
         
         # Write to output file
         with open("output.txt", "a") as f:
-            f.write(str(data) + "\n")
+            print(str(data), file=f, flush=True)
 
         return jsonify({"status": "success", "message": "Data written to output file"}), 200
     
@@ -252,7 +252,7 @@ def cli_loop(client_ip):
                     executor.submit(launch_file, i, ip, port, launch_type, client_ip)
             end = time.time()
             elapsed = end - start
-            throughput = elapsed / 500
+            throughput = 50 * len(node_list)/elapsed
             print(f"Elapsed time: {elapsed} seconds")
             print(f"Throughput: {throughput} seconds/commands")
         else:
