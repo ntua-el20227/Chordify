@@ -1,20 +1,38 @@
 import requests
+from flask import Flask, request, jsonify
 import shlex
-import threading
 from concurrent.futures import ThreadPoolExecutor
+from pyfiglet import Figlet
+from prompt_toolkit.styles import Style
+import os
+import atexit
+from colorama import init, Fore, Style
+import readline
+import threading
+import sys
+import time
+import logging
 
+cli_server = Flask(__name__)
+
+
+def print_banner():
+    f = Figlet(font='slant')  # You can choose other fonts like 'standard', 'big', etc.
+    print(f.renderText('Chordify CLI Client'))
+
+init(autoreset=True)  # Automatically resets color after each print
 def print_help():
-    help_text = """
-Available commands:
-  insert <key> <value>   - Insert a (key, value) pair into the DHT.
-  delete <key>           - Delete the (key, value) pair for the key.
-  query <key>            - Retrieve the value for the key (use "*" for all).
-  overlay                - Display the Chord ring topology.
-  depart                 - Instruct the node to gracefully leave the DHT (clearing its DHT info).
-  file_launch            - Launches a file from a node
-  file_parallel          - Launches in parallel different files to different nodes
-  help                   - Display this help message.
-  exit                   - Exit the client.
+    help_text = f"""
+{Fore.GREEN}Available commands:{Style.RESET_ALL}
+  {Fore.CYAN}insert <key> <value>{Style.RESET_ALL}   - Insert a (key, value) pair into the DHT.
+  {Fore.CYAN}delete <key>{Style.RESET_ALL}           - Delete the (key, value) pair for the key.
+  {Fore.CYAN}query <key>{Style.RESET_ALL}            - Retrieve the value for the key (use "*" for all).
+  {Fore.CYAN}overlay{Style.RESET_ALL}                - Display the Chord ring topology.
+  {Fore.CYAN}depart{Style.RESET_ALL}                 - Instruct the node to gracefully leave the DHT.
+  {Fore.CYAN}file_launch{Style.RESET_ALL}            - Launch a file from a node.
+  {Fore.CYAN}file_parallel{Style.RESET_ALL}          - Launch files in parallel to different nodes.
+  {Fore.CYAN}help{Style.RESET_ALL}                   - Display this help message.
+  {Fore.CYAN}exit{Style.RESET_ALL}                   - Exit the client.
 """
     print(help_text)
 
@@ -30,56 +48,99 @@ def send_request(method, base_url, endpoint, data=None, params=None):
         return {"status": "error", "message": str(e)}
     
 
-def launch_file(i, node_ip, node_port, launch_type):
+def launch_file(i, node_ip, node_port, launch_type, client_ip):
     base_url = f"http://{node_ip}:{node_port}"
     if launch_type == "insert":
-        file_path = "insert_" + str(i) + ".txt"
+        file_path = os.path.join("..", "data", "insert_" + str(i) + ".txt")
         with open(file_path, "r") as file:
-            while True:
-                line = file.readline()
-                if not line:  # Break if end of file
-                    break
-                data = {"key": line.strip(), "value": f"{node_ip}:{node_port}"}
-                resp = send_request("POST", base_url, "/insert", data=data)
-                print(resp)
+            with open("output.txt", "a") as f:
+                count = 0
+                while True:
+                    line = file.readline()
+                    if not line:  # Break if end of file
+                        break
+                    count+=1
+                    data = {"key": line.strip(), "value": f"{node_ip}:{node_port}", "client_ip": client_ip, "client_port": 8888}
+                    ins_resp = send_request("POST", base_url, "/insert", data=data)
+                    #print(str(ins_resp) + f" | Command {count} from file {i}", file=f, flush=True)
     elif launch_type == "query":
-        file_path = "query_" + str(i) + ".txt"
+        file_path = os.path.join("..", "data", "query_" + str(i) + ".txt")
         with open(file_path, "r") as file:
-            while True:
-                line = file.readline()
-                if not line:  # Break if end of file
-                    break
-                data = {"key": line.strip()}
-                resp = send_request("POST", base_url, "/query", data=data)
-                print(resp)
+            with open("output.txt", "a") as f:
+                count = 0
+                while True:
+                    line = file.readline()
+                    if not line:  # Break if end of file
+                        break
+                    count+=1
+                    data = {"key": line.strip(), "client_ip": client_ip, "client_port": 8888}
+                    q_resp = send_request("POST", base_url, "/query", data=data)
+                    #print(str(q_resp) + f" | Command {count} from file {i}", file=f, flush=True)
     elif launch_type == "request":
-        file_path = "request_" + str(i) + ".txt"
+        file_path = os.path.join("..", "data", "requests_" + str(i) + ".txt")
         with open(file_path, "r") as file:
-            while True:
-                line = file.readline().strip()
-                if not line:  # Break if end of file
-                    break
-                parts = line.split(", ")
-                request_type = parts[0]
-                key = parts[1]
-                if request_type == "query":
-                    data = {"key": key}
-                    resp = send_request("POST", base_url, "/query", data=data)
-                    print(resp)
-                elif request_type == "insert":
-                    value = parts[2]
-                    data = {"key": key, "value": value}
-                    resp = send_request("POST", base_url, "/insert", data=data)
-                    print(resp)
+            with open("output.txt", "a") as f:
+                count = 0
+                while True:
+                    line = file.readline().strip()
+                    if not line:  # Break if end of file
+                        break
+                    count+=1
+                    parts = line.split(", ")
+                    request_type = parts[0]
+                    key = parts[1]
+                    if request_type == "query":
+                        data = {"key": key, "client_ip": client_ip, "client_port": 8888}
+                        q_resp = send_request("POST", base_url, "/query", data=data)
+
+                    elif request_type == "insert":
+                        value = parts[2]
+                        data = {"key": key, "value": value, "client_ip": client_ip, "client_port": 8888}
+                        ins_resp = send_request("POST", base_url, "/insert", data=data)
+                        #print(str(ins_resp) + f" | Command {count} from file {i}", file=f, flush=True)
     else:
         print("Available type of launch: insert, query, request")
 
 
 
 
+# Define a history file path
+history_file = os.path.join(os.path.expanduser("~"), ".chordify_cli_history")
 
-def main():
-    print("Chordify CLI Client (Flask-based)")
+# Try to read an existing history file
+try:
+    readline.read_history_file(history_file)
+except FileNotFoundError:
+    pass
+
+# Ensure the history is saved when the program exits
+atexit.register(readline.write_history_file, history_file)
+
+
+@cli_server.route("/reception", methods=["POST"])
+def reception():
+    try:
+        data = request.get_json()  # Get incoming JSON data
+        if not data:
+            return jsonify({"status": "error", "message": "No data received"}), 400
+        
+        # Write to output file
+        with open("output.txt", "a") as f:
+            print(str(data), file=f, flush=True)
+
+        return jsonify({"status": "success", "message": "Data written to output file"}), 200
+    
+    except Exception as e:
+        return jsonify({"status": "error", "message": str(e)}), 500
+
+
+
+
+def cli_loop(client_ip):
+    with open("output.txt", "w") as f:
+        pass  
+    print_banner()
+    print("Chordify CLI Client-Server (Flask-based)")
     print("Type 'help' to see available commands.")
     while True:
         try:
@@ -108,7 +169,7 @@ def main():
             value = tokens[2]
             node_ip = tokens[3]
             node_port = tokens[4]
-            data = {"key": key, "value": value}
+            data = {"key": key, "value": value, "client_ip": client_ip, "client_port": 8888}
             base_url = f"http://{node_ip}:{node_port}"
             resp = send_request("POST", base_url, "/insert", data=data)
             print(resp)
@@ -130,7 +191,7 @@ def main():
             key = tokens[1]
             node_ip = tokens[2]
             node_port = tokens[3]
-            data = {"key": key}
+            data = {"key": key, "client_ip": client_ip, "client_port": 8888}
             base_url = f"http://{node_ip}:{node_port}"
             resp = send_request("POST", base_url, "/query", data=data)
             print(resp)
@@ -162,16 +223,20 @@ def main():
             resp = send_request("GET", base_url, "/node_info")
             print(resp)
 ###################################### single launch ######################################            
-        elif cmd == "file_launch":                     
+        elif cmd == "file_launch":
+            with open("output.txt", "w") as f:
+                pass                      
             if len(tokens) < 4:
                 print("Usage: file_launch <node_ip> <node_port> <type>")
                 continue
             node_ip = tokens[1]
             node_port = tokens[2]
             launch_type = tokens[3]
-            launch_file(0, node_ip, node_port, launch_type)       
+            launch_file(0, node_ip, node_port, launch_type, client_ip)
 ###################################### parallel launch ######################################
         elif cmd == "file_parallel":                        
+            with open("output.txt", "w") as f:
+                pass 
             if len(tokens) < 4:
                 print("Usage: file_parallel <node_ip> <node_port> <type>")
                 continue
@@ -181,16 +246,23 @@ def main():
             base_url = f"http://{node_ip}:{node_port}"
             resp = send_request("GET", base_url, "/overlay")
             node_list = [(node["ip"], node["port"]) for node in resp["overlay"]]
-
+            start  = time.time()
             with ThreadPoolExecutor(max_workers=len(node_list)) as executor:
-                futures = []
                 for i, (ip, port) in enumerate(node_list):
-                    futures.append(executor.submit(launch_file, i, ip, port, launch_type))
-                
-                for future in futures:
-                    future.result()
+                    executor.submit(launch_file, i, ip, port, launch_type, client_ip)
+            end = time.time()
+            elapsed = end - start
+            throughput = 50 * len(node_list)/elapsed
+            print(f"Elapsed time: {elapsed} seconds")
+            print(f"Throughput: {throughput} seconds/commands")
         else:
             print("Unknown command. Type 'help' for available commands.")
 
+# Disable Flask API logs
+log = logging.getLogger('werkzeug')
+log.setLevel(logging.ERROR)
+
 if __name__ == "__main__":
-    main()
+    client_ip = sys.argv[1]
+    threading.Thread(target=cli_loop, args=(client_ip,), daemon=True).start()
+    cli_server.run(host=client_ip, port=8888)

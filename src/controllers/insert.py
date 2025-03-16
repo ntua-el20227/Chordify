@@ -1,8 +1,9 @@
 import requests
 import threading
 import helper_functions as hf
-  
-def insert(self, key, value):
+
+
+def insert(self, key, value, client_ip, client_port):
         """
         Primary insertion method.
 
@@ -16,13 +17,16 @@ def insert(self, key, value):
             If not, forward the request.
           - If primary, write locally and then call insertReplicas if replication_count > 1.
         """
+        client_url = f"http://{client_ip}:{client_port}/reception"
+        
         # Check if the node is primary for the key.
         key_hash = hf.hash_function(key)
         if not (self.node_id == self.predecessor["node_id"] or hf.in_interval(key_hash, self.predecessor["node_id"],
                                                                               self.node_id)):
-            url = f"http://{self.successor['ip']}:{self.successor['port']}/insert"
-            response = requests.post(url, json={"key": key, "value": value})
-            print(f"[WRITE] Forwarded insert request for key '{key}' to node {self.successor['node_id']}")
+            next_node = self.find_successor(key_hash)   
+            url = f"http://{next_node['ip']}:{next_node['port']}/insert"
+            response = requests.post(url, json={"key": key, "value": value, "client_ip": client_ip, "client_port": client_port})
+            print(f"[WRITE] Forwarded insert request for key '{key}' to node {next_node['node_id']}")
             return response.json()
 
         replication_count = self.k_factor
@@ -33,21 +37,23 @@ def insert(self, key, value):
             # Asynchronously propagate the update if needed.
             # Call the successor to insert replicas.
             t = threading.Thread(target=self.forward_replicate,
-                                 args=(key, value, replication_count, False, self.node_id), daemon=True,
+                                 args=(key, value, replication_count, False, self.node_id, client_ip, client_port), daemon=True,
                                  name="forward_replicate")
             t.start()  # Start the thread
-            return {"status": "success", "message": f"Eventually inserted '{key}' at node {self.node_id}"}
+            ## TODO return from first (primary) node, check
+            client_message = {"status": "success", "message": f"Eventually inserted at node {self.ip}:{self.port}", "key": key, "value": value}
+            requests.post(client_url, json=client_message)
+            return client_message
         else:
             assert self.consistency == "linearizability", "Chain replication is only supported with linearizable consistency"
             # If primary, apply the write locally.
-            self.data_store[key] = self.data_store.get(key, "") + value
+            self.data_store[key] = self.data_store.get(key, "") + value # Concatenate the value if the key already exists
             print(f"[WRITE] Node {self.node_id} stored key '{key}' with value '{self.data_store[key]}'")
             # Call the successor to insert replicas.
-            self.forward_replicate(key, value, replication_count, False, self.node_id)
-            return {"status": "success",
-                    "message": f"Inserted '{key}' at node {self.node_id}"}  # Return success message
+            self.forward_replicate(key, value, replication_count, False, self.node_id, client_ip, client_port)
+            return {"status": "success", "message": f"Inserted at node {self.ip}:{self.port}", "key": key, "value": value} # Return success message
 
-def insertReplicas(self, key, value, replication_count, join=False, starting_node=None):
+def insertReplicas(self, key, value, replication_count, join=False, starting_node=None, client_ip=None, client_port=None):
         """
         Replica insertion method for chain replication.
 
@@ -71,13 +77,16 @@ def insertReplicas(self, key, value, replication_count, join=False, starting_nod
             print(
                 f"[WRITE_JOIN/DEPART] Node {self.node_id} stored replica key '{key}' with value '{self.replicas[key]}' and replica_count:{replication_count}")
         # If more replicas are needed, forward the request.
-        self.forward_replicate(key, value, replication_count, join, starting_node)
+        self.forward_replicate(key, value, replication_count, join, starting_node, client_ip, client_port)
         
-def forward_replicate(self, key, value, replication_count, join, starting_node):
+def forward_replicate(self, key, value, replication_count, join, starting_node, client_ip=None, client_port=None):
         """
         Asynchronously propagate the write for eventual consistency.
         Decrement replication_count before sending to ensure exactly kfactor copies.
         """
+        if client_ip:
+            client_url = f"http://{client_ip}:{client_port}/reception"
+        
         if self.successor["node_id"] != starting_node:
             print(key)
             print(value)
@@ -89,9 +98,23 @@ def forward_replicate(self, key, value, replication_count, join, starting_node):
                         "value": value,
                         "replication_count": int(replication_count) - 1,
                         "join": join,
-                        "starting_node": starting_node
+                        "starting_node": starting_node,
+                        "client_ip": client_ip,
+                        "client_port": client_port
                     })
                 except Exception as e:
                     print(f"[ERROR] Forward replication failed at node {self.node_id}: {e}")
+            else:
+                #return from last node of the chain, only from linearizability, check
+                if(self.consistency == "linearizability" and client_ip):
+                    client_message = {"status": "success", "message": f"Inserted at tail node {self.ip}:{self.port}", "key": key, "value": value}
+                    requests.post(client_url, json=client_message)
+                print(f"Circular replication completed for key '{key}'")
         else:
+            #return from last node of the chain, check
+            if(self.consistency == "linearizability" and client_ip):
+                client_message = {"status": "success", "message": f"Inserted at tail node {self.ip}:{self.port}", "key": key, "value": value}
+                requests.post(client_url, json=client_message)
             print(f"Circular replication completed for key '{key}'")
+
+   

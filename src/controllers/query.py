@@ -1,8 +1,8 @@
 import requests
 import helper_functions as hf
-from node import Node
 
-def query(self, key):
+
+def query(self, key, client_ip, client_port):
         """
         Query operation supporting both eventual and linearizable consistency.
 
@@ -17,11 +17,13 @@ def query(self, key):
             query with a replication count of self.k_factor.
           - If read_count is provided, we are already in the chain query.
         """
-        if key == "*":
-            return self.query_all_nodes()
-    
-        key_hash = hf.hash_function(key)
+        client_url = f"http://{client_ip}:{client_port}/reception"
 
+        if key == "*":
+             return self.query_all_nodes()
+            
+        key_hash = hf.hash_function(key)
+        
         if self.consistency == "eventual":
             
             should_be_here = self.node_id == self.predecessor["node_id"] or hf.in_interval(key_hash,
@@ -34,16 +36,30 @@ def query(self, key):
                 primary_value = self.data_store.get(key, "Key not found")
                 if primary_value != "Key not found":
                     print(f"[READ-EC] Node {self.node_id} found primary for '{key}' with value '{primary_value}'")
-                    return {"status": "success", "value": primary_value, "node_id": self.node_id}
-                
+                    ##TODO return original, check             
+                    client_message = {"status": f"success from  NODE {self.ip}:{self.port}", "key": key, "value": primary_value}
+
+                else:
+                    ##TODO not found, check
+                    client_message = {"status": "error", "message": f"Key '{key}' not found in node {self.node_id}"}
+
+                requests.post(client_url, json=client_message)
+                return client_message    
             # Check replica store (stale values are acceptable).
             replica_value, _ = self.replicas.get(key, ("Key not found", 0))
             if replica_value != "Key not found":
                 print(f"[READ-EC] Node {self.node_id} found replica for '{key}' with value '{replica_value}'")
-                return {"status": "success", "replica value": replica_value, "node_id": self.node_id}
-
-            # Not found locally; forward the query.
-            return self.forward_query_eventual(key, self.node_id)
+                ## TODO return replica, check               
+                client_message = {"status": f"success from  replica NODE {self.ip}:{self.port}", "key": key, "replica value": replica_value}
+                requests.post(client_url, json=client_message)
+                return client_message
+            
+            # Forward the query to the responsible node.
+            next_node = self.find_successor(key_hash)
+            url = f"http://{next_node['ip']}:{next_node['port']}/query"
+            response = requests.post(url, json={"key": key, "client_ip": client_ip, "client_port": client_port})
+            return response.json()
+            
         else:
             assert self.consistency == "linearizability"
             # Linearizable consistency
@@ -51,25 +67,45 @@ def query(self, key):
             # Corner case: if the node is the only one in the ring
             if self.node_id == self.predecessor["node_id"]:
                 if key in self.data_store:
-                    return {"status": "success", "value": self.data_store[key]}
+                    ## TODO return original, one node, check
+                    client_message = {"status": f"success from  NODE {self.ip}:{self.port}", "key": key, "value": self.data_store[key]}
+                    requests.post(client_url, json=client_message)
+                    return client_message
+                
                 else:
-                    return {"status": "error", "message": f"Key '{key}' not found in the only node in the ring"}
+                    ## TODO not found, check
+                    client_message = {"status": "error", "message": f"Key '{key}' not found in the only node in the ring"}
+                    requests.post(client_url, json=client_message)
+                    return client_message
 
             # Initial query: ensure the query starts at the node responsible for the key.
             if not hf.in_interval(key_hash, self.predecessor["node_id"], self.node_id):
                 # Forward the query to the responsible node.
-                url = f"http://{self.successor['ip']}:{self.successor['port']}/query"
-                response = requests.post(url, json={"key": key})
+                next_node = self.find_successor(key_hash)
+                url = f"http://{next_node['ip']}:{next_node['port']}/query"
+                response = requests.post(url, json={"key": key, "client_ip": client_ip, "client_port": client_port})
                 return response.json()
             else:
+                # case of kfactor 1.
+                if(self.k_factor == 1):
+                    if key in self.data_store:
+                        client_message = {"status": f"success from  NODE {self.ip}:{self.port}", "key": key, "value": self.data_store[key]}
+                        requests.post(client_url, json=client_message)
+                        return client_message
+                    else:
+                        client_message = {"status": "error", "message": f"Key '{key}' not found in node {self.node_id}"}
+                        requests.post(client_url, json=client_message)
+                        return client_message
+                    
                 return self.query_chain(self.successor['ip'], self.successor['port'], key, self.k_factor - 1,
-                                        self.node_id)
+                                        self.node_id, client_ip, client_port)
                 
-
 def query_all_nodes(self):
         """
         Retrieve all data and replica values from all nodes in the DHT.
         """
+        from controllers.node import Node # Avoid circular import
+        
         all_data = []
         current_node = self
         starting_node_id = self.node_id
@@ -96,19 +132,7 @@ def query_all_nodes(self):
             
         return {"status": "success", "all_data": all_data}
 
-def forward_query_eventual(self, key, starting_node):
-        """Forward an eventual consistency query to the successor."""
-        if self.successor["node_id"] == starting_node:
-            return {"status": "error", "message": f"Key '{key}' not found in the DHT"}
-        
-        try:
-            url = f"http://{self.successor['ip']}:{self.successor['port']}/query"
-            response = requests.post(url, json={"key": key})
-            return response.json()
-        except Exception as e:
-            return {"status": "error", "message": f"Eventual query forwarding failed: {e}"}
-
-def query_chain(self, ip, port, key, replication_count, starting_id):
+def query_chain(self, ip, port, key, replication_count, starting_id, client_ip, client_port):
         """
         Handle a linearizable consistency query as part of a chain replication.
 
@@ -116,6 +140,7 @@ def query_chain(self, ip, port, key, replication_count, starting_id):
         then this node is the tail and returns the final value. Otherwise, forward
         the query to the successor with a decremented replication count.
         """
+        client_url = f"http://{client_ip}:{client_port}/reception"
         # Get the info of current node
         url = f"http://{ip}:{port}/node_info"
         response = requests.get(url)
@@ -131,10 +156,18 @@ def query_chain(self, ip, port, key, replication_count, starting_id):
         if replica_value != "Key not found" and (
                 rep_count == 1 or successor['node_id'] == starting_id):  # Only the tail node returns the final value.
             print(f"[READ-LIN] Tail node {port} returning final value '{replica_value}' for key '{key}'")
-            return {"status": "success", "value": replica_value}
+            ## TODO return original from tail, check
+            client_message = {"status": f"success from TAIL NODE {ip}:{port}", "key": key, "value": replica_value}
+            requests.post(client_url, json=client_message)
+            return client_message
         else:
             if replication_count > 1:
                 print(f"[READ-LIN] Node {port} forwarding query for key '{key}' to node {successor['port']}")
-                return self.query_chain(successor['ip'], successor['port'], key, replication_count - 1, starting_id)
+                return self.query_chain(successor['ip'], successor['port'], key, replication_count - 1, starting_id, client_ip, client_port)
             else:
-                return {"status": "error", "message": f"Key '{key}' not found in linearizable chain"}
+                ## TODO not found, check
+                client_message = {"status": "error", "message": f"Key '{key}' not found in linearizable chain"}
+                requests.post(client_url, json=client_message)
+                return client_message
+
+ 
