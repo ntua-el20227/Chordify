@@ -1,7 +1,7 @@
 import requests
 import threading
 import helper_functions as hf
-from datetime import datetime
+
 
 class Node:
 
@@ -67,7 +67,7 @@ class Node:
                                  name="forward_replicate")
             t.start()  # Start the thread
             ## TODO return from first (primary) node, check
-            client_message = {"status": "success", "message": f"Eventually inserted at node {self.ip}:{self.port}", "key": key, "value": value, "timestamp": datetime.now().strftime("%H:%M:%S")}
+            client_message = {"status": "success", "message": f"Eventually inserted at node {self.ip}:{self.port}", "key": key, "value": value}
             requests.post(client_url, json=client_message)
             return client_message
         else:
@@ -77,7 +77,7 @@ class Node:
             print(f"[WRITE] Node {self.node_id} stored key '{key}' with value '{self.data_store[key]}'")
             # Call the successor to insert replicas.
             self.forward_replicate(key, value, replication_count, False, self.node_id, client_ip, client_port)
-            return {"status": "success", "message": f"Inserted at node {self.ip}:{self.port}", "key": key, "value": value, "timestamp": datetime.now().strftime("%H:%M:%S")} # Return success message
+            return {"status": "success", "message": f"Inserted at node {self.ip}:{self.port}", "key": key, "value": value} # Return success message
 
     def insertReplicas(self, key, value, replication_count, join=False, starting_node=None, client_ip=None, client_port=None):
         """
@@ -133,13 +133,13 @@ class Node:
             else:
                 #return from last node of the chain, only from linearizability, check
                 if(self.consistency == "linearizability" and client_ip):
-                    client_message = {"status": "success", "message": f"Inserted at tail node {self.ip}:{self.port}", "key": key, "value": value, "timestamp": datetime.now().strftime("%H:%M:%S")}
+                    client_message = {"status": "success", "message": f"Inserted at tail node {self.ip}:{self.port}", "key": key, "value": value}
                     requests.post(client_url, json=client_message)
                 print(f"Circular replication completed for key '{key}'")
         else:
             #return from last node of the chain, check
             if(self.consistency == "linearizability" and client_ip):
-                client_message = {"status": "success", "message": f"Inserted at tail node {self.ip}:{self.port}", "key": key, "value": value, "timestamp": datetime.now().strftime("%H:%M:%S")}
+                client_message = {"status": "success", "message": f"Inserted at tail node {self.ip}:{self.port}", "key": key, "value": value}
                 requests.post(client_url, json=client_message)
             print(f"Circular replication completed for key '{key}'")
 
@@ -178,7 +178,7 @@ class Node:
                 if primary_value != "Key not found":
                     print(f"[READ-EC] Node {self.node_id} found primary for '{key}' with value '{primary_value}'")
                     ##TODO return original, check             
-                    client_message = {"status": f"success from  NODE {self.ip}:{self.port}", "key": key, "value": primary_value, "timestamp": datetime.now().strftime("%H:%M:%S")}
+                    client_message = {"status": f"success from  NODE {self.ip}:{self.port}", "key": key, "value": primary_value}
 
                 else:
                     ##TODO not found, check
@@ -191,7 +191,7 @@ class Node:
             if replica_value != "Key not found":
                 print(f"[READ-EC] Node {self.node_id} found replica for '{key}' with value '{replica_value}'")
                 ## TODO return replica, check               
-                client_message = {"status": f"success from  replica NODE {self.ip}:{self.port}", "key": key, "replica value": replica_value, "timestamp": datetime.now().strftime("%H:%M:%S")}
+                client_message = {"status": f"success from  replica NODE {self.ip}:{self.port}", "key": key, "replica value": replica_value}
                 requests.post(client_url, json=client_message)
                 return client_message
             
@@ -208,7 +208,7 @@ class Node:
             if self.node_id == self.predecessor["node_id"]:
                 if key in self.data_store:
                     ## TODO return original, one node, check
-                    client_message = {"status": f"success from  NODE {self.ip}:{self.port}", "key": key, "value": self.data_store[key], "timestamp": datetime.now().strftime("%H:%M:%S")}
+                    client_message = {"status": f"success from  NODE {self.ip}:{self.port}", "key": key, "value": self.data_store[key]}
                     requests.post(client_url, json=client_message)
                     return client_message
                 
@@ -228,7 +228,7 @@ class Node:
                 # case of kfactor 1.
                 if(self.k_factor == 1):
                     if key in self.data_store:
-                        client_message = {"status": f"success from  NODE {self.ip}:{self.port}", "key": key, "value": self.data_store[key], "timestamp": datetime.now().strftime("%H:%M:%S")}
+                        client_message = {"status": f"success from  NODE {self.ip}:{self.port}", "key": key, "value": self.data_store[key]}
                         requests.post(client_url, json=client_message)
                         return client_message
                     else:
@@ -293,7 +293,7 @@ class Node:
                 rep_count == 1 or successor['node_id'] == starting_id):  # Only the tail node returns the final value.
             print(f"[READ-LIN] Tail node {port} returning final value '{replica_value}' for key '{key}'")
             ## TODO return original from tail, check
-            client_message = {"status": f"success from TAIL NODE {ip}:{port}", "key": key, "value": replica_value, "timestamp": datetime.now().strftime("%H:%M:%S")}
+            client_message = {"status": f"success from TAIL NODE {ip}:{port}", "key": key, "value": replica_value}
             requests.post(client_url, json=client_message)
             return client_message
         else:
