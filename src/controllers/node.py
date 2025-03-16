@@ -36,7 +36,18 @@ class Node:
         print(f"[START] Node {self.node_id} at {self.ip}:{self.port}")
         print(f"[CONFIG] Consistency: {self.consistency}, Replication Factor: {self.k_factor}")
 
-    
+    def get_node_status(self, ip, port):
+        """
+        Get the node info for the given IP and port.
+        """
+        try:
+            url = f"http://{ip}:{port}/node_info"
+            response = requests.get(url, timeout=1)
+            if response.status_code == 200:
+                return response.json()
+        except requests.exceptions.RequestException:
+            return None
+        
     def find_successor(self, id):
         """
         Find the successor of the given id using the finger table.
@@ -54,9 +65,11 @@ class Node:
         Find the closest preceding node for the given id using the finger table.
         """
         for i in range(15, -1, -1):
-            if hf.in_interval(self.finger_table[i]["node_id"], self.node_id, id):
+            node_info = self.get_node_status(self.finger_table[i]["ip"], self.finger_table[i]["port"])
+            if node_info and node_info["successor"] is not None and hf.in_interval(self.finger_table[i]["node_id"], self.node_id, id):
                 return self.finger_table[i]
         return self.successor
+    
     
     def initialize_finger_table(self):
         """
