@@ -1,6 +1,5 @@
 import requests
 import helper_functions as hf
-from datetime import datetime
 
 
 def query(self, key, client_ip, client_port):
@@ -38,7 +37,7 @@ def query(self, key, client_ip, client_port):
                 if primary_value != "Key not found":
                     print(f"[READ-EC] Node {self.node_id} found primary for '{key}' with value '{primary_value}'")
                     ##TODO return original, check             
-                    client_message = {"status": f"success from  NODE {self.ip}:{self.port}", "key": key, "value": primary_value, "timestamp": datetime.now().strftime("%H:%M:%S")}
+                    client_message = {"status": f"success from  NODE {self.ip}:{self.port}", "key": key, "value": primary_value}
 
                 else:
                     ##TODO not found, check
@@ -51,7 +50,7 @@ def query(self, key, client_ip, client_port):
             if replica_value != "Key not found":
                 print(f"[READ-EC] Node {self.node_id} found replica for '{key}' with value '{replica_value}'")
                 ## TODO return replica, check               
-                client_message = {"status": f"success from  replica NODE {self.ip}:{self.port}", "key": key, "replica value": replica_value, "timestamp": datetime.now().strftime("%H:%M:%S")}
+                client_message = {"status": f"success from  replica NODE {self.ip}:{self.port}", "key": key, "replica value": replica_value}
                 requests.post(client_url, json=client_message)
                 return client_message
             
@@ -69,7 +68,7 @@ def query(self, key, client_ip, client_port):
             if self.node_id == self.predecessor["node_id"]:
                 if key in self.data_store:
                     ## TODO return original, one node, check
-                    client_message = {"status": f"success from  NODE {self.ip}:{self.port}", "key": key, "value": self.data_store[key], "timestamp": datetime.now().strftime("%H:%M:%S")}
+                    client_message = {"status": f"success from  NODE {self.ip}:{self.port}", "key": key, "value": self.data_store[key]}
                     requests.post(client_url, json=client_message)
                     return client_message
                 
@@ -90,7 +89,7 @@ def query(self, key, client_ip, client_port):
                 # case of kfactor 1.
                 if(self.k_factor == 1):
                     if key in self.data_store:
-                        client_message = {"status": f"success from  NODE {self.ip}:{self.port}", "key": key, "value": self.data_store[key], "timestamp": datetime.now().strftime("%H:%M:%S")}
+                        client_message = {"status": f"success from  NODE {self.ip}:{self.port}", "key": key, "value": self.data_store[key]}
                         requests.post(client_url, json=client_message)
                         return client_message
                     else:
@@ -158,7 +157,7 @@ def query_chain(self, ip, port, key, replication_count, starting_id, client_ip, 
                 rep_count == 1 or successor['node_id'] == starting_id):  # Only the tail node returns the final value.
             print(f"[READ-LIN] Tail node {port} returning final value '{replica_value}' for key '{key}'")
             ## TODO return original from tail, check
-            client_message = {"status": f"success from TAIL NODE {ip}:{port}", "key": key, "value": replica_value, "timestamp": datetime.now().strftime("%H:%M:%S")}
+            client_message = {"status": f"success from TAIL NODE {ip}:{port}", "key": key, "value": replica_value}
             requests.post(client_url, json=client_message)
             return client_message
         else:

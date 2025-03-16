@@ -1,7 +1,6 @@
 import requests
 import threading
 import helper_functions as hf
-from datetime import datetime
 
 
 def insert(self, key, value, client_ip, client_port):
@@ -42,7 +41,7 @@ def insert(self, key, value, client_ip, client_port):
                                  name="forward_replicate")
             t.start()  # Start the thread
             ## TODO return from first (primary) node, check
-            client_message = {"status": "success", "message": f"Eventually inserted at node {self.ip}:{self.port}", "key": key, "value": value, "timestamp": datetime.now().strftime("%H:%M:%S")}
+            client_message = {"status": "success", "message": f"Eventually inserted at node {self.ip}:{self.port}", "key": key, "value": value}
             requests.post(client_url, json=client_message)
             return client_message
         else:
@@ -52,7 +51,7 @@ def insert(self, key, value, client_ip, client_port):
             print(f"[WRITE] Node {self.node_id} stored key '{key}' with value '{self.data_store[key]}'")
             # Call the successor to insert replicas.
             self.forward_replicate(key, value, replication_count, False, self.node_id, client_ip, client_port)
-            return {"status": "success", "message": f"Inserted at node {self.ip}:{self.port}", "key": key, "value": value, "timestamp": datetime.now().strftime("%H:%M:%S")} # Return success message
+            return {"status": "success", "message": f"Inserted at node {self.ip}:{self.port}", "key": key, "value": value} # Return success message
 
 def insertReplicas(self, key, value, replication_count, join=False, starting_node=None, client_ip=None, client_port=None):
         """
@@ -108,13 +107,13 @@ def forward_replicate(self, key, value, replication_count, join, starting_node, 
             else:
                 #return from last node of the chain, only from linearizability, check
                 if(self.consistency == "linearizability" and client_ip):
-                    client_message = {"status": "success", "message": f"Inserted at tail node {self.ip}:{self.port}", "key": key, "value": value, "timestamp": datetime.now().strftime("%H:%M:%S")}
+                    client_message = {"status": "success", "message": f"Inserted at tail node {self.ip}:{self.port}", "key": key, "value": value}
                     requests.post(client_url, json=client_message)
                 print(f"Circular replication completed for key '{key}'")
         else:
             #return from last node of the chain, check
             if(self.consistency == "linearizability" and client_ip):
-                client_message = {"status": "success", "message": f"Inserted at tail node {self.ip}:{self.port}", "key": key, "value": value, "timestamp": datetime.now().strftime("%H:%M:%S")}
+                client_message = {"status": "success", "message": f"Inserted at tail node {self.ip}:{self.port}", "key": key, "value": value}
                 requests.post(client_url, json=client_message)
             print(f"Circular replication completed for key '{key}'")
 
