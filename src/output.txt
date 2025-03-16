@@ -1,0 +1,300 @@
+{'status': 'success from  replica NODE 127.0.0.1:5000', 'key': 'Good Vibrations', 'replica value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Imagine', 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  replica NODE 127.0.0.1:3005', 'key': 'Johnny B. Goode', 'replica value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3005', 'key': "What's Going On", 'value': '590515531533569564592529508127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Imagine', 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:4000', 'key': 'Respect', 'value': '528522589584512587559566127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  replica NODE 127.0.0.1:3005', 'key': 'Hey Jude', 'replica value': '524523542572526540568596576594552565549573519543506535502127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3007', 'key': 'Like a Rolling Stone', 'value': '585536582520504599514578571527593545127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  replica NODE 127.0.0.1:3007', 'key': 'Satisfaction', 'replica value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Imagine', 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3007', 'key': 'Like a Rolling Stone', 'value': '585536582520504599514578571527593545127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Hey Jude', 'value': '524523542572526540568596576594552565549573519543506535502127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3007', 'key': 'Like a Rolling Stone', 'value': '585536582520504599514578571527593545127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  replica NODE 127.0.0.1:3007', 'key': "What'd I Say", 'replica value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  replica NODE 127.0.0.1:5000', 'key': "What's Going On", 'replica value': '590515531533569564592529508127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3005', 'key': "What's Going On", 'value': '590515531533569564592529508127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3005', 'key': "What'd I Say", 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3007', 'key': 'Good Vibrations', 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Smells Like Teen Spirit', 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Smells Like Teen Spirit', 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Hey Jude', 'value': '524523542572526540568596576594552565549573519543506535502127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  replica NODE 127.0.0.1:3005', 'key': 'Smells Like Teen Spirit', 'replica value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Smells Like Teen Spirit', 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  replica NODE 127.0.0.1:3007', 'key': 'Hey Jude', 'replica value': '524523542572526540568596576594552565549573519543506535502127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  replica NODE 127.0.0.1:4000', 'key': 'Good Vibrations', 'replica value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Satisfaction', 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  replica NODE 127.0.0.1:3005', 'key': 'Imagine', 'replica value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Satisfaction', 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  replica NODE 127.0.0.1:3007', 'key': "What'd I Say", 'replica value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  replica NODE 127.0.0.1:5000', 'key': 'Good Vibrations', 'replica value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Hey Jude', 'value': '524523542572526540568596576594552565549573519543506535502127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Imagine', 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Hey Jude', 'value': '524523542572526540568596576594552565549573519543506535502127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3007', 'key': 'Like a Rolling Stone', 'value': '585536582520504599514578571527593545127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  replica NODE 127.0.0.1:5000', 'key': 'Good Vibrations', 'replica value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  replica NODE 127.0.0.1:3007', 'key': "What'd I Say", 'replica value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Satisfaction', 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Smells Like Teen Spirit', 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3005', 'key': "What'd I Say", 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3005', 'key': "What'd I Say", 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Satisfaction', 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:4000', 'key': 'Respect', 'value': '528522589584512587559566127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3007', 'key': 'Like a Rolling Stone', 'value': '585536582520504599514578571527593545127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Hey Jude', 'value': '524523542572526540568596576594552565549573519543506535502127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  replica NODE 127.0.0.1:3000', 'key': 'Johnny B. Goode', 'replica value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:4000', 'key': 'Respect', 'value': '528522589584512587559566127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3007', 'key': 'Good Vibrations', 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Satisfaction', 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3005', 'key': "What'd I Say", 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3007', 'key': 'Good Vibrations', 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3005', 'key': "What's Going On", 'value': '590515531533569564592529508127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3007', 'key': 'Like a Rolling Stone', 'value': '585536582520504599514578571527593545127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:4000', 'key': 'Respect', 'value': '528522589584512587559566127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3001', 'key': 'Johnny B. Goode', 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3001', 'key': 'Johnny B. Goode', 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Smells Like Teen Spirit', 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3007', 'key': 'Good Vibrations', 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  replica NODE 127.0.0.1:3005', 'key': 'Imagine', 'replica value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:4000', 'key': 'Respect', 'value': '528522589584512587559566127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Smells Like Teen Spirit', 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  replica NODE 127.0.0.1:5000', 'key': "What's Going On", 'replica value': '590515531533569564592529508127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Hey Jude', 'value': '524523542572526540568596576594552565549573519543506535502127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  replica NODE 127.0.0.1:3007', 'key': "What's Going On", 'replica value': '590515531533569564592529508127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3005', 'key': "What'd I Say", 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3007', 'key': 'Good Vibrations', 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Imagine', 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:4000', 'key': 'Respect', 'value': '528522589584512587559566127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Hey Jude', 'value': '524523542572526540568596576594552565549573519543506535502127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3007', 'key': 'Good Vibrations', 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  replica NODE 127.0.0.1:3005', 'key': 'Satisfaction', 'replica value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3001', 'key': 'Johnny B. Goode', 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  replica NODE 127.0.0.1:3007', 'key': 'Smells Like Teen Spirit', 'replica value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3005', 'key': "What's Going On", 'value': '590515531533569564592529508127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3007', 'key': 'Good Vibrations', 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  replica NODE 127.0.0.1:3005', 'key': 'Johnny B. Goode', 'replica value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Imagine', 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3007', 'key': 'Good Vibrations', 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Imagine', 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  replica NODE 127.0.0.1:3005', 'key': 'Satisfaction', 'replica value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Hey Jude', 'value': '524523542572526540568596576594552565549573519543506535502127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  replica NODE 127.0.0.1:3007', 'key': 'Smells Like Teen Spirit', 'replica value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3001', 'key': 'Johnny B. Goode', 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3005', 'key': "What'd I Say", 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  replica NODE 127.0.0.1:3005', 'key': 'Imagine', 'replica value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  replica NODE 127.0.0.1:3007', 'key': 'Satisfaction', 'replica value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Imagine', 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3005', 'key': "What'd I Say", 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Hey Jude', 'value': '524523542572526540568596576594552565549573519543506535502127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  replica NODE 127.0.0.1:3007', 'key': 'Imagine', 'replica value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  replica NODE 127.0.0.1:3005', 'key': 'Smells Like Teen Spirit', 'replica value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3005', 'key': "What'd I Say", 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3001', 'key': 'Johnny B. Goode', 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3005', 'key': "What'd I Say", 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Hey Jude', 'value': '524523542572526540568596576594552565549573519543506535502127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  replica NODE 127.0.0.1:3005', 'key': 'Satisfaction', 'replica value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3001', 'key': 'Johnny B. Goode', 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:4000', 'key': 'Respect', 'value': '528522589584512587559566127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3007', 'key': 'Good Vibrations', 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:4000', 'key': 'Respect', 'value': '528522589584512587559566127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3007', 'key': 'Good Vibrations', 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Imagine', 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3007', 'key': 'Good Vibrations', 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:4000', 'key': 'Respect', 'value': '528522589584512587559566127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3001', 'key': 'Johnny B. Goode', 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:4000', 'key': 'Respect', 'value': '528522589584512587559566127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  replica NODE 127.0.0.1:3007', 'key': "What's Going On", 'replica value': '590515531533569564592529508127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3005', 'key': "What'd I Say", 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Smells Like Teen Spirit', 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3007', 'key': 'Good Vibrations', 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3007', 'key': 'Like a Rolling Stone', 'value': '585536582520504599514578571527593545127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  replica NODE 127.0.0.1:3007', 'key': 'Imagine', 'replica value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  replica NODE 127.0.0.1:5000', 'key': 'Like a Rolling Stone', 'replica value': '585536582520504599514578571527593545127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  replica NODE 127.0.0.1:3005', 'key': 'Smells Like Teen Spirit', 'replica value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3005', 'key': "What's Going On", 'value': '590515531533569564592529508127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Imagine', 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  replica NODE 127.0.0.1:3007', 'key': 'Smells Like Teen Spirit', 'replica value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  replica NODE 127.0.0.1:3005', 'key': 'Smells Like Teen Spirit', 'replica value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3001', 'key': 'Johnny B. Goode', 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3005', 'key': "What'd I Say", 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3005', 'key': "What'd I Say", 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  replica NODE 127.0.0.1:3007', 'key': "What's Going On", 'replica value': '590515531533569564592529508127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3007', 'key': 'Like a Rolling Stone', 'value': '585536582520504599514578571527593545127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Smells Like Teen Spirit', 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  replica NODE 127.0.0.1:5000', 'key': "What's Going On", 'replica value': '590515531533569564592529508127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  replica NODE 127.0.0.1:3007', 'key': "What's Going On", 'replica value': '590515531533569564592529508127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Hey Jude', 'value': '524523542572526540568596576594552565549573519543506535502127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Smells Like Teen Spirit', 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  replica NODE 127.0.0.1:3005', 'key': 'Johnny B. Goode', 'replica value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  replica NODE 127.0.0.1:4000', 'key': 'Good Vibrations', 'replica value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  replica NODE 127.0.0.1:5000', 'key': 'Good Vibrations', 'replica value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  replica NODE 127.0.0.1:3000', 'key': 'Respect', 'replica value': '528522589584512587559566127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Smells Like Teen Spirit', 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3001', 'key': 'Johnny B. Goode', 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3007', 'key': 'Good Vibrations', 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Smells Like Teen Spirit', 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  replica NODE 127.0.0.1:5000', 'key': "What'd I Say", 'replica value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Imagine', 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  replica NODE 127.0.0.1:3007', 'key': "What's Going On", 'replica value': '590515531533569564592529508127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  replica NODE 127.0.0.1:5000', 'key': "What's Going On", 'replica value': '590515531533569564592529508127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Satisfaction', 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3005', 'key': "What's Going On", 'value': '590515531533569564592529508127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:4000', 'key': 'Respect', 'value': '528522589584512587559566127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3007', 'key': 'Like a Rolling Stone', 'value': '585536582520504599514578571527593545127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Smells Like Teen Spirit', 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Hey Jude', 'value': '524523542572526540568596576594552565549573519543506535502127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3007', 'key': 'Like a Rolling Stone', 'value': '585536582520504599514578571527593545127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Smells Like Teen Spirit', 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Satisfaction', 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  replica NODE 127.0.0.1:3007', 'key': 'Smells Like Teen Spirit', 'replica value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  replica NODE 127.0.0.1:4000', 'key': 'Like a Rolling Stone', 'replica value': '585536582520504599514578571527593545127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:4000', 'key': 'Respect', 'value': '528522589584512587559566127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Imagine', 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Smells Like Teen Spirit', 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:4000', 'key': 'Respect', 'value': '528522589584512587559566127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  replica NODE 127.0.0.1:3005', 'key': 'Hey Jude', 'replica value': '524523542572526540568596576594552565549573519543506535502127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:4000', 'key': 'Respect', 'value': '528522589584512587559566127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  replica NODE 127.0.0.1:3000', 'key': 'Respect', 'replica value': '528522589584512587559566127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Smells Like Teen Spirit', 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3005', 'key': "What's Going On", 'value': '590515531533569564592529508127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:4000', 'key': 'Respect', 'value': '528522589584512587559566127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  replica NODE 127.0.0.1:3005', 'key': 'Imagine', 'replica value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Hey Jude', 'value': '524523542572526540568596576594552565549573519543506535502127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  replica NODE 127.0.0.1:3007', 'key': 'Satisfaction', 'replica value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  replica NODE 127.0.0.1:5000', 'key': "What's Going On", 'replica value': '590515531533569564592529508127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Satisfaction', 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3005', 'key': "What's Going On", 'value': '590515531533569564592529508127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Smells Like Teen Spirit', 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3005', 'key': "What's Going On", 'value': '590515531533569564592529508127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  replica NODE 127.0.0.1:3007', 'key': 'Imagine', 'replica value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  replica NODE 127.0.0.1:3005', 'key': 'Johnny B. Goode', 'replica value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  replica NODE 127.0.0.1:4000', 'key': 'Like a Rolling Stone', 'replica value': '585536582520504599514578571527593545127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:4000', 'key': 'Respect', 'value': '528522589584512587559566127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  replica NODE 127.0.0.1:3001', 'key': 'Respect', 'replica value': '528522589584512587559566127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  replica NODE 127.0.0.1:3007', 'key': 'Smells Like Teen Spirit', 'replica value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3005', 'key': "What's Going On", 'value': '590515531533569564592529508127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  replica NODE 127.0.0.1:4000', 'key': 'Good Vibrations', 'replica value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3005', 'key': "What's Going On", 'value': '590515531533569564592529508127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3007', 'key': 'Good Vibrations', 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Hey Jude', 'value': '524523542572526540568596576594552565549573519543506535502127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:4000', 'key': 'Respect', 'value': '528522589584512587559566127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Hey Jude', 'value': '524523542572526540568596576594552565549573519543506535502127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3005', 'key': "What'd I Say", 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3005', 'key': "What'd I Say", 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:4000', 'key': 'Respect', 'value': '528522589584512587559566127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3001', 'key': 'Johnny B. Goode', 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:4000', 'key': 'Respect', 'value': '528522589584512587559566127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Smells Like Teen Spirit', 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  replica NODE 127.0.0.1:3007', 'key': 'Smells Like Teen Spirit', 'replica value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:4000', 'key': 'Respect', 'value': '528522589584512587559566127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3007', 'key': 'Good Vibrations', 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Smells Like Teen Spirit', 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3007', 'key': 'Good Vibrations', 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3005', 'key': "What'd I Say", 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Smells Like Teen Spirit', 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  replica NODE 127.0.0.1:3005', 'key': 'Johnny B. Goode', 'replica value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  replica NODE 127.0.0.1:3007', 'key': 'Hey Jude', 'replica value': '524523542572526540568596576594552565549573519543506535502127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3005', 'key': "What's Going On", 'value': '590515531533569564592529508127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Imagine', 'value': '127.0.0.1:5000', 'timestamp': '18:47:15'}
+{'status': 'success from  replica NODE 127.0.0.1:5000', 'key': "What's Going On", 'replica value': '590515531533569564592529508127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  NODE 127.0.0.1:3005', 'key': "What'd I Say", 'value': '127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  NODE 127.0.0.1:3007', 'key': 'Like a Rolling Stone', 'value': '585536582520504599514578571527593545127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  replica NODE 127.0.0.1:4000', 'key': 'Good Vibrations', 'replica value': '127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Satisfaction', 'value': '127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  NODE 127.0.0.1:3005', 'key': "What'd I Say", 'value': '127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  replica NODE 127.0.0.1:3007', 'key': 'Hey Jude', 'replica value': '524523542572526540568596576594552565549573519543506535502127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  replica NODE 127.0.0.1:3000', 'key': 'Respect', 'replica value': '528522589584512587559566127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  NODE 127.0.0.1:3005', 'key': "What's Going On", 'value': '590515531533569564592529508127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Imagine', 'value': '127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  NODE 127.0.0.1:3007', 'key': 'Like a Rolling Stone', 'value': '585536582520504599514578571527593545127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  replica NODE 127.0.0.1:3007', 'key': 'Smells Like Teen Spirit', 'replica value': '127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Imagine', 'value': '127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  NODE 127.0.0.1:3005', 'key': "What's Going On", 'value': '590515531533569564592529508127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  replica NODE 127.0.0.1:3005', 'key': 'Johnny B. Goode', 'replica value': '127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  NODE 127.0.0.1:4000', 'key': 'Respect', 'value': '528522589584512587559566127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  replica NODE 127.0.0.1:5000', 'key': 'Like a Rolling Stone', 'replica value': '585536582520504599514578571527593545127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  replica NODE 127.0.0.1:3007', 'key': 'Smells Like Teen Spirit', 'replica value': '127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Smells Like Teen Spirit', 'value': '127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Satisfaction', 'value': '127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  NODE 127.0.0.1:4000', 'key': 'Respect', 'value': '528522589584512587559566127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  replica NODE 127.0.0.1:3005', 'key': 'Johnny B. Goode', 'replica value': '127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  NODE 127.0.0.1:3005', 'key': "What'd I Say", 'value': '127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  replica NODE 127.0.0.1:4000', 'key': 'Good Vibrations', 'replica value': '127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  NODE 127.0.0.1:3001', 'key': 'Johnny B. Goode', 'value': '127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Imagine', 'value': '127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Smells Like Teen Spirit', 'value': '127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  NODE 127.0.0.1:3005', 'key': "What's Going On", 'value': '590515531533569564592529508127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  replica NODE 127.0.0.1:3005', 'key': 'Smells Like Teen Spirit', 'replica value': '127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  replica NODE 127.0.0.1:3007', 'key': "What'd I Say", 'replica value': '127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Smells Like Teen Spirit', 'value': '127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  replica NODE 127.0.0.1:3001', 'key': 'Respect', 'replica value': '528522589584512587559566127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  NODE 127.0.0.1:4000', 'key': 'Respect', 'value': '528522589584512587559566127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  replica NODE 127.0.0.1:3005', 'key': 'Hey Jude', 'replica value': '524523542572526540568596576594552565549573519543506535502127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  NODE 127.0.0.1:3005', 'key': "What's Going On", 'value': '590515531533569564592529508127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  NODE 127.0.0.1:3005', 'key': "What'd I Say", 'value': '127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  NODE 127.0.0.1:3001', 'key': 'Johnny B. Goode', 'value': '127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  NODE 127.0.0.1:3001', 'key': 'Johnny B. Goode', 'value': '127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  NODE 127.0.0.1:4000', 'key': 'Respect', 'value': '528522589584512587559566127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  replica NODE 127.0.0.1:3005', 'key': 'Imagine', 'replica value': '127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  NODE 127.0.0.1:3001', 'key': 'Johnny B. Goode', 'value': '127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Satisfaction', 'value': '127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  NODE 127.0.0.1:3001', 'key': 'Johnny B. Goode', 'value': '127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  NODE 127.0.0.1:3007', 'key': 'Good Vibrations', 'value': '127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  NODE 127.0.0.1:3007', 'key': 'Good Vibrations', 'value': '127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Hey Jude', 'value': '524523542572526540568596576594552565549573519543506535502127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  NODE 127.0.0.1:3005', 'key': "What'd I Say", 'value': '127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Hey Jude', 'value': '524523542572526540568596576594552565549573519543506535502127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  NODE 127.0.0.1:3007', 'key': 'Like a Rolling Stone', 'value': '585536582520504599514578571527593545127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  NODE 127.0.0.1:3001', 'key': 'Johnny B. Goode', 'value': '127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  NODE 127.0.0.1:3005', 'key': "What's Going On", 'value': '590515531533569564592529508127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  replica NODE 127.0.0.1:3005', 'key': 'Johnny B. Goode', 'replica value': '127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  NODE 127.0.0.1:3005', 'key': "What's Going On", 'value': '590515531533569564592529508127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Imagine', 'value': '127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Satisfaction', 'value': '127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  replica NODE 127.0.0.1:4000', 'key': 'Good Vibrations', 'replica value': '127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  NODE 127.0.0.1:3007', 'key': 'Good Vibrations', 'value': '127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  replica NODE 127.0.0.1:3005', 'key': 'Satisfaction', 'replica value': '127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  replica NODE 127.0.0.1:3007', 'key': 'Satisfaction', 'replica value': '127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  NODE 127.0.0.1:3005', 'key': "What's Going On", 'value': '590515531533569564592529508127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  replica NODE 127.0.0.1:3005', 'key': 'Johnny B. Goode', 'replica value': '127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Hey Jude', 'value': '524523542572526540568596576594552565549573519543506535502127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Imagine', 'value': '127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Satisfaction', 'value': '127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  replica NODE 127.0.0.1:3005', 'key': 'Imagine', 'replica value': '127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  NODE 127.0.0.1:3005', 'key': "What's Going On", 'value': '590515531533569564592529508127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  replica NODE 127.0.0.1:3005', 'key': 'Imagine', 'replica value': '127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  NODE 127.0.0.1:3007', 'key': 'Like a Rolling Stone', 'value': '585536582520504599514578571527593545127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Smells Like Teen Spirit', 'value': '127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Satisfaction', 'value': '127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  NODE 127.0.0.1:3007', 'key': 'Good Vibrations', 'value': '127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  replica NODE 127.0.0.1:3001', 'key': 'Respect', 'replica value': '528522589584512587559566127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  replica NODE 127.0.0.1:4000', 'key': 'Like a Rolling Stone', 'replica value': '585536582520504599514578571527593545127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Satisfaction', 'value': '127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  NODE 127.0.0.1:3007', 'key': 'Good Vibrations', 'value': '127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Imagine', 'value': '127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Imagine', 'value': '127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Hey Jude', 'value': '524523542572526540568596576594552565549573519543506535502127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Imagine', 'value': '127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Hey Jude', 'value': '524523542572526540568596576594552565549573519543506535502127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Hey Jude', 'value': '524523542572526540568596576594552565549573519543506535502127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Imagine', 'value': '127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  NODE 127.0.0.1:3005', 'key': "What's Going On", 'value': '590515531533569564592529508127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Satisfaction', 'value': '127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  replica NODE 127.0.0.1:3001', 'key': 'Respect', 'replica value': '528522589584512587559566127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Satisfaction', 'value': '127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  NODE 127.0.0.1:4000', 'key': 'Respect', 'value': '528522589584512587559566127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  replica NODE 127.0.0.1:3001', 'key': 'Respect', 'replica value': '528522589584512587559566127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  NODE 127.0.0.1:4000', 'key': 'Respect', 'value': '528522589584512587559566127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  NODE 127.0.0.1:3005', 'key': "What's Going On", 'value': '590515531533569564592529508127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  NODE 127.0.0.1:3005', 'key': "What'd I Say", 'value': '127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  replica NODE 127.0.0.1:3001', 'key': 'Respect', 'replica value': '528522589584512587559566127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Imagine', 'value': '127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Satisfaction', 'value': '127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  replica NODE 127.0.0.1:5000', 'key': 'Like a Rolling Stone', 'replica value': '585536582520504599514578571527593545127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  NODE 127.0.0.1:4000', 'key': 'Respect', 'value': '528522589584512587559566127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Hey Jude', 'value': '524523542572526540568596576594552565549573519543506535502127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Smells Like Teen Spirit', 'value': '127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Hey Jude', 'value': '524523542572526540568596576594552565549573519543506535502127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  NODE 127.0.0.1:3000', 'key': 'Satisfaction', 'value': '127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  NODE 127.0.0.1:3001', 'key': 'Johnny B. Goode', 'value': '127.0.0.1:5000', 'timestamp': '18:47:16'}
+{'status': 'success from  replica NODE 127.0.0.1:5000', 'key': "What's Going On", 'replica value': '590515531533569564592529508127.0.0.1:5000', 'timestamp': '18:47:16'}

@@ -60,11 +60,11 @@ def join(self, new_ip, new_port):
             }
         else:
             # Case 2 : Forward the join request to the successor.
-            url = f"http://{self.successor['ip']}:{self.successor['port']}/join"
+            next_node = self.find_successor(new_node_id)
+            url = f"http://{next_node['ip']}:{next_node['port']}/join"
             response = requests.post(url, json={"ip": new_ip, "port": new_port})
             return response.json()
 
-# TODO: Implement the depart method for replication
 def depart(self):
         """
         Handle graceful departure of this node.
@@ -73,7 +73,6 @@ def depart(self):
         # Inform predecessor to update its successor.
         url_pred = f"http://{self.predecessor['ip']}:{self.predecessor['port']}/update_successor"
         requests.post(url_pred, json={"new_successor": self.successor})
-        # TODO : 1 node left when departing
         # Inform successor to update its predecessor.
         url_succ = f"http://{self.successor['ip']}:{self.successor['port']}/update_predecessor"
         requests.post(url_succ, json={"new_predecessor": self.predecessor})

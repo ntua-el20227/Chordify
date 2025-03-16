@@ -28,7 +28,8 @@ def delete(self, key):
                     self.forward_delete_replicas(key, self.k_factor - 1, self.node_id)
                 return {"status": "success", "message": f"Deleted '{key}' from node {self.node_id} (linearizability)"}
         else:
-            url = f"http://{self.successor['ip']}:{self.successor['port']}/delete"
+            next_node = self.find_successor(key_hash)
+            url = f"http://{next_node['ip']}:{next_node['port']}/delete"
             response = requests.post(url, json={"key": key})
             return response.json()
 

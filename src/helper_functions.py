@@ -16,14 +16,18 @@ def hash_function(key):
     """Compute SHA-1 hash of a key mod 2^16."""
     return int(hashlib.sha1(key.encode()).hexdigest(), 16) % (2 ** 16)
 
-def shutdown_server():
+def shutdown_server(node):
     # Shut down the server using os._exit() to avoid the SystemExit exception
+    url = f"http://{node['ip']}:{node['port']}/initialize_finger_table"
+    requests.post(url)
     time.sleep(1)
     os._exit(0)
 
 
 def replica_handler(node):
     time.sleep(1)
+    node.initialize_finger_table()
+    print(f"[INITIALIZED] Finger Table for Node {node.node_id}")
     if node.data_store is not None:
         node.generate_replicas(node.data_store)
 

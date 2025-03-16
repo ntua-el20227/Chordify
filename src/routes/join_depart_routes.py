@@ -1,5 +1,4 @@
 from flask import Blueprint, request, jsonify, g
-from controllers.node import Node
 from helper_functions import *
 import threading
 join_depart_bp = Blueprint('join_depart', __name__)
@@ -17,9 +16,30 @@ def join():
 @join_depart_bp.route('/depart', methods=['POST'])
 def depart():
     node = g.node
+    successor = node.successor
     result = node.depart()
-    threading.Thread(target=shutdown_server).start()
+    threading.Thread(target=shutdown_server, args=(successor,)).start()
     return jsonify(result)
+
+@join_depart_bp.route('/find_successor', methods=['POST'])
+def find_successor():
+    node = g.node
+    req = request.get_json()
+    id = req.get("id")
+    result = node.find_successor(id)
+    return jsonify(result)
+
+@join_depart_bp.route('/initialize_finger_table', methods=['POST'])
+def initialize_finger_table():
+    node = g.node
+    node.initialize_finger_table()
+    return jsonify({"status": "success"})
+
+@join_depart_bp.route('/update_finger_table', methods=['POST'])
+def update_finger_table():
+    node = g.node
+    node.update_finger_table()
+    return jsonify({"status": "success"})
 
 @join_depart_bp.route('/update_successor', methods=['POST'])
 def update_successor():
@@ -63,9 +83,9 @@ def set_config():
         node.k_factor = int(k_factor)
     return jsonify({"status": "success", "consistency": node.consistency, "k_factor": node.k_factor})
 
-@join_depart_bp.route('/shutdown', methods=['POST'])
-def shutdown():
-    threading.Thread(target=shutdown_server).start()
-    return jsonify({"status": "success"})
+# @join_depart_bp.route('/shutdown', methods=['POST'])
+# def shutdown():
+#     threading.Thread(target=shutdown_server).start()
+#     return jsonify({"status": "success"})
 
 
