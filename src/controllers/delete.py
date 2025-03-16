@@ -2,6 +2,7 @@ import requests
 import threading
 import helper_functions as hf
 
+
 def delete(self, key):
         """
         Delete a key from the DHT.
@@ -43,7 +44,8 @@ def deleteReplicas(self, key, replication_count):
         if replication_count > 1:
             self.forward_delete_replicas(key, replication_count - 1, self.node_id)
         return {"status": "success", "message": f"Deleted replicas of '{key}' from node {self.node_id}"}
-
+    
+        
 def forward_delete_replicas(self, key, replication_count, starting_node):
         """
         Propagate the delete for replicas.
@@ -62,3 +64,5 @@ def forward_delete_replicas(self, key, replication_count, starting_node):
                 print(f"[ERROR] Forward delete replication failed at node {self.node_id}: {e}")
         else:
             print(f"Circular delete replication completed for key '{key}'")
+            
+
