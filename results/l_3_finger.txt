@@ -1,0 +1,6 @@
+___INSERT___
+Elapsed time: 2.7339377403259277 seconds
+Throughput: 182.88638860532072 commands/seconds
+___QUERY___
+Elapsed time: 3.354830503463745 seconds
+Throughput: 149.0388260997888 commands/seconds

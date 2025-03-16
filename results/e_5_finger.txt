@@ -1,0 +1,6 @@
+__INSERT__
+Elapsed time: 2.594301223754883 seconds
+Throughput: 192.7301253307513 seconds/commands
+__QUERY__
+Elapsed time: 1.8129234313964844 seconds
+Throughput: 275.7976378598918 seconds/commands

@@ -1,0 +1,500 @@
+{'status': 'error', 'message': "Key 'Hey Jude' not found in linearizable chain"}
+{'status': 'error', 'message': "Key 'Respect' not found in linearizable chain"}
+{'status': 'error', 'message': "Key 'Hey Jude' not found in linearizable chain"}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '583'}
+{'status': 'error', 'message': "Key 'What's Going On' not found in linearizable chain"}
+{'status': 'error', 'message': "Key 'Like a Rolling Stone' not found in linearizable chain"}
+{'status': 'success from TAIL NODE 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '583'}
+{'status': 'success from TAIL NODE 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '583'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.230:5000', 'key': 'Respect', 'value': '528'}
+{'status': 'error', 'message': "Key 'Hey Jude' not found in linearizable chain"}
+{'status': 'error', 'message': "Key 'Hey Jude' not found in linearizable chain"}
+{'status': 'error', 'message': "Key 'What's Going On' not found in linearizable chain"}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.230:5000', 'key': 'Respect', 'value': '553'}
+{'status': 'error', 'message': "Key 'Hey Jude' not found in linearizable chain"}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.169:6000', 'key': "What's Going On", 'value': '510'}
+{'status': 'success from TAIL NODE 10.0.20.230:5000', 'key': 'Respect', 'value': '528553'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524'}
+{'status': 'success from TAIL NODE 10.0.20.169:6000', 'key': "What's Going On", 'value': '510'}
+{'status': 'success from TAIL NODE 10.0.20.230:5000', 'key': 'Respect', 'value': '528553'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524'}
+{'status': 'success from TAIL NODE 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '583'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524'}
+{'status': 'success from TAIL NODE 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '583'}
+{'status': 'success from TAIL NODE 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '583'}
+{'status': 'success from TAIL NODE 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '583'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524'}
+{'status': 'success from TAIL NODE 10.0.20.230:5000', 'key': 'Respect', 'value': '528553'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524'}
+{'status': 'success from TAIL NODE 10.0.20.169:6000', 'key': "What's Going On", 'value': '510'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524'}
+{'status': 'success from TAIL NODE 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '583'}
+{'status': 'success from TAIL NODE 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '583'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524'}
+{'status': 'success from TAIL NODE 10.0.20.230:5000', 'key': 'Respect', 'value': '528553'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524'}
+{'status': 'success from TAIL NODE 10.0.20.169:6000', 'key': "What's Going On", 'value': '510'}
+{'status': 'success from TAIL NODE 10.0.20.230:5000', 'key': 'Respect', 'value': '528553'}
+{'status': 'success from TAIL NODE 10.0.20.230:5000', 'key': 'Respect', 'value': '528553'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524'}
+{'status': 'success from TAIL NODE 10.0.20.230:5000', 'key': 'Respect', 'value': '528553'}
+{'status': 'success from TAIL NODE 10.0.20.230:5000', 'key': 'Respect', 'value': '528553'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524'}
+{'status': 'success from TAIL NODE 10.0.20.169:6000', 'key': "What's Going On", 'value': '510'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.230:5000', 'key': 'Respect', 'value': '522'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '561'}
+{'status': 'success from TAIL NODE 10.0.20.169:6000', 'key': "What's Going On", 'value': '510'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.169:6000', 'key': "What's Going On", 'value': '590'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.230:5000', 'key': 'Respect', 'value': '516'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '542'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '523'}
+{'status': 'success from TAIL NODE 10.0.20.230:5000', 'key': 'Respect', 'value': '528553522516'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '539'}
+{'status': 'success from TAIL NODE 10.0.20.230:5000', 'key': 'Respect', 'value': '528553522516'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.230:5000', 'key': 'Respect', 'value': '554'}
+{'status': 'success from TAIL NODE 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '583'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539'}
+{'status': 'success from TAIL NODE 10.0.20.169:6000', 'key': "What's Going On", 'value': '510590'}
+{'status': 'success from TAIL NODE 10.0.20.230:5000', 'key': 'Respect', 'value': '528553522516554'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539'}
+{'status': 'success from TAIL NODE 10.0.20.169:6000', 'key': "What's Going On", 'value': '510590'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '558'}
+{'status': 'success from TAIL NODE 10.0.20.230:5000', 'key': 'Respect', 'value': '528553522516554'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '513'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513'}
+{'status': 'success from TAIL NODE 10.0.20.230:5000', 'key': 'Respect', 'value': '528553522516554'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513'}
+{'status': 'success from TAIL NODE 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '583'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513'}
+{'status': 'success from TAIL NODE 10.0.20.169:6000', 'key': "What's Going On", 'value': '510590'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '575'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513'}
+{'status': 'success from TAIL NODE 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '583575'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '582'}
+{'status': 'success from TAIL NODE 10.0.20.169:6000', 'key': "What's Going On", 'value': '510590'}
+{'status': 'success from TAIL NODE 10.0.20.230:5000', 'key': 'Respect', 'value': '528553522516554'}
+{'status': 'success from TAIL NODE 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '583575582'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513'}
+{'status': 'success from TAIL NODE 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '583575582'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '525'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525'}
+{'status': 'success from TAIL NODE 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '583575582'}
+{'status': 'success from TAIL NODE 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '583575582'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '504'}
+{'status': 'success from TAIL NODE 10.0.20.230:5000', 'key': 'Respect', 'value': '528553522516554'}
+{'status': 'success from TAIL NODE 10.0.20.169:6000', 'key': "What's Going On", 'value': '510590'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '585'}
+{'status': 'success from TAIL NODE 10.0.20.169:6000', 'key': "What's Going On", 'value': '510590'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525'}
+{'status': 'success from TAIL NODE 10.0.20.230:5000', 'key': 'Respect', 'value': '528553522516554'}
+{'status': 'success from TAIL NODE 10.0.20.230:5000', 'key': 'Respect', 'value': '528553522516554'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525'}
+{'status': 'success from TAIL NODE 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '583575582504585'}
+{'status': 'success from TAIL NODE 10.0.20.230:5000', 'key': 'Respect', 'value': '528553522516554'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '570'}
+{'status': 'success from TAIL NODE 10.0.20.169:6000', 'key': "What's Going On", 'value': '510590'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.169:6000', 'key': "What's Going On", 'value': '531'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570'}
+{'status': 'success from TAIL NODE 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '583575582504585'}
+{'status': 'success from TAIL NODE 10.0.20.169:6000', 'key': "What's Going On", 'value': '510590531'}
+{'status': 'success from TAIL NODE 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '583575582504585'}
+{'status': 'success from TAIL NODE 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '583575582504585'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '536'}
+{'status': 'success from TAIL NODE 10.0.20.169:6000', 'key': "What's Going On", 'value': '510590531'}
+{'status': 'success from TAIL NODE 10.0.20.230:5000', 'key': 'Respect', 'value': '528553522516554'}
+{'status': 'success from TAIL NODE 10.0.20.169:6000', 'key': "What's Going On", 'value': '510590531'}
+{'status': 'success from TAIL NODE 10.0.20.169:6000', 'key': "What's Going On", 'value': '510590531'}
+{'status': 'success from TAIL NODE 10.0.20.169:6000', 'key': "What's Going On", 'value': '510590531'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570'}
+{'status': 'success from TAIL NODE 10.0.20.230:5000', 'key': 'Respect', 'value': '528553522516554'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570'}
+{'status': 'success from TAIL NODE 10.0.20.230:5000', 'key': 'Respect', 'value': '528553522516554'}
+{'status': 'success from TAIL NODE 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '583575582504585536'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '520'}
+{'status': 'success from TAIL NODE 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '583575582504585536520'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570'}
+{'status': 'success from TAIL NODE 10.0.20.230:5000', 'key': 'Respect', 'value': '528553522516554'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '505'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.230:5000', 'key': 'Respect', 'value': '550'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.169:6000', 'key': "What's Going On", 'value': '521'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.230:5000', 'key': 'Respect', 'value': '503'}
+{'status': 'success from TAIL NODE 10.0.20.169:6000', 'key': "What's Going On", 'value': '510590531521'}
+{'status': 'success from TAIL NODE 10.0.20.230:5000', 'key': 'Respect', 'value': '528553522516554550503'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.230:5000', 'key': 'Respect', 'value': '584'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505'}
+{'status': 'success from TAIL NODE 10.0.20.230:5000', 'key': 'Respect', 'value': '528553522516554550503584'}
+{'status': 'success from TAIL NODE 10.0.20.169:6000', 'key': "What's Going On", 'value': '510590531521'}
+{'status': 'success from TAIL NODE 10.0.20.169:6000', 'key': "What's Going On", 'value': '510590531521'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505'}
+{'status': 'success from TAIL NODE 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '583575582504585536520'}
+{'status': 'success from TAIL NODE 10.0.20.230:5000', 'key': 'Respect', 'value': '528553522516554550503584'}
+{'status': 'success from TAIL NODE 10.0.20.169:6000', 'key': "What's Going On", 'value': '510590531521'}
+{'status': 'success from TAIL NODE 10.0.20.169:6000', 'key': "What's Going On", 'value': '510590531521'}
+{'status': 'success from TAIL NODE 10.0.20.230:5000', 'key': 'Respect', 'value': '528553522516554550503584'}
+{'status': 'success from TAIL NODE 10.0.20.169:6000', 'key': "What's Going On", 'value': '510590531521'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505'}
+{'status': 'success from TAIL NODE 10.0.20.230:5000', 'key': 'Respect', 'value': '528553522516554550503584'}
+{'status': 'success from TAIL NODE 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '583575582504585536520'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505'}
+{'status': 'success from TAIL NODE 10.0.20.169:6000', 'key': "What's Going On", 'value': '510590531521'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.230:5000', 'key': 'Respect', 'value': '512'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '572'}
+{'status': 'success from TAIL NODE 10.0.20.169:6000', 'key': "What's Going On", 'value': '510590531521'}
+{'status': 'success from TAIL NODE 10.0.20.169:6000', 'key': "What's Going On", 'value': '510590531521'}
+{'status': 'success from TAIL NODE 10.0.20.230:5000', 'key': 'Respect', 'value': '528553522516554550503584512'}
+{'status': 'success from TAIL NODE 10.0.20.169:6000', 'key': "What's Going On", 'value': '510590531521'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572'}
+{'status': 'success from TAIL NODE 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '583575582504585536520'}
+{'status': 'success from TAIL NODE 10.0.20.169:6000', 'key': "What's Going On", 'value': '510590531521'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '551'}
+{'status': 'success from TAIL NODE 10.0.20.230:5000', 'key': 'Respect', 'value': '528553522516554550503584512'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '511'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511'}
+{'status': 'success from TAIL NODE 10.0.20.230:5000', 'key': 'Respect', 'value': '528553522516554550503584512'}
+{'status': 'success from TAIL NODE 10.0.20.169:6000', 'key': "What's Going On", 'value': '510590531521'}
+{'status': 'success from TAIL NODE 10.0.20.230:5000', 'key': 'Respect', 'value': '528553522516554550503584512'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511'}
+{'status': 'success from TAIL NODE 10.0.20.169:6000', 'key': "What's Going On", 'value': '510590531521'}
+{'status': 'success from TAIL NODE 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '583575582504585536520551'}
+{'status': 'success from TAIL NODE 10.0.20.169:6000', 'key': "What's Going On", 'value': '510590531521'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.230:5000', 'key': 'Respect', 'value': '589'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '597'}
+{'status': 'success from TAIL NODE 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '583575582504585536520551'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '579'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '526'}
+{'status': 'success from TAIL NODE 10.0.20.230:5000', 'key': 'Respect', 'value': '528553522516554550503584512589'}
+{'status': 'success from TAIL NODE 10.0.20.230:5000', 'key': 'Respect', 'value': '528553522516554550503584512589'}
+{'status': 'success from TAIL NODE 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '583575582504585536520551'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '580'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '596'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.169:6000', 'key': "What's Going On", 'value': '517'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '588'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '557'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '518'}
+{'status': 'success from TAIL NODE 10.0.20.169:6000', 'key': "What's Going On", 'value': '510590531521517'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '501'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501'}
+{'status': 'success from TAIL NODE 10.0.20.169:6000', 'key': "What's Going On", 'value': '510590531521517'}
+{'status': 'success from TAIL NODE 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '583575582504585536520551'}
+{'status': 'success from TAIL NODE 10.0.20.230:5000', 'key': 'Respect', 'value': '528553522516554550503584512589'}
+{'status': 'success from TAIL NODE 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '583575582504585536520551'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501'}
+{'status': 'success from TAIL NODE 10.0.20.169:6000', 'key': "What's Going On", 'value': '510590531521517'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '514'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.230:5000', 'key': 'Respect', 'value': '541'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501'}
+{'status': 'success from TAIL NODE 10.0.20.169:6000', 'key': "What's Going On", 'value': '510590531521517'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501'}
+{'status': 'success from TAIL NODE 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '583575582504585536520551514'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.169:6000', 'key': "What's Going On", 'value': '515'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.230:5000', 'key': 'Respect', 'value': '560'}
+{'status': 'success from TAIL NODE 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '583575582504585536520551514'}
+{'status': 'success from TAIL NODE 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '583575582504585536520551514'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '600'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501'}
+{'status': 'success from TAIL NODE 10.0.20.169:6000', 'key': "What's Going On", 'value': '510590531521517515'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.169:6000', 'key': "What's Going On", 'value': '562'}
+{'status': 'success from TAIL NODE 10.0.20.169:6000', 'key': "What's Going On", 'value': '510590531521517515562'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501'}
+{'status': 'success from TAIL NODE 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '583575582504585536520551514600'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '556'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '534'}
+{'status': 'success from TAIL NODE 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '583575582504585536520551514600'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '555'}
+{'status': 'success from TAIL NODE 10.0.20.230:5000', 'key': 'Respect', 'value': '528553522516554550503584512589541560'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.230:5000', 'key': 'Respect', 'value': '587'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '599'}
+{'status': 'success from TAIL NODE 10.0.20.230:5000', 'key': 'Respect', 'value': '528553522516554550503584512589541560587'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555'}
+{'status': 'success from TAIL NODE 10.0.20.169:6000', 'key': "What's Going On", 'value': '510590531521517515562'}
+{'status': 'success from TAIL NODE 10.0.20.230:5000', 'key': 'Respect', 'value': '528553522516554550503584512589541560587'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.169:6000', 'key': "What's Going On", 'value': '537'}
+{'status': 'success from TAIL NODE 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '583575582504585536520551514600599'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555'}
+{'status': 'success from TAIL NODE 10.0.20.230:5000', 'key': 'Respect', 'value': '528553522516554550503584512589541560587'}
+{'status': 'success from TAIL NODE 10.0.20.230:5000', 'key': 'Respect', 'value': '528553522516554550503584512589541560587'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555'}
+{'status': 'success from TAIL NODE 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '583575582504585536520551514600599'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '530'}
+{'status': 'success from TAIL NODE 10.0.20.169:6000', 'key': "What's Going On", 'value': '510590531521517515562537'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530'}
+{'status': 'success from TAIL NODE 10.0.20.230:5000', 'key': 'Respect', 'value': '528553522516554550503584512589541560587'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '571'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.169:6000', 'key': "What's Going On", 'value': '546'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '586'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '578'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586'}
+{'status': 'success from TAIL NODE 10.0.20.230:5000', 'key': 'Respect', 'value': '528553522516554550503584512589541560587'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '540'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '568'}
+{'status': 'success from TAIL NODE 10.0.20.169:6000', 'key': "What's Going On", 'value': '510590531521517515562537546'}
+{'status': 'success from TAIL NODE 10.0.20.230:5000', 'key': 'Respect', 'value': '528553522516554550503584512589541560587'}
+{'status': 'success from TAIL NODE 10.0.20.230:5000', 'key': 'Respect', 'value': '528553522516554550503584512589541560587'}
+{'status': 'success from TAIL NODE 10.0.20.230:5000', 'key': 'Respect', 'value': '528553522516554550503584512589541560587'}
+{'status': 'success from TAIL NODE 10.0.20.230:5000', 'key': 'Respect', 'value': '528553522516554550503584512589541560587'}
+{'status': 'success from TAIL NODE 10.0.20.169:6000', 'key': "What's Going On", 'value': '510590531521517515562537546'}
+{'status': 'success from TAIL NODE 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '583575582504585536520551514600599571578'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568'}
+{'status': 'success from TAIL NODE 10.0.20.169:6000', 'key': "What's Going On", 'value': '510590531521517515562537546'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.230:5000', 'key': 'Respect', 'value': '548'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568'}
+{'status': 'success from TAIL NODE 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '583575582504585536520551514600599571578'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568'}
+{'status': 'success from TAIL NODE 10.0.20.169:6000', 'key': "What's Going On", 'value': '510590531521517515562537546'}
+{'status': 'success from TAIL NODE 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '583575582504585536520551514600599571578'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '509'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '507'}
+{'status': 'success from TAIL NODE 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '583575582504585536520551514600599571578'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '576'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.169:6000', 'key': "What's Going On", 'value': '533'}
+{'status': 'success from TAIL NODE 10.0.20.169:6000', 'key': "What's Going On", 'value': '510590531521517515562537546533'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576'}
+{'status': 'success from TAIL NODE 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '583575582504585536520551514600599571578509'}
+{'status': 'success from TAIL NODE 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '583575582504585536520551514600599571578509'}
+{'status': 'success from TAIL NODE 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '583575582504585536520551514600599571578509'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576'}
+{'status': 'success from TAIL NODE 10.0.20.230:5000', 'key': 'Respect', 'value': '528553522516554550503584512589541560587548'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '527'}
+{'status': 'success from TAIL NODE 10.0.20.169:6000', 'key': "What's Going On", 'value': '510590531521517515562537546533'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.169:6000', 'key': "What's Going On", 'value': '569'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.230:5000', 'key': 'Respect', 'value': '566'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576'}
+{'status': 'success from TAIL NODE 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '583575582504585536520551514600599571578509527'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576'}
+{'status': 'success from TAIL NODE 10.0.20.169:6000', 'key': "What's Going On", 'value': '510590531521517515562537546533569'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576'}
+{'status': 'success from TAIL NODE 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '583575582504585536520551514600599571578509527'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576'}
+{'status': 'success from TAIL NODE 10.0.20.169:6000', 'key': "What's Going On", 'value': '510590531521517515562537546533569'}
+{'status': 'success from TAIL NODE 10.0.20.230:5000', 'key': 'Respect', 'value': '528553522516554550503584512589541560587548566'}
+{'status': 'success from TAIL NODE 10.0.20.230:5000', 'key': 'Respect', 'value': '528553522516554550503584512589541560587548566'}
+{'status': 'success from TAIL NODE 10.0.20.230:5000', 'key': 'Respect', 'value': '528553522516554550503584512589541560587548566'}
+{'status': 'success from TAIL NODE 10.0.20.230:5000', 'key': 'Respect', 'value': '528553522516554550503584512589541560587548566'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576'}
+{'status': 'success from TAIL NODE 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '583575582504585536520551514600599571578509527'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576'}
+{'status': 'success from TAIL NODE 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '583575582504585536520551514600599571578509527'}
+{'status': 'success from TAIL NODE 10.0.20.169:6000', 'key': "What's Going On", 'value': '510590531521517515562537546533569'}
+{'status': 'success from TAIL NODE 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '583575582504585536520551514600599571578509527'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '594'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576'}
+{'status': 'success from TAIL NODE 10.0.20.169:6000', 'key': "What's Going On", 'value': '510590531521517515562537546533569'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576594'}
+{'status': 'success from TAIL NODE 10.0.20.230:5000', 'key': 'Respect', 'value': '528553522516554550503584512589541560587548566'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '506'}
+{'status': 'success from TAIL NODE 10.0.20.169:6000', 'key': "What's Going On", 'value': '510590531521517515562537546533569'}
+{'status': 'success from TAIL NODE 10.0.20.169:6000', 'key': "What's Going On", 'value': '510590531521517515562537546533569'}
+{'status': 'success from TAIL NODE 10.0.20.169:6000', 'key': "What's Going On", 'value': '510590531521517515562537546533569'}
+{'status': 'success from TAIL NODE 10.0.20.230:5000', 'key': 'Respect', 'value': '528553522516554550503584512589541560587548566'}
+{'status': 'success from TAIL NODE 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '583575582504585536520551514600599571578509527'}
+{'status': 'success from TAIL NODE 10.0.20.230:5000', 'key': 'Respect', 'value': '528553522516554550503584512589541560587548566'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576594506'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576594506'}
+{'status': 'success from TAIL NODE 10.0.20.169:6000', 'key': "What's Going On", 'value': '510590531521517515562537546533569'}
+{'status': 'success from TAIL NODE 10.0.20.230:5000', 'key': 'Respect', 'value': '528553522516554550503584512589541560587548566'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '552'}
+{'status': 'success from TAIL NODE 10.0.20.230:5000', 'key': 'Respect', 'value': '528553522516554550503584512589541560587548566'}
+{'status': 'success from TAIL NODE 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '583575582504585536520551514600599571578509527'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '565'}
+{'status': 'success from TAIL NODE 10.0.20.230:5000', 'key': 'Respect', 'value': '528553522516554550503584512589541560587548566'}
+{'status': 'success from TAIL NODE 10.0.20.169:6000', 'key': "What's Going On", 'value': '510590531521517515562537546533569'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576594506552565'}
+{'status': 'success from TAIL NODE 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '583575582504585536520551514600599571578509527'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576594506552565'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576594506552565'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '577'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '595'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '549'}
+{'status': 'success from TAIL NODE 10.0.20.230:5000', 'key': 'Respect', 'value': '528553522516554550503584512589541560587548566'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576594506552565595549'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.169:6000', 'key': "What's Going On", 'value': '529'}
+{'status': 'success from TAIL NODE 10.0.20.169:6000', 'key': "What's Going On", 'value': '510590531521517515562537546533569529'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576594506552565595549'}
+{'status': 'success from TAIL NODE 10.0.20.230:5000', 'key': 'Respect', 'value': '528553522516554550503584512589541560587548566'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.230:5000', 'key': 'Respect', 'value': '559'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576594506552565595549'}
+{'status': 'success from TAIL NODE 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '583575582504585536520551514600599571578509527577'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576594506552565595549'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '544'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576594506552565595549'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576594506552565595549'}
+{'status': 'success from TAIL NODE 10.0.20.169:6000', 'key': "What's Going On", 'value': '510590531521517515562537546533569529'}
+{'status': 'success from TAIL NODE 10.0.20.230:5000', 'key': 'Respect', 'value': '528553522516554550503584512589541560587548566559'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576594506552565595549544'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576594506552565595549544'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576594506552565595549544'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '573'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576594506552565595549544573'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576594506552565595549544573'}
+{'status': 'success from TAIL NODE 10.0.20.169:6000', 'key': "What's Going On", 'value': '510590531521517515562537546533569529'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576594506552565595549544573'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576594506552565595549544573'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576594506552565595549544573'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '547'}
+{'status': 'success from TAIL NODE 10.0.20.169:6000', 'key': "What's Going On", 'value': '510590531521517515562537546533569529'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576594506552565595549544573'}
+{'status': 'success from TAIL NODE 10.0.20.230:5000', 'key': 'Respect', 'value': '528553522516554550503584512589541560587548566559'}
+{'status': 'success from TAIL NODE 10.0.20.169:6000', 'key': "What's Going On", 'value': '510590531521517515562537546533569529'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576594506552565595549544573'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576594506552565595549544573'}
+{'status': 'success from TAIL NODE 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '583575582504585536520551514600599571578509527577547'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576594506552565595549544573'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576594506552565595549544573'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576594506552565595549544573'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576594506552565595549544573'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576594506552565595549544573'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576594506552565595549544573'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '519'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.169:6000', 'key': "What's Going On", 'value': '563'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576594506552565595549544573519'}
+{'status': 'success from TAIL NODE 10.0.20.230:5000', 'key': 'Respect', 'value': '528553522516554550503584512589541560587548566559'}
+{'status': 'success from TAIL NODE 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '583575582504585536520551514600599571578509527577547'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576594506552565595549544573519'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '598'}
+{'status': 'success from TAIL NODE 10.0.20.230:5000', 'key': 'Respect', 'value': '528553522516554550503584512589541560587548566559'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '591'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576594506552565595549544573519598'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576594506552565595549544573519598'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.169:6000', 'key': "What's Going On", 'value': '574'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '543'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576594506552565595549544573519598591543'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576594506552565595549544573519598591543'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576594506552565595549544573519598591543'}
+{'status': 'success from TAIL NODE 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '583575582504585536520551514600599571578509527577547'}
+{'status': 'success from TAIL NODE 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '583575582504585536520551514600599571578509527577547'}
+{'status': 'success from TAIL NODE 10.0.20.230:5000', 'key': 'Respect', 'value': '528553522516554550503584512589541560587548566559'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576594506552565595549544573519598591543'}
+{'status': 'success from TAIL NODE 10.0.20.230:5000', 'key': 'Respect', 'value': '528553522516554550503584512589541560587548566559'}
+{'status': 'success from TAIL NODE 10.0.20.169:6000', 'key': "What's Going On", 'value': '510590531521517515562537546533569529563574'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '502'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.230:5000', 'key': 'Respect', 'value': '567'}
+{'status': 'success from TAIL NODE 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '583575582504585536520551514600599571578509527577547'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576594506552565595549544573519598591543502'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '581'}
+{'status': 'success from TAIL NODE 10.0.20.230:5000', 'key': 'Respect', 'value': '528553522516554550503584512589541560587548566559567'}
+{'status': 'success from TAIL NODE 10.0.20.169:6000', 'key': "What's Going On", 'value': '510590531521517515562537546533569529563574'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576594506552565595549544573519598591543502581'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '593'}
+{'status': 'success from TAIL NODE 10.0.20.169:6000', 'key': "What's Going On", 'value': '510590531521517515562537546533569529563574'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576594506552565595549544573519598591543502581'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576594506552565595549544573519598591543502581'}
+{'status': 'success from TAIL NODE 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '583575582504585536520551514600599571578509527577547593'}
+{'status': 'success from TAIL NODE 10.0.20.169:6000', 'key': "What's Going On", 'value': '510590531521517515562537546533569529563574'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576594506552565595549544573519598591543502581'}
+{'status': 'success from TAIL NODE 10.0.20.230:5000', 'key': 'Respect', 'value': '528553522516554550503584512589541560587548566559567'}
+{'status': 'success from TAIL NODE 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '583575582504585536520551514600599571578509527577547593'}
+{'status': 'success from TAIL NODE 10.0.20.230:5000', 'key': 'Respect', 'value': '528553522516554550503584512589541560587548566559567'}
+{'status': 'success from TAIL NODE 10.0.20.230:5000', 'key': 'Respect', 'value': '528553522516554550503584512589541560587548566559567'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '532'}
+{'status': 'success from TAIL NODE 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '583575582504585536520551514600599571578509527577547593'}
+{'status': 'success from TAIL NODE 10.0.20.230:5000', 'key': 'Respect', 'value': '528553522516554550503584512589541560587548566559567'}
+{'status': 'success from TAIL NODE 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '583575582504585536520551514600599571578509527577547593'}
+{'status': 'success from TAIL NODE 10.0.20.230:5000', 'key': 'Respect', 'value': '528553522516554550503584512589541560587548566559567'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576594506552565595549544573519598591543502581532'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.169:6000', 'key': "What's Going On", 'value': '538'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576594506552565595549544573519598591543502581532'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576594506552565595549544573519598591543502581532'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576594506552565595549544573519598591543502581532'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576594506552565595549544573519598591543502581532'}
+{'status': 'success from TAIL NODE 10.0.20.169:6000', 'key': "What's Going On", 'value': '510590531521517515562537546533569529563574538'}
+{'status': 'success from TAIL NODE 10.0.20.169:6000', 'key': "What's Going On", 'value': '510590531521517515562537546533569529563574538'}
+{'status': 'success from TAIL NODE 10.0.20.169:6000', 'key': "What's Going On", 'value': '510590531521517515562537546533569529563574538'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576594506552565595549544573519598591543502581532'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576594506552565595549544573519598591543502581532'}
+{'status': 'success from TAIL NODE 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '583575582504585536520551514600599571578509527577547593'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576594506552565595549544573519598591543502581532'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576594506552565595549544573519598591543502581532'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576594506552565595549544573519598591543502581532'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.169:6000', 'key': "What's Going On", 'value': '564'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576594506552565595549544573519598591543502581532'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576594506552565595549544573519598591543502581532'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576594506552565595549544573519598591543502581532'}
+{'status': 'success from TAIL NODE 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '583575582504585536520551514600599571578509527577547593'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '545'}
+{'status': 'success from TAIL NODE 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '583575582504585536520551514600599571578509527577547593545'}
+{'status': 'success from TAIL NODE 10.0.20.169:6000', 'key': "What's Going On", 'value': '510590531521517515562537546533569529563574538564'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576594506552565595549544573519598591543502581532'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576594506552565595549544573519598591543502581532'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576594506552565595549544573519598591543502581532'}
+{'status': 'success from TAIL NODE 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '583575582504585536520551514600599571578509527577547593545'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.169:6000', 'key': "What's Going On", 'value': '508'}
+{'status': 'success from TAIL NODE 10.0.20.169:6000', 'key': "What's Going On", 'value': '510590531521517515562537546533569529563574538564508'}
+{'status': 'success from TAIL NODE 10.0.20.230:5000', 'key': 'Respect', 'value': '528553522516554550503584512589541560587548566559567'}
+{'status': 'success from TAIL NODE 10.0.20.230:5000', 'key': 'Respect', 'value': '528553522516554550503584512589541560587548566559567'}
+{'status': 'success from TAIL NODE 10.0.20.230:5000', 'key': 'Respect', 'value': '528553522516554550503584512589541560587548566559567'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.169:6000', 'key': "What's Going On", 'value': '592'}
+{'status': 'success from TAIL NODE 10.0.20.230:5000', 'key': 'Respect', 'value': '528553522516554550503584512589541560587548566559567'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576594506552565595549544573519598591543502581532'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576594506552565595549544573519598591543502581532'}
+{'status': 'success', 'message': 'Inserted at tail node 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '535'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576594506552565595549544573519598591543502581532535'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576594506552565595549544573519598591543502581532535'}
+{'status': 'success from TAIL NODE 10.0.20.169:6000', 'key': "What's Going On", 'value': '510590531521517515562537546533569529563574538564508592'}
+{'status': 'success from TAIL NODE 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '583575582504585536520551514600599571578509527577547593545'}
+{'status': 'success from TAIL NODE 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '583575582504585536520551514600599571578509527577547593545'}
+{'status': 'success from TAIL NODE 10.0.20.230:5000', 'key': 'Respect', 'value': '528553522516554550503584512589541560587548566559567'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576594506552565595549544573519598591543502581532535'}
+{'status': 'success from TAIL NODE 10.0.20.169:6000', 'key': "What's Going On", 'value': '510590531521517515562537546533569529563574538564508592'}
+{'status': 'success from TAIL NODE 10.0.20.169:6000', 'key': "What's Going On", 'value': '510590531521517515562537546533569529563574538564508592'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576594506552565595549544573519598591543502581532535'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576594506552565595549544573519598591543502581532535'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576594506552565595549544573519598591543502581532535'}
+{'status': 'success from TAIL NODE 10.0.20.169:6000', 'key': "What's Going On", 'value': '510590531521517515562537546533569529563574538564508592'}
+{'status': 'success from TAIL NODE 10.0.20.230:6000', 'key': 'Like a Rolling Stone', 'value': '583575582504585536520551514600599571578509527577547593545'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576594506552565595549544573519598591543502581532535'}
+{'status': 'success from TAIL NODE 10.0.20.169:6000', 'key': "What's Going On", 'value': '510590531521517515562537546533569529563574538564508592'}
+{'status': 'success from TAIL NODE 10.0.20.41:5000', 'key': 'Hey Jude', 'value': '524561542523539558513525570505572511597579526596580588557518501556534555530586540568507576594506552565595549544573519598591543502581532535'}
