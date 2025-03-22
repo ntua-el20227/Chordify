@@ -26,7 +26,7 @@ Chordify is a peer-to-peer Chord-DHT application developed as part of a Distribu
 
 ---
 
-## Installation
+## Deployment
 
 Chordify is built using **Python 3.12** and the **Flask** web framework. Follow the steps below to set up your environment:
 
@@ -69,6 +69,16 @@ A basic test suite using the `pytest` library is available in the `./tests` dire
 ```bash
 python3 tests/test.py
 ```
+## Results
+
+### Without finger tables
+
+![image](https://github.com/user-attachments/assets/eeea34f1-21d4-4c39-8cb0-b3ad54394573)
+
+### With finger tables
+
+![image](https://github.com/user-attachments/assets/0810d53a-6dee-4621-989f-0fbaa11cb36e)
+
 
 
 ---
